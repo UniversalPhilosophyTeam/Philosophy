@@ -1,0 +1,154 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{mathabx,graphicx}
+
+
+\newcommand{\test}{\circlearrowright}
+\def \loop {\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}}
+\def \nestedloop {\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}^n}
+
+
+
+\begin{document}
+\section*{Logic}
+
+
+
+
+
+\section{Not $\lnot$}
+\subsection{Definition}
+\begin{center}
+$\lnot a$ = $\lnot \lbrack a \rbrack$ :=\\
+\vspace{2mm}
+$\lnot \lbrack \mathbb{T} \rbrack \rightarrow \mathbb{F}$\\
+\vspace{2mm}
+$\lnot \lbrack \mathbb{F} \rbrack \rightarrow \mathbb{T}$
+\end{center}
+
+
+
+
+
+
+\section{Logical And $\land$}
+\subsection{Definition}
+\begin{center}
+$
+a \land b = \land \lbrack{a,b}\rbrack :=
+$
+\end{center}
+\begin{center}
+$\lnot (\hspace{1mm} \exists \hspace{1mm} \mathbb{F} \in \{a,b\}) =$
+
+$\vspace{1.5mm} \not \exists \hspace{1mm} \mathbb{F} \in \{a,b\}$
+\end{center}
+
+
+
+
+\subsection{Alternate Definition}
+\begin{center}
+$\land \lbrack\mathbb{F}, \mathbb{F}\rbrack = \mathbb{F}$ \\
+$\land \lbrack\mathbb{F}, \mathbb{T}\rbrack = \mathbb{F}$ \\
+$\land \lbrack\mathbb{T}, \mathbb{F}\rbrack = \mathbb{F}$ \\
+$\land \lbrack\mathbb{T}, \mathbb{T}\rbrack = \mathbb{T}$ \\
+\end{center}
+
+
+
+
+
+\section{Law of Non-Contradiction}
+\begin{center}
+Introduce the symbol for contradiction, proof by contradiction
+\end{center}
+
+
+
+
+\newpage
+\section{Logical Function}
+\subsection{Definition}
+Define logical function with boolean input(s) $a_1,...,a_n$ and a boolean output $b$
+\begin{center}
+$f_{logical}$ $:=$\\
+$f[a_1,...,a_n] \rightarrow b$
+\end{center}
+\subsection{Proof of All Logical Functions Can Be Built from Not with any Two Input Logic Function}
+
+
+
+
+
+
+
+
+
+\newpage
+\section*{Appendix}
+
+
+\section{Or $\lor$}
+\subsection{Definition}
+\subsection{Alternate Definition}
+
+
+
+\section{Exclusive Or (Xor)}
+\subsection{Definition}
+\subsection{Alternate Definition}
+
+
+
+
+
+\section{Not Or (Nor)}
+\subsection{Definition}
+\subsection{Alternate Definition}
+
+
+
+
+
+\section{Exclusive Nor (Xnor)}
+\subsection{Definition}
+\subsection{Alternate Definition}
+
+
+
+
+
+
+\section{Not And (Nand)}
+\subsection{Definition}
+\subsection{Alternate Definition}
+
+
+
+
+
+
+\section{Criticism logical union, set union, logical and, set and}
+- logical or is a function logical and is a function\\
+- language muks up our understanding\\
+
+Logical or $\lor$ is different from $\cup$
+Logical and $\land$ is different from $\cap$
+
+Logical or, only one has to be true\\
+Logical and, both have to be true --> I'll take the intersection\\
+
+Set and, I'll take bag 1 and bag 2 i'll take both --> I'll take the union\\
+set or, I'll take bag 1 or bag 2 I'll take just one\\
+
+Do we ever confuse set union, set and with logical or, and?\\
+(Don't we describe set union $\cup$ as "or")
+
+
+
+
+
+
+\end{document}

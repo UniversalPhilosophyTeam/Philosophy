@@ -1,0 +1,529 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{mathabx,graphicx}
+
+
+\newcommand{\test}{\circlearrowright}
+\def \loop {\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}}
+\def \nestedloop {\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}^n}
+
+
+
+\begin{document}
+\section*{Logic}
+
+
+
+\section{"Equals" =}
+\begin{center}
+$
+= \hspace{2mm} :=
+$
+\\ \vspace{4mm}
+$
+(a = a) \doteq \mathbb{T}
+$
+\end{center}
+
+
+
+
+\section{"Does Not Equal" $\neq$}
+\begin{center}
+$
+\neq \hspace{2mm} :=
+$
+\\ \vspace{4mm}
+$
+(a \hspace{2mm} \neq \hspace{1mm} a) \doteq \mathbb{F}
+$
+\end{center}
+
+
+
+
+\section{Definition of "Fact" $t$}
+\begin{center}
+$
+"A$ $Fact$ $" = t :=
+$
+\\ \vspace{2mm}
+$
+t \doteq \mathbb{T}
+$
+\end{center}
+
+
+
+
+
+
+
+\section{Definition of "Lie" $l$}
+\begin{center}
+$
+"A$ $Lie"$ $= l :=
+$
+\\ \vspace{2mm}
+$
+l \doteq \mathbb{F}
+$
+\end{center}
+
+
+
+
+\section{Definition of If Then}
+\section{Definition of Implication}
+
+
+\section{Definition of Positive Implication}
+\begin{center}
+$
+"Positive$ $Implication" := s_{in} \cup s_{result}:
+$
+\\ \vspace{2mm}
+$
+\mathbb{T} \doteq s_{in} \Rightarrow \mathbb{T} \doteq s_{result}
+$
+\end{center}
+
+
+
+\section{Definition of Negative Implication}
+\begin{center}
+$
+"Negative$ $Implication" := s_{in} \cup s_{result}:
+$
+\\ \vspace{2mm}
+$
+\mathbb{F} \doteq s_{in} \Rightarrow \mathbb{F} \doteq s_{result}
+$
+\end{center}
+
+
+
+
+\section{Definition of Preventative Implication}
+\begin{center}
+$
+"Preventative$ $Implication" := s_{in} \cup s_{result}:
+$
+\\ \vspace{2mm}
+$
+\mathbb{T} \doteq s_{in} \Rightarrow \mathbb{F} \doteq s_{result}
+$
+\end{center}
+
+
+
+\section{Definition of Consequential Implication}
+\begin{center}
+$
+"Consesquential$ $Implication" := s_{in} \cup s_{result}:
+$
+\\ \vspace{2mm}
+$
+\mathbb{F} \doteq s_{in} \Rightarrow \mathbb{T} \doteq s_{result}
+$
+\end{center}
+
+
+
+
+
+\section{Definition of "Exclusive Or" $\oplus$}
+\begin{center}
+$
+s_x \oplus s_y :=
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{F} \hspace{1mm} \oplus \hspace{1mm} s_y\doteq \mathbb{F}) \doteq \mathbb{F}
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{F} \hspace{1mm} \oplus \hspace{1mm} s_y\doteq \mathbb{T}) \doteq \mathbb{T}
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{T} \hspace{1mm} \oplus \hspace{1mm} s_y\doteq \mathbb{F}) \doteq \mathbb{T}
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{T} \hspace{1mm} \oplus \hspace{1mm} s_y\doteq \mathbb{T}) \doteq \mathbb{F}
+$
+\end{center}
+
+
+\section{Definition of "Logical And" $\land$}
+\begin{center}
+$
+s_x \land s_y :=
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{F} \hspace{1mm} \land \hspace{1mm} s_y\doteq \mathbb{F}) \doteq \mathbb{F}
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{F} \hspace{1mm} \land \hspace{1mm} s_y\doteq \mathbb{T}) \doteq \mathbb{F}
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{T} \hspace{1mm} \land \hspace{1mm} s_y\doteq \mathbb{F}) \doteq \mathbb{F}
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{T} \hspace{1mm} \land \hspace{1mm} s_y\doteq \mathbb{T}) \doteq \mathbb{T}
+$
+\end{center}
+
+
+
+\section{Definition of "Logical Or" $\lor$}
+\begin{center}
+$
+s_x \lor s_y :=
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{F} \hspace{1mm} \lor \hspace{1mm} s_y\doteq \mathbb{F}) \doteq \mathbb{F}
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{F} \hspace{1mm} \lor \hspace{1mm} s_y\doteq \mathbb{T}) \doteq \mathbb{T}
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{T} \hspace{1mm} \lor \hspace{1mm} s_y\doteq \mathbb{F}) \doteq \mathbb{T}
+$
+\\ \vspace{3mm}
+$
+(s_x \doteq \mathbb{T} \hspace{1mm} \lor \hspace{1mm} s_y\doteq \mathbb{T}) \doteq \mathbb{T}
+$
+\end{center}
+
+
+
+
+
+\section{Definition of "NOR"}
+\section{Definition of "XNOR"}
+\section{Definition of "NAND"}
+
+
+
+
+\section{Boolean Statement $b$}
+\subsection{Definition of Boolean Statement $b$}
+\begin{center}
+$
+"A$ $Boolean$ $Statement$ $" = b:=
+$
+\\ \vspace{2mm}
+$
+b \doteq \mathbb{T} \hspace{2mm} \oplus \hspace{2mm} b \doteq  \mathbb{F}
+$
+\end{center}
+\subsection{Equivalence of Boolean Statement $b$}
+\vspace{1mm}
+\begin{center}
+$
+b = b
+$
+\end{center}
+
+
+
+
+\subsection{Inverse "Not b" $\lnot$ b}
+\begin{center}
+$
+"Not$ $b" = \lnot b :=
+$
+\\ \vspace{4mm}
+$
+\lnot (s \doteq \mathbb{T}) = (s \doteq \mathbb{F})
+$
+\\ \vspace{4mm}
+$
+\lnot (s \doteq \mathbb{F}) = (s \doteq \mathbb{T})
+$
+\end{center}
+\subsection{Equivalent Definition of  "Not b" $\lnot$ b}
+\vspace{2mm}
+\begin{center}
+$
+"Not$ $s" = \lnot s :=
+$
+\end{center}
+$s \doteq \mathbb{T}$
+\begin{center}
+$
+\lnot s \doteq \mathbb{F}
+$
+\end{center}
+\vspace{2mm}
+$s \doteq \mathbb{F}$
+\begin{center}
+$
+\lnot s \doteq \mathbb{T}
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Definition of Or $\lor$}
+The law of excluded middle
+\begin{center}
+\end{center}
+\subsection{The Law of Total Equivalence}
+
+
+\section{Definition of And $\land$}
+The law of non-contradiction
+\begin{center}
+$
+s \land \lnot s = \mathbb{F}
+$
+\end{center}
+\subsection{Example of a Contradiction}
+\begin{center}
+$
+s \land \lnot s = \mathbb{T}
+$
+\end{center}
+
+
+
+
+
+
+
+
+\section{Prove Fact t is a statement}
+\section{Prove Lie l is a statement}
+
+
+
+
+
+\section{Remaining 2 Variable Logical Definitions}
+Express explicitly; Express in terms of the above definitions
+\subsection{XOR}
+
+
+
+
+
+
+
+\section{Universality of Logical Expressions}
+\subsection{Universality of Not $\lnot$;\hspace{2mm}Logical Or $\lor$;\hspace{2mm} Logical $\land$}
+
+
+
+
+
+
+
+
+
+\section{Definiton of Argument A}
+\subsection{Set of All Arguments $\mathbb{L}$}
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section*{Appendix}
+
+
+\subsection{English Example of a fact}
+Let $t=$ Five plus five is equal to ten
+\begin{center}
+Five plus five is equal to ten is true\\ \vspace{2mm}
+Flive plus five is equal to ten is a fact
+\end{center}
+
+
+
+\subsection{English Example of a lie}
+Consider the statement five plus five is equal to nine
+\begin{center}
+Five plus five is equal to nine is a false statement\\ \vspace{2mm}
+Five plus five is equal to nine is a lie
+\end{center}
+
+
+\subsection{English Example}
+Let
+\begin{center}
+$s=$ Humans can travel faster than the speed of light.\\ \vspace{2mm}
+$\lnot s=$ Humans can not travel faster than the speed of light.\\ \vspace{2mm}
+$\mathbb{F} \doteq s$\\
+s is false\\ \vspace{2mm}
+$\mathbb{T} \doteq \lnot s$\\
+$\lnot s$ is a fact
+\end{center}
+
+
+
+
+\section{"-ness"}
+Happy is an adjective\\
+Happyiness is a noun\\
+The dog is happy\\
+The dog has happiness\\
+Happiness is a (current or permanent) quality of the dog
+
+\section{is vs is a}
+The cat is a feline\\
+The cat is a member of the set of felines\\
+vs\\
+The cat is hairy\\
+The cat has hair. The cat has the quality of hairyness\\
+vs\\
+The cat is a hairy cat\\
+The cat is a member of the set of cats having the quality of hairyness\\
+
+
+\section{Overloaded "is"}
+Object c is a cat\\
+c = cat\\
+\\
+That cat is a feline\\
+cat = feline?\\
+cat $\Rightarrow$ feline\\
+cat inherits felineness\\
+\\
+That cat is hairy\\
+cat = hairy?\\
+The cat has hairyness; the quality of having hair
+
+
+\section{Criticism of "Is True" and "Is False"}
+Consider true statement t\\
+"Statement t is true" is equivalent to saying "Statement t equals True"\\
+Statement t is not equivalent to True. Statement has the property of truth.\\
+\\
+Consider false statement f\\
+"Statement f is false" is equivalent to saying "Statement f equals False"\\
+False statement f is not equivalent to False. Statement f has the property of falsehood.\\
+
+
+
+
+\section{English Translation of Logical Or $\lor$}
+$b_1$ Logical Or $b_2$ is spoken in English as "at least one of the following is true. $b_1$. $b_2.$"
+\subsection{English Example}
+At least one of the following is true.\\
+Most dogs have four legs.\\
+Two plus three is equal to 5.
+\subsection{Criticism of "Logical Or" In Computer Science}
+In Computer Science, $b_1$ Logical Or $b_2$ is often spoken as "$b_1$ or $b_2$". "$b_1$ or $b_2$" can lead to inconsistent statements.\\
+\begin{center}
+$b_1 = ($int $3 \subset [1,2,3])$\\
+\vspace{2mm}
+$b_2 = ((2 + 2) == 5)$\\
+\end{center}
+\vspace{2mm}
+The following is a valid expression in Computer Science
+\begin{center}
+$
+b_1 \lor b_2 = \mathbb{T}
+$
+\end{center}
+The expression is read in English as "3 is in the list 1 2 3 or 2 plus 2 is equal to 5". The expression is True by definition but $b_1$ or $b_2$
+do not necessarily imply Truth.\\\\
+\begin{center}
+$b_1 = ($int $3 \subset [1,2,3])$\\
+\vspace{2mm}
+$b_2 = ($int $3 \not \subset [1,2,3])$\\
+\end{center}
+\vspace{2mm}
+The following is a valid expression in Computer Science
+\begin{center}
+$
+ b_1 \lor b_2 =  b_1 \lor \lnot b_1 = \mathbb{T}
+$
+\end{center}
+The expression is read in English as "3 is in the list 1 2 3 or 3 is not in the list 1 2 3 is True". The expression is necessarily true.\\
+\\Now consider
+\begin{center}
+$
+ b_1 \land b_2 =  b_1 \land \lnot b_1 = \mathbb{F}
+$
+\end{center}
+The expression is read in English as "3 is in the list 1 2 3 and 3 is not in the list 1 2 3 is True". The expression in computer science evaluates to false
+
+
+\section{English Translation of "Exclusive Or" XOR}
+"$b_1$ Exclusive Or $b_2$" is read in English as "Either $b_1$ Or $b_2$"
+\subsection{Example}
+Either\\
+Three plus four is equal to seven\\
+or\\
+Three plus four is equal to eight
+\subsection{Criticism of English Expression of "Exclusive Or"}
+"Exclusive Or" is often expressed as "Or" in English.\\
+I can order the salad for lunch\\
+or\\
+I can order tofu for lunch
+
+\section{Commentary on "Logical And"}
+In English, "$b_1$ Logical And $b_2$" is read as "And"
+\subsection{Example}
+Most dogs have four legs\\
+and\\
+Most cats have four legs
+
+
+\section{Criticism logical union, set union, logical and, set and}
+- logical or is a function logical and is a function\\
+- language muks up our understanding\\
+
+Logical or $\lor$ is different from $\cup$
+Logical and $\land$ is different from $\cap$
+
+Logical or, only one has to be true\\
+Logical and, both have to be true --> I'll take the intersection\\
+
+Set and, I'll take bag 1 and bag 2 i'll take both --> I'll take the union\\
+set or, I'll take bag 1 or bag 2 I'll take just one\\
+
+Do we ever confuse set union, set and with logical or, and?\\
+(Don't we describe set union $\cup$ as "or")
+
+
+
+
+
+
+\end{document}

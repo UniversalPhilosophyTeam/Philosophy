@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}                
+\geometry{letterpaper}                 
+\usepackage[parfill]{parskip}        
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{grffile}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{gensymb}
+\usepackage[T1]{fontenc}
+\usepackage[hang,small]{caption}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\graphicspath{ {C:/Users/Nate/Documents/School/EECS351/Nates Discussion Material/Discussion 4} }
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{1,1,1}
+\lstset{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=matlab,
+	basicstyle= \scriptsize,
+	upquote=true,
+	aboveskip={1.5\baselineskip},
+	columns=fixed,
+        	showstringspaces=false,
+        	extendedchars=true,
+        	breaklines=true,
+        	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        	frame=single,
+        	showtabs=false,
+        	showspaces=false,
+        	showstringspaces=false,
+        	identifierstyle=\ttfamily,
+        	keywordstyle=\color[rgb]{0,0,1},
+        	commentstyle=\color[rgb]{0.133,0.545,0.133},
+        	stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+
+\begin{document}
+
+
+\section*{Ch. 1 Logic}
+== is read as "is equal to"\\
+: is read as "satisfying the condition"\\
+$\exists$ is read as exists\\
+$\not \exists$ is read as exists\\
+
+\section{Logical Or $\lor$}
+\subsection{Formal Definition}
+\begin{center}
+$
+\lor = \lor \lbrack{a_i,a_j}\rbrack \equiv 
+$
+\end{center}
+\begin{center}
+$
+\exists a_x \in \{a_i,a_j\} : a_x == True, \hspace{3mm} \lor \lbrack a_i,a_j \rbrack = True
+$
+\end{center}
+\begin{center}
+$
+\not \exists a_x \in \{a_i,a_j\} : a_x == True, \hspace{3mm} \lor \lbrack a_i,a_j \rbrack = False
+$
+\end{center}
+\subsection{Alternate Definition}
+$\lor$ \lbrack{False, False}\rbrack  \hspace{.8mm} = False \\
+ $\lor$ \lbrack{False, True}\rbrack  \hspace{.8mm} = True \\
+ $\lor$ \lbrack{True, False}\rbrack \hspace{.8mm} = True \\
+ $\lor$ \lbrack{True,True}\rbrack   \hspace{.8mm} = True
+
+\section{Logical And $\land$}
+\subsection{Definition}
+\begin{center}
+$
+\land = \land \lbrack{a_i,a_j}\rbrack \equiv 
+$
+\end{center}
+\begin{center}
+$
+\exists a_x \in \{a_i,a_j\} : a_x == False, \hspace{3mm} \land \lbrack a_i,a_j \rbrack = False
+$
+\end{center}
+\begin{center}
+$
+\not \exists a_x \in \{a_i,a_j\} : a_x == False, \hspace{3mm} \land \lbrack a_i,a_j \rbrack = True
+$
+\end{center}
+\subsection{Alternate Definition}
+$\land$ \lbrack{False, False}\rbrack = False \\
+ $\land$ \lbrack{False, True}\rbrack = False \\
+ $\land$ \lbrack{True, False}\rbrack = False \\
+ $\land$ \lbrack{True,True}\rbrack  = True
+
+\section{Law of Non-Contradiction}
+\begin{center}
+Law of Non-Contradiction 
+\end{center}
+
+\subsection{Proof}
+Assumptions\\
+1. Let $a_i \rightarrow$ True, $\hspace{2mm} \forall i$
+\\
+Assertions\\
+2. Suppose $\exists i : \neg a_i \rightarrow$ True\\
+3. $a_i \land \neg a_i \rightarrow \perp$ \hspace{3mm} (implied from 2)\\
+4. $\neg(\exists i : \neg a_i) \rightarrow$ True\\
+\ \ \ $\not \exists i : \neg a_i \rightarrow True$\\
+5. $\therefore a_i = a_i \hspace{3mm} \forall i$
+
+
+\section{Criticism logical union, set union, logical and, set and}
+Verify on Wiki \\
+- logical or is a function logical and is a function\\
+- language muks up our understanding\\
+
+Logical or $\lor$ is different from $\cup$
+Logical and $\land$ is different from $\cap$
+
+Logical or, only one has to be true\\
+Logical and, both have to be true --> I'll take the intersection\\
+
+Set and, I'll take bag 1 and bag 2 i'll take both --> I'll take the union\\
+set or, I'll take bag 1 or bag 2 I'll take just one\\
+
+Do we ever confuse set union, set and with logical or, and?\\
+(Don't we describe set union $\cup$ as "or")
+
+\section{Appendix}
+$
+\lbrack1\rbrack \hspace{2mm} https://kapeli.com/cheat\_sheets/LaTeX\_Math\_Symbols.docset\\
+$
+$
+/Contents/Resources/Documents/index
+$
+
+\end{document}
