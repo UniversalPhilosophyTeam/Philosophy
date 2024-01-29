@@ -1,0 +1,623 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{mathabx,graphicx}
+
+\def \attrdef{\atop}
+\def \hasattrdef{$\rlap{$\supseteq$}$\tiny $a \attr $ \normalsize}
+\def \isattrof{$\rlap{$\supseteq$}$\tiny $a \attr $ \normalsize}
+\def \defined{{def}\atop{=}}
+\begin{document}
+
+
+
+
+\section{Equality}
+\subsection{Definition}
+\begin{center}
+$a = a$
+\end{center}
+\subsection{English Translation}
+\begin{center}
+$a$ $equals$ $a$
+\end{center}
+
+
+
+
+
+
+\section{Fact}
+\begin{center}
+$
+"fact" = \dot{t} := t:
+$
+\\ \vspace{2mm}
+$t$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{T}$
+\end{center}
+
+\subsection{English Translation}
+\begin{center}
+$Definition$ $of$ $fact$ 
+\\ \vspace{2mm}
+$fact$ $\dot{t}$ $satisfies$ $the$ $condition$ $truth$ $is$ $an$ $attribute$ $of$ $\dot{t}$
+\\ \vspace{4mm}
+$Alternate$ $Definition$ $of$ $fact$ 
+\\ \vspace{2mm}
+$fact$ $\dot{t}$ $satisfies$ $the$ $condition$ $\dot{t}$ $is$ $true$ 
+\end{center}
+
+
+
+
+
+
+
+
+\section{Lie}
+\begin{center}
+$
+"lie" = \dot{f} := f:
+$
+\\ \vspace{2mm}
+$f$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{F}$
+\end{center}
+
+
+\subsection{English Translation}
+\begin{center}
+$Definition$ $of$ $lie$ 
+\\ \vspace{2mm}
+$lie$ $\dot{f}$ $satisfies$ $the$ $condition$ $\dot{f}$ $is$ $false$
+\\ \vspace{4mm}
+$Alternate$ $Definition$ $of$ $lie$ 
+\\ \vspace{2mm}
+$lie$ $\dot{f}$ $satisfies$ $the$ $condition$ $falseness$ $is$ $an$ $attribute$ $of$ $\dot{f}$
+\end{center}
+
+
+
+
+
+
+
+\section{Thing}
+\begin{center}
+$
+"Thing" = \dot{s} := s:
+$
+\\ \vspace{2mm}
+$s$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\exists}$
+\\ \vspace{2mm}
+\end{center}
+
+
+
+\subsection{English Translation}
+\begin{center}
+$Definition$ $of$ $thing$
+\\ \vspace{2mm}
+$thing$ $\dot{s}$ $satisfies$ $the$ $condition$ $\dot{s}$ $exists$ 
+\\ \vspace{4mm}
+$Alternate$ $Definition$ $of$ $thing$ 
+\\ \vspace{2mm}
+$thing$ $\dot{s}$ $satisfies$ $the$ $condition$ $\dot{s}$ $is$ $existant$
+\end{center}
+
+
+
+
+
+
+\section{Nothing}
+\begin{center}
+$
+"nothing" = \dot{n} := n:
+$
+\\ \vspace{2mm}
+$n$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\emptyset}$
+\\ \vspace{2mm}
+\end{center}
+
+
+
+\subsection{English Translation}
+\begin{center}
+$Definition$ $of$ $nothing$
+\\ \vspace{2mm}
+$nothing$ $\dot{n}$ $satisfies$ $the$ $condition$ $\dot{n}$ $does$ $not$ $exist$ 
+\\ \vspace{4mm}
+$Alternate$ $Definition$ $of$ $thing$ 
+\\ \vspace{2mm}
+$thing$ $\dot{s}$ $satisfies$ $the$ $condition$ $nullity$ $is$ $an$ $attribute$ $of$ $\dot{n}$
+\end{center}
+
+
+
+
+
+
+\section{Count of}
+\begin{center}
+$
+||[a] = |a|$ 
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+|\dot{s}| = 1
+$
+\\ \vspace{4mm}
+$
+|\dot{n}| = 0
+$
+\end{center}
+
+
+
+\subsection{English Translation}
+\begin{center}
+$Definition$ $of$ $count$ $of$ $a$
+\\ \vspace{2mm}
+$the$ $count$ $of$ $thing$ $\dot{s}$ $is$ $one$
+\\ \vspace{2mm}
+$the$ $count$ $of$ $nothing$ $\dot{n}$ $is$ $zero$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Judgement of}
+\begin{center}
+$
+||[a] = |a|$ 
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+|\dot{t}| = \dot{T}
+$
+\\ \vspace{4mm}
+$
+|\dot{f}| = \dot{F}
+$
+\end{center}
+
+
+
+\subsection{English Translation}
+\begin{center}
+$Definition$ $of$ $judgement$ $of$ $a$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $fact$ $\dot{t}$ $is$ $True$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $lie$ $\dot{f}$ $is$ $False$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\section{Union of}
+\begin{center}
+$
+\cup[a;b] = a \cup b = a,b
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+s_x \cup s_y = s_x, s_y
+$
+\\ \vspace{2mm}
+$
+s \cup n = s
+$
+\\ \vspace{2mm}
+$
+n \cup s = s
+$
+\\ \vspace{2mm}
+$
+n_x \cup n_y = n
+$
+\end{center}
+
+
+
+\subsection{English Translation}
+\begin{center}
+$Definition$ $of$ $a$ $union$ $b$
+\\ \vspace{2mm}
+$the$ $union$ $of$ $thing$ $s_x$ $with$ $thing$ $s_y$ $is$ $thing$ $s_x$ $and$ $thing$ $s_y$
+\\ \vspace{2mm}
+$the$ $union$ $of$ $something$ $s$ $with$ $nothing$ $n$ $is$ $thing$ $s$
+\\ \vspace{2mm}
+$the$ $union$ $of$ $nothing$ $n$ $with$ $thing$ $s$ $is$ $thing$ $s$
+\\ \vspace{2mm}
+$the$ $union$ $of$ $nothing$ $n_x$ $with$ $nothing$ $n_y$ $is$ $nothing$ $n$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\section{Deletion of}
+\begin{center}
+$
+/[a;b] = a / b
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+s_x \hspace{1mm}/\hspace{1mm} s_x = n
+$
+\\ \vspace{2mm}
+$
+s \hspace{1mm}/\hspace{1mm} n = s
+$
+\end{center}
+
+
+
+\subsection{English Translation}
+\begin{center}
+\vspace{1.5mm}
+$Definition$ $of$ $deletion$ $of$ $b$ $from$ $a$
+\\ \vspace{2mm}
+$The$ $deletion$ $of$ $s_x$ $from$ $s_x$ $equals$ $nothing$ $n$
+\\ \vspace{2mm}
+$The$ $deletion$ $of$ $nothing$ $n$ $from$ $thing$ $s$ $equals$ $thing$ $s$
+\end{center}
+
+
+
+
+
+
+
+
+\section{Mutuality of}
+\begin{center}
+$
+\cap[a;b] = a \cap b
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+s_x \cap s_x = s_x
+$
+\\ \vspace{4mm}
+$
+s_x \cap s_y = n
+$
+\\ \vspace{4mm}
+$
+s \cap n = n
+$
+\\ \vspace{4mm}
+$
+n_x\cap n_y = n
+$
+\end{center}
+
+
+
+\subsection{English Translation}
+\begin{center}
+\vspace{1.5mm}
+$Definition$ $of$ $mutuality$ $of$ $a$ $and$ $b$
+\\ \vspace{2mm}
+$The$ $mutuality$ $of$ $thing$ $s_x$ $and$ $thing$ $s_x$ $is$ $thing$ $s_x$
+\\ \vspace{2mm}
+$The$ $mutuality$ $of$ $thing$ $s_x$ $and$ $thing$ $s_y$ $is$ $nothing$ $n$
+\\ \vspace{2mm}
+$The$ $mutuality$ $of$ $thing$ $s$ $and$ $nothing$ $n$ $is$ $nothing$ $n$
+\\ \vspace{2mm}
+$The$ $mutuality$ $of$ $nothing$ $n_x$ $and$ $nothing$ $n_y$ $is$ $nothing$ $n$
+\end{center}
+
+
+
+
+
+
+\section{And}
+\begin{center}
+$
+\&[a;b] = a \hspace{1mm}\&\hspace{1mm} b
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+t_x \hspace{1mm}\&\hspace{1mm} t_y = t_{x,y}
+$
+\\ \vspace{4mm}
+$
+t_x \hspace{1mm}\&\hspace{1mm} f_y = f_{x,y}
+$
+\\ \vspace{4mm}
+$
+f_x \hspace{1mm}\&\hspace{1mm} t_y = f_{x,y}
+$
+\\ \vspace{4mm}
+$
+f_x \hspace{1mm}\&\hspace{1mm} f_y = f_{x,y}
+$
+\end{center}
+
+
+
+
+\subsection{English Translation}
+\begin{center}
+\vspace{2mm}
+$Definition$ $of$ $a$ $and$ $b$
+\\ \vspace{2mm}
+$fact$ $t_x$ $and$ $fact$ $t_y$ $is$ $fact$ $t_{x\hspace{1mm}\&\hspace{1mm}y}$
+\\ \vspace{2mm}
+$fact$ $t_x$ $and$ $lie$ $f_y$ $is$ $lie$ $f_{x\hspace{1mm}\&\hspace{1mm}y}$
+\\ \vspace{2mm}
+$lie$ $f_x$ $and$ $fact$ $t_y$ $is$ $lie$ $f_{x\hspace{1mm}\&\hspace{1mm}y}$
+\\ \vspace{2mm}
+$lie$ $t_x$ $and$ $lie$ $f_y$ $is$ $lie$ $f_{x\hspace{1mm}\&\hspace{1mm}y}$
+\end{center}
+
+
+
+
+
+
+
+
+
+\section{Or}
+\begin{center}
+$
+||[a;b] = a \hspace{1mm}||\hspace{1mm} b
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+t_x || t_y = t_{x|y}
+$
+\\ \vspace{4mm}
+$
+t_x || f_y = t_{x|y}
+$
+\\ \vspace{4mm}
+$
+f_x || t_y = t_{x|y}
+$
+\\ \vspace{4mm}
+$
+f_x || f_y = f_{x|y}
+$
+\end{center}
+
+
+\subsection{English Translation}
+\begin{center}
+\vspace{2mm}
+$Definition$ $of$ $a$ $and$ $b$
+\\ \vspace{2mm}
+$fact$ $t_x$ $or$ $fact$ $t_y$ $is$ $fact$ $t_{x|y}$
+\\ \vspace{2mm}
+$fact$ $t_x$ $or$ $lie$ $f_y$ $is$ $fact$ $f_{x|y}$
+\\ \vspace{2mm}
+$lie$ $f_x$ $or$ $fact$ $t_y$ $is$ $fact$ $f_{x|y}$
+\\ \vspace{2mm}
+$lie$ $t_x$ $or$ $lie$ $f_y$ $is$ $lie$ $f_{x|y}$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\section{Either or}
+\begin{center}
+$
+\oplus[a;b] = a \oplus b
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+t_x \oplus t_y = f_{x\bigcirc  y}
+$
+\\ \vspace{4mm}
+$
+t_x \oplus f_y = t_{x\bigcirc y}
+$
+\\ \vspace{4mm}
+$
+f_x \oplus t_y = t_{x\bigcirc y}
+$
+\\ \vspace{4mm}
+$
+f_x \oplus f_y = f_{x\bigcirc y}
+$
+\end{center}
+
+
+
+
+
+\subsection{English Translation}
+\begin{center}
+\vspace{2mm}
+$Definition$ $of$ $either$ $a$ $or$ $b$
+\\ \vspace{2mm}
+$either$ $fact$ $t_x$ $or$ $fact$ $t_y$ $is$ $lie$ $f_{x\bigcirc y}$
+\\ \vspace{2mm}
+$either$ $fact$ $t_x$ $or$ $lie$ $f_y$ $is$ $fact$ $t_{x\bigcirc y}$
+\\ \vspace{2mm}
+$either$ $lie$ $f_x$ $or$ $fact$ $t_y$ $is$ $fact$ $t_{x\bigcirc y}$
+\\ \vspace{2mm}
+$either$ $lie$ $t_x$ $or$ $lie$ $f_y$ $is$ $lie$ $f_{x\bigcirc y}$
+\end{center}
+
+
+
+
+
+
+\section{Element}
+\vspace{1mm}
+\begin{center}
+$"element"$ $= e := \tilde{e}:$
+\\ \vspace{2mm}
+$\tilde{e}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\exists}$ $\oplus$ $\tilde{e}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\emptyset}$
+\end{center}
+
+
+
+\section{Alternate Definition}
+\vspace{1mm}
+\begin{center}
+$"element"$ $= e := \tilde{e}:$
+\\ \vspace{2mm}
+$\tilde{e}$ $\equiv$ $\dot{s} \oplus \tilde{e} \equiv$ $\dot{n}$
+\end{center}
+
+
+
+
+
+
+\subsection{English Translation} 
+\vspace{2mm}
+\begin{center}
+\vspace{1mm}
+$Definition$ $of$ $an$ $element$
+\\ \vspace{2mm}
+$either$ $element$ $e$ $exists$ $or$ $element$ $e$ $is$ $null$
+\\ \vspace{2mm}
+$Alternate$ $Definition$ $of$ $an$ $element$
+\\ \vspace{2mm}
+$either$ $element$ $\tilde{e}$ $is$ $a$ $thing$ $t$ $or$ $element$ $\tilde{e}$ $is$ $a$ $nothing$ $n$
+\end{center}
+
+
+
+
+
+
+\section{Bool}
+\vspace{1mm}
+\begin{center}
+$"bool"$ $= b := \tilde{b}:$
+\\ \vspace{2mm}
+$\tilde{b}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{T}$ $\oplus$ $\tilde{b}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{F}$
+\end{center}
+
+
+
+\section{Alternate Definition}
+\vspace{1mm}
+\begin{center}
+$"bool"$ $= b := \tilde{b}:$
+\\ \vspace{2mm}
+$\tilde{b}$ $\equiv$ $\dot{t} \oplus \tilde{b} \equiv$ $\dot{f}$
+\end{center}
+
+
+
+
+
+
+\subsection{English Translation} 
+\vspace{2mm}
+\begin{center}
+\vspace{1mm}
+$Definition$ $of$ $a$ $b$ $bool$
+\\ \vspace{2mm}
+$either$ $bool$ $b$ $is$ $true$ $or$ $bool$ $b$ $is$ $false$
+\\ \vspace{2mm}
+$Alternate$ $Definition$ $of$ $a$ $bool$
+\\ \vspace{2mm}
+$either$ $bool$ $b$ $is$ $a$ $fact$ $t$ $or$ $bool$ $b$ $is$ $a$ $lie$ $f$
+\end{center}
+
+
+
+
+
+
+
+
+\section{Set}
+\begin{center}
+$
+"Set" = S := 
+$
+\end{center}
+\subsection{English Translation}
+
+
+
+
+\section{Argument}
+\subsection{English Translation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
