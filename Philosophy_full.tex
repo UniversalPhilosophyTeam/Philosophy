@@ -7,17 +7,30 @@
 \def \hasattrdef{$\rlap{$\supseteq$}$\tiny $a \attr $ \normalsize}
 \def \isattrof{$\rlap{$\supseteq$}$\tiny $a \attr $ \normalsize}
 \def \defined{{def}\atop{=}}
+\def \outputequals{ \hspace{1mm} { {\rightarrow \atop \leftarrow} \atop = } \hspace{1mm} }
+\def \outputs{ \hspace{1mm} {\rightarrow \atop =} \hspace{1mm} }
+\def \invertable{ { \rightarrow \atop \leftarrow } }
+\def \iffdef { { def \atop \iff} }
+\def \equivdef { { def \atop \equiv} }
+\def \outputdef{ \hspace{1mm} { {def \atop \rightarrow} \atop = } \hspace{1mm} }
+\def \conditiondef{  { def \atop := } }
+\def \and { { \hspace{1mm} \& \hspace{1mm} } }
+
 \begin{document}
 
 
 
 
-\section{Equality}
-\subsection{Definition}
+
+
+\section{equals}
 \begin{center}
 $a = a$
 \end{center}
-\subsection{English Translation}
+
+\subsection{english translation}
+\vspace{2mm}
+Axiom of equality
 \begin{center}
 $a$ $equals$ $a$
 \end{center}
@@ -27,52 +40,58 @@ $a$ $equals$ $a$
 
 
 
-\section{Fact}
-\begin{center}
-$
-"fact" = \dot{t} := t:
-$
-\\ \vspace{2mm}
-$t$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{T}$
-\end{center}
 
-\subsection{English Translation}
+
+
+
+
+
+
+
+
+\newpage
+\section{fact; lie; judgement of a fact; judgement of a lie}
+\vspace{1mm}
 \begin{center}
-$Definition$ $of$ $fact$ 
-\\ \vspace{2mm}
-$fact$ $\dot{t}$ $satisfies$ $the$ $condition$ $truth$ $is$ $an$ $attribute$ $of$ $\dot{t}$
+$
+\dot{t} \equiv fact
+$
 \\ \vspace{4mm}
-$Alternate$ $Definition$ $of$ $fact$ 
-\\ \vspace{2mm}
-$fact$ $\dot{t}$ $satisfies$ $the$ $condition$ $\dot{t}$ $is$ $true$ 
-\end{center}
-
-
-
-
-
-
-
-
-\section{Lie}
-\begin{center}
 $
-"lie" = \dot{f} := f:
+\outputdef
 $
-\\ \vspace{2mm}
-$f$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{F}$
-\end{center}
-
-
-\subsection{English Translation}
-\begin{center}
-$Definition$ $of$ $lie$ 
-\\ \vspace{2mm}
-$lie$ $\dot{f}$ $satisfies$ $the$ $condition$ $\dot{f}$ $is$ $false$
 \\ \vspace{4mm}
-$Alternate$ $Definition$ $of$ $lie$ 
+$
+| \dot{t} |^{TF} \outputs \dot{T}
+$
+\\ \vspace{6mm}
+$
+\dot{f} \equiv lie
+$
+\\ \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+| \dot{f} |^{TF} \outputs \dot{F}
+$
+\end{center}
+
+
+
+
+
+\subsection{english translation}
+\vspace{1mm}
+\begin{center}
+$definition$ $of$ $a$ $fact$
 \\ \vspace{2mm}
-$lie$ $\dot{f}$ $satisfies$ $the$ $condition$ $falseness$ $is$ $an$ $attribute$ $of$ $\dot{f}$
+$the$ $judgement$ $of$ $a$ $fact$ $is$ $true$ 
+\\ \vspace{6mm}
+$definition$ $of$ $a$ $lie$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $a$ $lie$ $is$ $false$ 
 \end{center}
 
 
@@ -81,7 +100,899 @@ $lie$ $\dot{f}$ $satisfies$ $the$ $condition$ $falseness$ $is$ $an$ $attribute$ 
 
 
 
-\section{Thing}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{thing; nothing; count of a thing, count of a nothing}
+\vspace{1mm}
+\begin{center}
+$
+\dot{s} \equiv thing
+$
+\\ \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+|\dot{s}| \outputs 1
+$
+\\ \vspace{6mm}
+$
+\dot{n} \equiv nothing
+$
+\\ \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+|\dot{n}| \outputs 0
+$
+\end{center}
+
+
+
+\subsection{english translation}
+\vspace{1mm}
+\begin{center}
+$definition$ $of$ $a$ $thing$
+\\ \vspace{2mm}
+$the$ $count$ $of$ $a$ $thing$ $is$ $one$
+\\ \vspace{6mm}
+$definition$ $of$ $a$ $nothing$
+\\ \vspace{2mm}
+$the$ $count$ $of$ $a$ $nothing$ $is$ $zero$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Is Equal To}
+\begin{center}
+$
+a == b
+$
+\\ \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+(a == a) \outputs \dot{T}
+$
+\\ \vspace{4mm}
+$
+(a == b) \outputs \dot{F}
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Greater than}
+\begin{center}
+$
+a > b
+$
+\\  \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+1 > 0 \outputs \dot{T}
+$
+\\ \vspace{4mm}
+$
+0 > 1 \outputs \dot{F}
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\section{Less than}
+\begin{center}
+$
+a < b
+$
+\\  \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+1 < 0 \outputs \dot{F}
+$
+\\ \vspace{4mm}
+$
+0 > 1 \outputs \dot{T}
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{and}
+\begin{center}
+$
+a \hspace{1mm}\and \hspace{1mm} b
+$
+\\ \vspace{4mm}
+$
+\equivdef
+$
+\\ \vspace{4mm}
+$
+\dot{f}_a \hspace{1mm} \and \hspace{1mm} \dot{f}_b \equivdef \dot{f}_c
+$
+\\ \vspace{4mm}
+$
+\dot{f}_a \hspace{1mm} \and \hspace{1mm} \dot{t}_b  \equivdef \dot{f}_c
+$
+\\ \vspace{4mm}
+$
+\dot{t}_a \hspace{1mm} \and \hspace{1mm} \dot{f}_b   \equivdef \dot{f}_c
+$
+\\ \vspace{4mm}
+$
+\dot{t}_a \hspace{1mm} \and \hspace{1mm} \dot{t}_b \equivdef \dot{t}_c
+$
+\end{center}
+
+
+
+
+
+
+
+\subsection{english translation}
+\begin{center}
+\vspace{2mm}
+$Definition$ $of$ $a$ $and$ $b$ $is$ $c$
+\\ \vspace{2mm}
+$a$ $lie$ $and$ $a$ $lie$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$a$ $lie$ $and$ $a$ $fact$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$a$ $fact$ $and$ $a$ $lie$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$a$ $fact$ $and$ $a$ $fact$ $is$ $a$ $fact$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{judgment of a and b}
+\begin{center}
+$
+|a \hspace{1mm}\and \hspace{1mm} b|
+$
+\\ \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+|f_a \hspace{1mm}\and \hspace{1mm} f_b|  \outputs \dot{F}
+$
+\\ \vspace{4mm}
+$
+|f_a \hspace{1mm}\and \hspace{1mm} t_b| \outputs \dot{F}
+$
+\\ \vspace{4mm}
+$
+|t_a \hspace{1mm}\and \hspace{1mm} f_b| \outputs \dot{F}
+$
+\\ \vspace{4mm}
+$
+|t_a \hspace{1mm}\and \hspace{1mm} t_b| \outputs \dot{T}
+$
+\end{center}
+
+
+
+
+\subsection{english translation}
+\begin{center}
+\vspace{2mm}
+$Definition$ $of$ $a$ $and$ $b$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $a$ $lie$ $and$ $a$ $lie$ $is$ $false$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $a$ $lie$ $and$ $a$ $fact$ $is$ $false$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $a$ $fact$ $and$ $a$ $lie$ $is$ $false$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $a$ $fact$ $and$ $a$ $fact$ $is$ $true$
+\end{center}
+
+
+
+\subsection{Notation}
+Let
+\begin{center}
+$
+|a \hspace{1mm}\and \hspace{1mm} b| = a \land b
+$
+\end{center}
+
+
+
+
+\subsection{judgement of a and b is commutative}
+\vspace{2mm}
+Prove
+\begin{center}
+$
+a \land b \outputequals b \land a
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{or}
+\begin{center}
+$
+a \hspace{1mm} || \hspace{1mm} b
+$
+\\ \vspace{4mm}
+$
+\equivdef
+$
+\\ \vspace{4mm}
+$
+\dot{f}_a \hspace{1mm} || \hspace{1mm} \dot{f}_b \equivdef \dot{f}_c
+$
+\\ \vspace{4mm}
+$
+\dot{f}_a \hspace{1mm} || \hspace{1mm} \dot{t}_b  \equivdef \dot{t}_c
+$
+\\ \vspace{4mm}
+$
+\dot{t}_a \hspace{1mm} || \hspace{1mm} \dot{f}_b   \equivdef \dot{t}_c
+$
+\\ \vspace{4mm}
+$
+\dot{t}_a \hspace{1mm} || \hspace{1mm} \dot{t}_b \equivdef \dot{t}_c
+$
+\end{center}
+
+
+
+
+
+
+
+\subsection{english translation}
+\begin{center}
+\vspace{2mm}
+$Definition$ $of$ $a$ $and$ $b$ $is$ $c$
+\\ \vspace{2mm}
+$a$ $lie$ $and$ $a$ $lie$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$a$ $lie$ $and$ $a$ $fact$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$a$ $fact$ $and$ $a$ $lie$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$a$ $fact$ $and$ $a$ $fact$ $is$ $a$ $fact$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{judgment of a or b}
+\begin{center}
+$
+|\hspace{1mm} a \hspace{1mm}|| \hspace{1mm} b \hspace{1mm}|
+$
+\\ \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+|\hspace{1mm} f_a \hspace{1mm}|| \hspace{1mm} f_b \hspace{1mm}|  \outputs \dot{F}
+$
+\\ \vspace{4mm}
+$
+| \hspace{1mm} f_a \hspace{1mm}|| \hspace{1mm} t_b \hspace{1mm}| \outputs \dot{T}
+$
+\\ \vspace{4mm}
+$
+| \hspace{1mm} t_a \hspace{1mm}|| \hspace{1mm} f_b \hspace{1mm}| \outputs \dot{T}
+$
+\\ \vspace{4mm}
+$
+| \hspace{1mm}t_a \hspace{1mm}|| \hspace{1mm} t_b \hspace{1mm}| \outputs \dot{T}
+$
+\end{center}
+
+
+
+
+\subsection{english translation}
+\begin{center}
+\vspace{2mm}
+$Definition$ $of$ $a$ $and$ $b$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $a$ $lie$ $and$ $a$ $lie$ $is$ $false$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $a$ $lie$ $and$ $a$ $fact$ $is$ $false$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $a$ $fact$ $and$ $a$ $lie$ $is$ $false$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $a$ $fact$ $and$ $a$ $fact$ $is$ $true$
+\end{center}
+
+
+
+\subsection{Notation}
+Let
+\begin{center}
+$
+|a \hspace{1mm}|| \hspace{1mm} b| = a \lor b
+$
+\end{center}
+
+
+
+
+\subsection{judgement of a or b is commutative}
+\vspace{2mm}
+Prove
+\begin{center}
+$
+a \lor b \outputequals b \lor a
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{either a or b}
+\begin{center}
+$
+a \hspace{1mm} | \hspace{1mm} b
+$
+\\ \vspace{4mm}
+$
+\equivdef
+$
+\\ \vspace{4mm}
+$
+\dot{f}_a \hspace{1mm} | \hspace{1mm} \dot{f}_b \equivdef \dot{f}_c
+$
+\\ \vspace{4mm}
+$
+\dot{f}_a \hspace{1mm} | \hspace{1mm} \dot{t}_b  \equivdef \dot{t}_c
+$
+\\ \vspace{4mm}
+$
+\dot{t}_a \hspace{1mm} | \hspace{1mm} \dot{f}_b   \equivdef \dot{t}_c
+$
+\\ \vspace{4mm}
+$
+\dot{t}_a \hspace{1mm} | \hspace{1mm} \dot{t}_b \equivdef \dot{f}_c
+$
+\end{center}
+
+
+
+
+
+
+
+\subsection{english translation}
+\begin{center}
+\vspace{2mm}
+$Definition$ $of$ $a$ $and$ $b$ $is$ $c$
+\\ \vspace{2mm}
+$a$ $lie$ $and$ $a$ $lie$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$a$ $lie$ $and$ $a$ $fact$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$a$ $fact$ $and$ $a$ $lie$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$a$ $fact$ $and$ $a$ $fact$ $is$ $a$ $fact$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{judgment of either a or b}
+\begin{center}
+$
+|\hspace{1mm} a \hspace{1mm}| \hspace{1mm} b \hspace{1mm}|
+$
+\\ \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+|\hspace{1mm} f_a \hspace{1mm}| \hspace{1mm} f_b \hspace{1mm}|  \outputs \dot{F}
+$
+\\ \vspace{4mm}
+$
+| \hspace{1mm} f_a \hspace{1mm}| \hspace{1mm} t_b \hspace{1mm}| \outputs \dot{T}
+$
+\\ \vspace{4mm}
+$
+| \hspace{1mm} t_a \hspace{1mm}| \hspace{1mm} f_b \hspace{1mm}| \outputs \dot{T}
+$
+\\ \vspace{4mm}
+$
+| \hspace{1mm}t_a \hspace{1mm}| \hspace{1mm} t_b \hspace{1mm}| \outputs \dot{F}
+$
+\end{center}
+
+
+
+
+\subsection{english translation}
+\begin{center}
+\vspace{2mm}
+$Definition$ $of$ $a$ $and$ $b$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $either$ $a$ $lie$ $or$ $a$ $lie$ $is$ $false$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $either$ $a$ $lie$ $and$ $a$ $fact$ $is$ $true$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $either$ $a$ $fact$ $or$ $a$ $lie$ $is$ $true$
+\\ \vspace{2mm}
+$the$ $judgement$ $of$ $either$ $a$ $fact$ $or$ $a$ $fact$ $is$ $false$
+\end{center}
+
+
+
+\subsection{Notation}
+Let
+\begin{center}
+$
+|\hspace{1mm} a \hspace{1mm}| \hspace{1mm} b \hspace{1mm}| = a \odot b
+$
+\end{center}
+
+
+
+
+\subsection{judgement of a or b is commutative}
+\vspace{2mm}
+Prove
+\begin{center}
+$
+a \odot b \outputequals b \odot a
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{function of}
+\begin{center}
+$
+f[\hspace{.5mm}] \equiv function
+$
+\\ \vspace{2mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+f[x] \outputs y
+$
+\\ \vspace{4mm}
+$
+f[x_a;x_b] \outputs \tilde{y}
+$
+\\ \vspace{4mm}
+$
+f[x_a;x_b;...;x_n] \outputs \hat{y}
+$
+\end{center}
+
+\subsection{english translation}
+\begin{center}
+$definition$ $of$ $function$ $of$ $x$
+\\ \vspace{2mm}
+$function$ $of$ $x$ $ouputs$ $y$
+\\ \vspace{2mm}
+$function$ $of$ $x_a$ $x_b$ $outputs$ $\tilde{y}$
+\\ \vspace{2mm}
+$function$ $of$ $x_a$ $x_b$ $through$ $x_n$ $outputs$ $\hat{y}$
+\\ \vspace{6mm}
+$alternate$ $translation$
+\\ \vspace{2mm}
+$function$ $of$ $x$ $maps$ $to$ $y$
+\\ \vspace{2mm}
+$function$ $of$ $x_a$ $x_b$ $maps$ $to$ $\tilde{y}$
+\\ \vspace{2mm}
+$function$ $of$ $x_a$ $x_b$ $through$ $x_n$ $maps$ $to$ $\hat{y}$
+\\ \vspace{6mm}
+$alternate$ $translation$
+\\ \vspace{2mm}
+$function$ $of$ $x$ $is$ $y$
+\\ \vspace{2mm}
+$function$ $of$ $x_a$ $x_b$ $is$ $\tilde{y}$
+\\ \vspace{2mm}
+$function$ $of$ $x_a$ $x_b$ $through$ $x_n$ $is$ $\hat{y}$
+\end{center}
+
+
+
+
+\subsection{function of a function}
+\vspace{1mm}
+\begin{center}
+$
+g[f[\hspace{.5mm}]] \outputs y
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\end{center}
+
+\subsection{cascading functions}
+\begin{center}
+$
+l[...g[f[a]]...]
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{lie}
+\vspace{1mm}
+\begin{center}
+$
+"lie" \equiv \dot{f}
+$
+\\ \vspace{4mm}
+$
+\outputdef
+$
+\\ \vspace{4mm}
+$
+| \dot{f} | \outputs \dot{F}
+$
+\end{center}
+
+\subsection{english translation}
+\vspace{1mm}
+\begin{center}
+$definition$ $of$ $\dot{f}$ $is$ $a$ $lie$
+\\ \vspace{2mm}
+$judgement$ $of$ $\dot{f}$ $is$ $false$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{thing}
 \begin{center}
 $
 "Thing" = \dot{s} := s:
@@ -93,15 +1004,15 @@ $s$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\exists}$
 
 
 
-\subsection{English Translation}
+\subsection{english translation}
 \begin{center}
 $Definition$ $of$ $thing$
 \\ \vspace{2mm}
-$thing$ $\dot{s}$ $satisfies$ $the$ $condition$ $\dot{s}$ $exists$ 
+$thing$ $\dot{s}$ $is$ $existant$
 \\ \vspace{4mm}
 $Alternate$ $Definition$ $of$ $thing$ 
 \\ \vspace{2mm}
-$thing$ $\dot{s}$ $satisfies$ $the$ $condition$ $\dot{s}$ $is$ $existant$
+$thing$ $\dot{s}$ $satisfies$ $the$ $condition$ $existantness$ $is$ $an$ $attribute$ $of$ $\dot{s}$
 \end{center}
 
 
@@ -109,7 +1020,15 @@ $thing$ $\dot{s}$ $satisfies$ $the$ $condition$ $\dot{s}$ $is$ $existant$
 
 
 
-\section{Nothing}
+
+
+
+
+
+
+
+
+\section{nothing}
 \begin{center}
 $
 "nothing" = \dot{n} := n:
@@ -121,11 +1040,11 @@ $n$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\emptyset}$
 
 
 
-\subsection{English Translation}
+\subsection{english translation}
 \begin{center}
 $Definition$ $of$ $nothing$
 \\ \vspace{2mm}
-$nothing$ $\dot{n}$ $satisfies$ $the$ $condition$ $\dot{n}$ $does$ $not$ $exist$ 
+$nothing$ $\dot{n}$ $satisfies$ $the$ $condition$ $\dot{n}$ $is$ $null$
 \\ \vspace{4mm}
 $Alternate$ $Definition$ $of$ $thing$ 
 \\ \vspace{2mm}
@@ -137,7 +1056,49 @@ $thing$ $\dot{s}$ $satisfies$ $the$ $condition$ $nullity$ $is$ $an$ $attribute$ 
 
 
 
-\section{Count of}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{count of a thing; count of a nothing}
 \begin{center}
 $
 ||[a] = |a|$ 
@@ -147,23 +1108,23 @@ $
 $
 \\ \vspace{4mm}
 $
-|\dot{s}| = 1
+|\dot{s}| \outputs 1
 $
 \\ \vspace{4mm}
 $
-|\dot{n}| = 0
+|\dot{n}| \outputs 0
 $
 \end{center}
 
 
 
-\subsection{English Translation}
+\subsection{english translation}
 \begin{center}
 $Definition$ $of$ $count$ $of$ $a$
 \\ \vspace{2mm}
-$the$ $count$ $of$ $thing$ $\dot{s}$ $is$ $one$
+$the$ $count$ $of$ $thing$ $\dot{s}$ $maps$ $to$ $one$
 \\ \vspace{2mm}
-$the$ $count$ $of$ $nothing$ $\dot{n}$ $is$ $zero$
+$the$ $count$ $of$ $nothing$ $\dot{n}$ $maps$ $to$ $zero$
 \end{center}
 
 
@@ -180,7 +1141,13 @@ $the$ $count$ $of$ $nothing$ $\dot{n}$ $is$ $zero$
 
 
 
-\section{Judgement of}
+
+
+
+
+
+
+\section{judgement of a fact; judgement of a lie}
 \begin{center}
 $
 ||[a] = |a|$ 
@@ -190,17 +1157,17 @@ $
 $
 \\ \vspace{4mm}
 $
-|\dot{t}| = \dot{T}
+|\dot{t}| \rightarrow \dot{T}
 $
 \\ \vspace{4mm}
 $
-|\dot{f}| = \dot{F}
+|\dot{f}| \rightarrow \dot{F}
 $
 \end{center}
 
 
 
-\subsection{English Translation}
+\subsection{english translation}
 \begin{center}
 $Definition$ $of$ $judgement$ $of$ $a$
 \\ \vspace{2mm}
@@ -218,10 +1185,14 @@ $the$ $judgement$ $of$ $lie$ $\dot{f}$ $is$ $False$
 
 
 
-\section{Union of}
+
+
+
+\section{not true; not false}
+\vspace{1mm}
 \begin{center}
 $
-\cup[a;b] = a \cup b = a,b
+\lnot a
 $
 \\ \vspace{4mm}
 $
@@ -229,35 +1200,95 @@ $
 $
 \\ \vspace{4mm}
 $
-s_x \cup s_y = s_x, s_y
+\lnot \dot{T} \outputs \dot{F}
+$
+\\ \vspace{4mm}
+$
+\lnot \dot{F} \outputs \dot{T}
+$
+
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{union of}
+\begin{center}
+$
+\cup[a;b;(...;l)] = a \cup b \hspace{1mm}(\cup c \hspace{1mm} ... \cup l) \hspace{1mm} = \cup_{i=a}^b i \hspace{1mm} \cup ( \cup_{i=c}^l i)
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+n_x \cup n_y \outputs n
 $
 \\ \vspace{2mm}
 $
-s \cup n = s
+n \cup s \outputs s
 $
 \\ \vspace{2mm}
 $
-n \cup s = s
+s \cup n \outputs s
 $
 \\ \vspace{2mm}
 $
-n_x \cup n_y = n
+s_x \cup s_x \outputs s_x
+$
+\\ \vspace{2mm}
+$
+s_x \cup s_y = \cup_{i=x}^y s_i \outputs s_x, s_y = \{s_x,s_y\}
+$
+\\ \vspace{2mm}
+$
+s_x \cup s_y \cup s_z ... \cup s_n = \cup_{i=x}^n s_i \outputs s_x, s_y,s_z...s_n = \{s_x,s_y,s_z,...,s_n\}
 $
 \end{center}
 
 
 
-\subsection{English Translation}
+\subsection{english translation}
+\vspace{1mm}
 \begin{center}
 $Definition$ $of$ $a$ $union$ $b$
 \\ \vspace{2mm}
-$the$ $union$ $of$ $thing$ $s_x$ $with$ $thing$ $s_y$ $is$ $thing$ $s_x$ $and$ $thing$ $s_y$
+$the$ $union$ $of$ $nothing$ $n_x$ $with$ $nothing$ $n_y$ $outputs$ $nothing$ $n$
 \\ \vspace{2mm}
-$the$ $union$ $of$ $something$ $s$ $with$ $nothing$ $n$ $is$ $thing$ $s$
+$the$ $union$ $of$ $nothing$ $n$ $with$ $thing$ $s$ $outputs$ $thing$ $s$
 \\ \vspace{2mm}
-$the$ $union$ $of$ $nothing$ $n$ $with$ $thing$ $s$ $is$ $thing$ $s$
+$the$ $union$ $of$ $something$ $s$ $with$ $nothing$ $n$ $outputs$ $thing$ $s$
 \\ \vspace{2mm}
-$the$ $union$ $of$ $nothing$ $n_x$ $with$ $nothing$ $n_y$ $is$ $nothing$ $n$
+$the$ $union$ $of$ $thing$ $s_x$ $with$ $thing$ $s_y$ $outputs$ $thing$ $s_x$ $and$ $thing$ $s_y$
+\\ \vspace{2mm}
+$the$ $union$ $of$ $thing$ $s_x$ $with$ $thing$ $s_y$ $with$ ... $with$ $s_n$ $outputs$ $thing$ $s_x$ $and$ $thing$ $s_y$ $and$ ... $and$ $s_n$
 \end{center}
 
 
@@ -269,7 +1300,18 @@ $the$ $union$ $of$ $nothing$ $n_x$ $with$ $nothing$ $n_y$ $is$ $nothing$ $n$
 
 
 
-\section{Deletion of}
+
+
+
+
+
+
+
+
+
+
+
+\section{deletion of}
 \begin{center}
 $
 /[a;b] = a / b
@@ -280,24 +1322,24 @@ $
 $
 \\ \vspace{4mm}
 $
-s_x \hspace{1mm}/\hspace{1mm} s_x = n
+s_x \hspace{1mm}/\hspace{1mm} s_x \rightarrow n
 $
 \\ \vspace{2mm}
 $
-s \hspace{1mm}/\hspace{1mm} n = s
+s \hspace{1mm}/\hspace{1mm} n \rightarrow s
 $
 \end{center}
 
 
 
-\subsection{English Translation}
+\subsection{english translation}
 \begin{center}
 \vspace{1.5mm}
 $Definition$ $of$ $deletion$ $of$ $b$ $from$ $a$
 \\ \vspace{2mm}
-$The$ $deletion$ $of$ $s_x$ $from$ $s_x$ $equals$ $nothing$ $n$
+$The$ $deletion$ $of$ $s_x$ $from$ $s_x$ $yields$ $nothing$ $n$
 \\ \vspace{2mm}
-$The$ $deletion$ $of$ $nothing$ $n$ $from$ $thing$ $s$ $equals$ $thing$ $s$
+$The$ $deletion$ $of$ $nothing$ $n$ $from$ $thing$ $s$ $yields$ $thing$ $s$
 \end{center}
 
 
@@ -307,7 +1349,23 @@ $The$ $deletion$ $of$ $nothing$ $n$ $from$ $thing$ $s$ $equals$ $thing$ $s$
 
 
 
-\section{Mutuality of}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{mutuality of}
 \begin{center}
 $
 \cap[a;b] = a \cap b
@@ -318,36 +1376,36 @@ $
 $
 \\ \vspace{4mm}
 $
-s_x \cap s_x = s_x
+s_x \cap s_x \rightarrow s_x
 $
 \\ \vspace{4mm}
 $
-s_x \cap s_y = n
+s_x \cap s_y \rightarrow n
 $
 \\ \vspace{4mm}
 $
-s \cap n = n
+s \cap n \rightarrow n
 $
 \\ \vspace{4mm}
 $
-n_x\cap n_y = n
+n_x\cap n_y \rightarrow n
 $
 \end{center}
 
 
 
-\subsection{English Translation}
+\subsection{english translation}
 \begin{center}
 \vspace{1.5mm}
 $Definition$ $of$ $mutuality$ $of$ $a$ $and$ $b$
 \\ \vspace{2mm}
-$The$ $mutuality$ $of$ $thing$ $s_x$ $and$ $thing$ $s_x$ $is$ $thing$ $s_x$
+$The$ $mutuality$ $of$ $thing$ $s_x$ $and$ $thing$ $s_x$ $yields$ $thing$ $s_x$
 \\ \vspace{2mm}
-$The$ $mutuality$ $of$ $thing$ $s_x$ $and$ $thing$ $s_y$ $is$ $nothing$ $n$
+$The$ $mutuality$ $of$ $thing$ $s_x$ $and$ $thing$ $s_y$ $yields$ $nothing$ $n$
 \\ \vspace{2mm}
-$The$ $mutuality$ $of$ $thing$ $s$ $and$ $nothing$ $n$ $is$ $nothing$ $n$
+$The$ $mutuality$ $of$ $thing$ $s$ $and$ $nothing$ $n$ $yields$ $nothing$ $n$
 \\ \vspace{2mm}
-$The$ $mutuality$ $of$ $nothing$ $n_x$ $and$ $nothing$ $n_y$ $is$ $nothing$ $n$
+$The$ $mutuality$ $of$ $nothing$ $n_x$ $and$ $nothing$ $n_y$ $yields$ $nothing$ $n$
 \end{center}
 
 
@@ -355,48 +1413,45 @@ $The$ $mutuality$ $of$ $nothing$ $n_x$ $and$ $nothing$ $n_y$ $is$ $nothing$ $n$
 
 
 
-\section{And}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{output equals}
 \begin{center}
 $
-\&[a;b] = a \hspace{1mm}\&\hspace{1mm} b
+f[a] \outputequals g[b]
 $
 \\ \vspace{4mm}
 $
-\defined
+\iffdef
 $
 \\ \vspace{4mm}
 $
-t_x \hspace{1mm}\&\hspace{1mm} t_y = t_{x,y}
-$
-\\ \vspace{4mm}
-$
-t_x \hspace{1mm}\&\hspace{1mm} f_y = f_{x,y}
-$
-\\ \vspace{4mm}
-$
-f_x \hspace{1mm}\&\hspace{1mm} t_y = f_{x,y}
-$
-\\ \vspace{4mm}
-$
-f_x \hspace{1mm}\&\hspace{1mm} f_y = f_{x,y}
+f[a] \outputs y \hspace{1mm} \land \hspace{1mm} g[b] \outputs y
 $
 \end{center}
 
 
-
-
-\subsection{English Translation}
+\subsection{english translation}
 \begin{center}
-\vspace{2mm}
-$Definition$ $of$ $a$ $and$ $b$
+$Definition$ $of$ $f$ $of$ $a$ $output$ $equals$ $g$ $of$ $b$
 \\ \vspace{2mm}
-$fact$ $t_x$ $and$ $fact$ $t_y$ $is$ $fact$ $t_{x\hspace{1mm}\&\hspace{1mm}y}$
-\\ \vspace{2mm}
-$fact$ $t_x$ $and$ $lie$ $f_y$ $is$ $lie$ $f_{x\hspace{1mm}\&\hspace{1mm}y}$
-\\ \vspace{2mm}
-$lie$ $f_x$ $and$ $fact$ $t_y$ $is$ $lie$ $f_{x\hspace{1mm}\&\hspace{1mm}y}$
-\\ \vspace{2mm}
-$lie$ $t_x$ $and$ $lie$ $f_y$ $is$ $lie$ $f_{x\hspace{1mm}\&\hspace{1mm}y}$
+$f$ $of$ $a$ $outputs$ $y$ $and$ $g$ $of$ $b$ $outputs$ $y$
 \end{center}
 
 
@@ -407,46 +1462,41 @@ $lie$ $t_x$ $and$ $lie$ $f_y$ $is$ $lie$ $f_{x\hspace{1mm}\&\hspace{1mm}y}$
 
 
 
-\section{Or}
+
+
+
+
+
+
+
+
+
+\section{invertable}
 \begin{center}
 $
-||[a;b] = a \hspace{1mm}||\hspace{1mm} b
+a \invertable b
 $
 \\ \vspace{4mm}
 $
-\defined
+\iffdef
 $
 \\ \vspace{4mm}
 $
-t_x || t_y = t_{x|y}
+\exists f[ \hspace{1mm} ] : f[a] \rightarrow b
 $
-\\ \vspace{4mm}
+\\ \vspace{2mm}
 $
-t_x || f_y = t_{x|y}
+\land
 $
-\\ \vspace{4mm}
+\\ \vspace{2mm}
 $
-f_x || t_y = t_{x|y}
-$
-\\ \vspace{4mm}
-$
-f_x || f_y = f_{x|y}
+\exists g[ \hspace{1mm} ] : g[b] \rightarrow a
 $
 \end{center}
 
 
-\subsection{English Translation}
+\subsection{english translation}
 \begin{center}
-\vspace{2mm}
-$Definition$ $of$ $a$ $and$ $b$
-\\ \vspace{2mm}
-$fact$ $t_x$ $or$ $fact$ $t_y$ $is$ $fact$ $t_{x|y}$
-\\ \vspace{2mm}
-$fact$ $t_x$ $or$ $lie$ $f_y$ $is$ $fact$ $f_{x|y}$
-\\ \vspace{2mm}
-$lie$ $f_x$ $or$ $fact$ $t_y$ $is$ $fact$ $f_{x|y}$
-\\ \vspace{2mm}
-$lie$ $t_x$ $or$ $lie$ $f_y$ $is$ $lie$ $f_{x|y}$
 \end{center}
 
 
@@ -458,87 +1508,49 @@ $lie$ $t_x$ $or$ $lie$ $f_y$ $is$ $lie$ $f_{x|y}$
 
 
 
-\section{Either or}
-\begin{center}
-$
-\oplus[a;b] = a \oplus b
-$
-\\ \vspace{4mm}
-$
-\defined
-$
-\\ \vspace{4mm}
-$
-t_x \oplus t_y = f_{x\bigcirc  y}
-$
-\\ \vspace{4mm}
-$
-t_x \oplus f_y = t_{x\bigcirc y}
-$
-\\ \vspace{4mm}
-$
-f_x \oplus t_y = t_{x\bigcirc y}
-$
-\\ \vspace{4mm}
-$
-f_x \oplus f_y = f_{x\bigcirc y}
-$
-\end{center}
-
-
-
-
-
-\subsection{English Translation}
-\begin{center}
-\vspace{2mm}
-$Definition$ $of$ $either$ $a$ $or$ $b$
-\\ \vspace{2mm}
-$either$ $fact$ $t_x$ $or$ $fact$ $t_y$ $is$ $lie$ $f_{x\bigcirc y}$
-\\ \vspace{2mm}
-$either$ $fact$ $t_x$ $or$ $lie$ $f_y$ $is$ $fact$ $t_{x\bigcirc y}$
-\\ \vspace{2mm}
-$either$ $lie$ $f_x$ $or$ $fact$ $t_y$ $is$ $fact$ $t_{x\bigcirc y}$
-\\ \vspace{2mm}
-$either$ $lie$ $t_x$ $or$ $lie$ $f_y$ $is$ $lie$ $f_{x\bigcirc y}$
-\end{center}
 
 
 
 
 
 
-\section{Element}
+
+
+
+
+
+\section{element}
 \vspace{1mm}
 \begin{center}
 $"element"$ $= e := \tilde{e}:$
 \\ \vspace{2mm}
-$\tilde{e}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\exists}$ $\oplus$ $\tilde{e}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\emptyset}$
+$\tilde{e}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\exists}$ $\odot$ $\tilde{e}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{\emptyset}$
 \end{center}
 
 
+\subsection{english translation}
+\vspace{1mm}
+\begin{center}
+$Definition$ $of$ $element$
+\\ \vspace{2mm}
+$either$ $element$ $e$ $is$ $existant$ $or$ $element$ $e$ $is$ $null$
+\end{center}
 
-\section{Alternate Definition}
+
+\subsection{alternate definition}
 \vspace{1mm}
 \begin{center}
 $"element"$ $= e := \tilde{e}:$
 \\ \vspace{2mm}
-$\tilde{e}$ $\equiv$ $\dot{s} \oplus \tilde{e} \equiv$ $\dot{n}$
+$\tilde{e}$ $\equiv$ $\dot{s} \odot \tilde{e} \equiv$ $\dot{n}$
 \end{center}
 
 
 
-
-
-
-\subsection{English Translation} 
+\subsection{english translation} 
 \vspace{2mm}
 \begin{center}
 \vspace{1mm}
-$Definition$ $of$ $an$ $element$
-\\ \vspace{2mm}
-$either$ $element$ $e$ $exists$ $or$ $element$ $e$ $is$ $null$
-\\ \vspace{2mm}
 $Alternate$ $Definition$ $of$ $an$ $element$
 \\ \vspace{2mm}
 $either$ $element$ $\tilde{e}$ $is$ $a$ $thing$ $t$ $or$ $element$ $\tilde{e}$ $is$ $a$ $nothing$ $n$
@@ -549,37 +1561,56 @@ $either$ $element$ $\tilde{e}$ $is$ $a$ $thing$ $t$ $or$ $element$ $\tilde{e}$ $
 
 
 
-\section{Bool}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{bool}
 \vspace{1mm}
 \begin{center}
 $"bool"$ $= b := \tilde{b}:$
 \\ \vspace{2mm}
-$\tilde{b}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{T}$ $\oplus$ $\tilde{b}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{F}$
+$\tilde{b}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{T}$ $\odot$ $\tilde{b}$ $\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize $\dot{F}$
 \end{center}
 
 
 
-\section{Alternate Definition}
+\subsection{english translation}
+\vspace{1mm}
+\begin{center}
+$Definition$ $of$ $bool$
+\\ \vspace{2mm}
+$either$ $bool$ $b$ $is$ $true$ $or$ $bool$ $b$ $is$ $false$
+\end{center}
+
+
+
+
+\subsection{alternate definition}
 \vspace{1mm}
 \begin{center}
 $"bool"$ $= b := \tilde{b}:$
 \\ \vspace{2mm}
-$\tilde{b}$ $\equiv$ $\dot{t} \oplus \tilde{b} \equiv$ $\dot{f}$
+$\tilde{b}$ $\equiv$ $\dot{t} \odot \tilde{b} \equiv$ $\dot{f}$
 \end{center}
 
 
 
-
-
-
-\subsection{English Translation} 
+\subsection{english translation} 
 \vspace{2mm}
 \begin{center}
 \vspace{1mm}
-$Definition$ $of$ $a$ $b$ $bool$
-\\ \vspace{2mm}
-$either$ $bool$ $b$ $is$ $true$ $or$ $bool$ $b$ $is$ $false$
-\\ \vspace{2mm}
 $Alternate$ $Definition$ $of$ $a$ $bool$
 \\ \vspace{2mm}
 $either$ $bool$ $b$ $is$ $a$ $fact$ $t$ $or$ $bool$ $b$ $is$ $a$ $lie$ $f$
@@ -592,24 +1623,240 @@ $either$ $bool$ $b$ $is$ $a$ $fact$ $t$ $or$ $bool$ $b$ $is$ $a$ $lie$ $f$
 
 
 
-\section{Set}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{inverse judgement}
+\vspace{1mm}
 \begin{center}
 $
-"Set" = S := 
+\lnot|b|
+$
+\\ \vspace{4mm}
+$
+\defined
+$
+\\ \vspace{4mm}
+$
+\lnot|\dot{t}| \outputequals \lnot \dot{T} \outputs \dot{F}
+$
+\\ \vspace{2mm}
+$
+\lnot|\dot{f}| \outputequals \lnot \dot{F} \outputs \dot{T}
 $
 \end{center}
-\subsection{English Translation}
 
 
 
 
-\section{Argument}
-\subsection{English Translation}
+\subsection{english translation}
+\vspace{1mm}
+\begin{center}
+\end{center}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{set}
+\begin{center}
+$
+"Set" = S := \tilde{S}:
+$
+\\ \vspace{2mm}
+$
+\tilde{S} \equiv e
+$
+\\ \vspace{2mm}
+$
+\odot
+$
+\\ \vspace{2mm}
+$
+\tilde{S}$ $\outputequals$ $s_1 \cup s_2 \cup ... \cup s_N = \cup_{i=1}^{N}e_i
+$
+\end{center}
+
+
+\subsection{english translation}
+\vspace{1mm}
+\begin{center}
+$Definition$ $of$ $Set$
+\\ \vspace{2mm}
+$either$ $set$ $S$ $is$ $an$ $element$
+\\ \vspace{2mm}
+$or$ $set$ $S$ $is$ $fuctionally$ $equivalent$ $to$ $union$ $of$ $element$ $e_1$ $with$ $e_2$ $with$ $...$ $with$ $e_N$
+\end{center}
+
+
+
+\subsection{set notation}
+\begin{center}
+$
+S = \{s_1,s_2,...,s_N\}
+$
+\end{center}
+
+
+
+
+
+\section{count of a set}
+\vspace{1mm}
+\begin{center}
+$
+||[S] = |S|
+$
+\\ \vspace{2mm}
+$
+\defined
+$
+\\ \vspace{2mm}
+$
+|e| \rightarrow |e|
+$
+\\ \vspace{2mm}
+$
+|\{s_1,s_2,...,s_N\}| \rightarrow N
+$
+\end{center}
+
+
+
+\section{there exists}
+\section{for all}
+\section{not exists}
+
+
+
+
+\section{infinity}
+\vspace{1mm}
+\begin{center}
+$"infinity"$ = $\infty := \tilde{S}:$
+\\ \vspace{2mm}
+$
+\tilde{S}$ $\outputequals$ $e_1 \cup e_2 \cup ...
+$
+\end{center}
+
+
+
+
+
+
+\subsection{english translation}
+\vspace{1mm}
+\begin{center}
+$Definition$ $of$ $infinity$
+\\ \vspace{2mm}
+$infinity$ $\infty$ $is$ $functionally$ $equivalent$ $to$ $union$ $of$ $e_1$ $with$ $e_2$ $with$ ...
+\end{center}
+
+
+
+
+
+\subsection{infinity notation}
+\vspace{1mm}
+\begin{center}
+$
+\infty = \{e_1,e_2,...)
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\section{argument}
+\vspace{1mm}
+\begin{center}
+$
+"Argument" = A := \tilde{A}:
+$
+\\ \vspace{2mm}
+$
+\tilde{A} \equiv b
+$
+\\ \vspace{2mm}
+$
+\odot
+$
+\\ \vspace{2mm}
+$
+\tilde{A}$ $\outputequals$ $b_1 \cup b_2 \cup ... b_N
+$
+\end{center}
+
+
+
+\subsection{english translation}
+\vspace{1mm}
+\begin{center}
+$Definition$ $of$ $Argument$
+\\ \vspace{2mm}
+$either$ $argument$ $A$ $is$ $a$ $bool$
+\\ \vspace{2mm}
+$or$ $A$ $is$ $functionally$ $equivalent$ $to$ $union$ $of$ $bool$ $b_1$ $with$ $bool$ $b_2$ $with$ ... $with$ $b_N$
+\end{center}
+
+
+
+
+
+
+\section{consistent argument}
+
+
+\subsection{english translation}
 
 
 
