@@ -11,10 +11,16 @@
 \def \outputs{ \hspace{1mm} {\rightarrow \atop =} \hspace{1mm} }
 \def \invertable{ { \rightarrow \atop \leftarrow } }
 \def \iffdef { { def \atop \iff} }
-\def \equivdef { { def \atop \equiv} }
+\def \equivdef { \hspace{1mm} { def \atop \equiv} \hspace{1mm} }
+\def \attributedef{ \hspace{1mm} { {def \atop \rightarrow} \atop = } \hspace{1mm} }
 \def \outputdef{ \hspace{1mm} { {def \atop \rightarrow} \atop = } \hspace{1mm} }
 \def \conditiondef{  { def \atop := } }
 \def \and { { \hspace{1mm} \& \hspace{1mm} } }
+\def \loop {\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}}
+\def \nestedloop {\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}^n}
+\def \axiom { \hspace{1mm} {ax \atop = }\hspace{1mm}  }
+\def \paritydef { \hspace{1mm} { def \atop \rightarrow } \hspace{1mm} }
+\def \pair { \hspace{1mm} {f \atop \rightarrow} \hspace{1mm} }
 
 \begin{document}
 
@@ -23,17 +29,6 @@
 
 
 
-\section{equals}
-\begin{center}
-$a = a$
-\end{center}
-
-\subsection{english translation}
-\vspace{2mm}
-Axiom of equality
-\begin{center}
-$a$ $equals$ $a$
-\end{center}
 
 
 
@@ -46,35 +41,19 @@ $a$ $equals$ $a$
 
 
 
-
-
-
-\newpage
-\section{fact; lie; judgement of a fact; judgement of a lie}
+\section{Identity of a is a}
 \vspace{1mm}
 \begin{center}
 $
-\dot{t} \equiv fact
+= [a] \paritydef a
 $
 \\ \vspace{4mm}
 $
-\outputdef
+=
 $
 \\ \vspace{4mm}
 $
-| \dot{t} |^{TF} \outputs \dot{T}
-$
-\\ \vspace{6mm}
-$
-\dot{f} \equiv lie
-$
-\\ \vspace{4mm}
-$
-\outputdef
-$
-\\ \vspace{4mm}
-$
-| \dot{f} |^{TF} \outputs \dot{F}
+a \hspace{1mm} {def \atop =} \hspace{1mm} a
 $
 \end{center}
 
@@ -82,16 +61,20 @@ $
 
 
 
-\subsection{english translation}
-\vspace{1mm}
+
+\section{Not a}
 \begin{center}
-$definition$ $of$ $a$ $fact$
-\\ \vspace{2mm}
-$the$ $judgement$ $of$ $a$ $fact$ $is$ $true$ 
-\\ \vspace{6mm}
-$definition$ $of$ $a$ $lie$
-\\ \vspace{2mm}
-$the$ $judgement$ $of$ $a$ $lie$ $is$ $false$ 
+$
+! \hspace{1mm} [a] \paritydef b
+$
+\\ \vspace{4mm}
+$
+=
+$
+\\ \vspace{4mm}
+$
+a \hspace{1mm} { def \atop {!\atop \rightarrow} } \hspace{1mm} b
+$
 \end{center}
 
 
@@ -101,73 +84,59 @@ $the$ $judgement$ $of$ $a$ $lie$ $is$ $false$
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-\section{thing; nothing; count of a thing, count of a nothing}
+\section{a is equal to a}
 \vspace{1mm}
 \begin{center}
 $
-\dot{s} \equiv thing
+|=[a] \rightarrow a| = |a = a| \hspace{1mm} \paritydef \hspace{1mm} 1
 $
 \\ \vspace{4mm}
 $
-\outputdef
+=
 $
 \\ \vspace{4mm}
 $
-|\dot{s}| \outputs 1
-$
-\\ \vspace{6mm}
-$
-\dot{n} \equiv nothing
-$
-\\ \vspace{4mm}
-$
-\outputdef
-$
-\\ \vspace{4mm}
-$
-|\dot{n}| \outputs 0
+a == a \hspace{1mm} \paritydef \hspace{1mm} 1
 $
 \end{center}
 
 
 
-\subsection{english translation}
+
+
+
+
+
+
+\section{a is equal to b}
 \vspace{1mm}
 \begin{center}
-$definition$ $of$ $a$ $thing$
+$
+|=[a] \rightarrow b| = |a = b| \hspace{1mm} \paritydef \hspace{1mm} 0
+$
+\\ \vspace{4mm}
+$
+=
+$
+\\ \vspace{4mm}
+$
+a == b \hspace{1mm} \paritydef \hspace{1mm} 0
+$
+\end{center}
+
+
+
+
+
+\section{Inverse a}
+\begin{center}
+$
+\lnot 0 \hspace{1mm} \paritydef \hspace{1mm} 1
+$
 \\ \vspace{2mm}
-$the$ $count$ $of$ $a$ $thing$ $is$ $one$
-\\ \vspace{6mm}
-$definition$ $of$ $a$ $nothing$
-\\ \vspace{2mm}
-$the$ $count$ $of$ $a$ $nothing$ $is$ $zero$
+$
+\lnot 1 \hspace{1mm} \paritydef \hspace{1mm} 0
+$
 \end{center}
 
 
@@ -178,49 +147,19 @@ $the$ $count$ $of$ $a$ $nothing$ $is$ $zero$
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-\section{Is Equal To}
+\section{a is not equal to a}
+\vspace{1mm}
 \begin{center}
 $
-a == b
+|\neq[a] \rightarrow a| = |a \neq a| \hspace{1mm} \paritydef \hspace{1mm} 0
 $
 \\ \vspace{4mm}
 $
-\outputdef
+=
 $
 \\ \vspace{4mm}
 $
-(a == a) \outputs \dot{T}
-$
-\\ \vspace{4mm}
-$
-(a == b) \outputs \dot{F}
+a \hspace{1mm} != a \hspace{1mm} \paritydef \hspace{1mm} 0
 $
 \end{center}
 
@@ -232,38 +171,19 @@ $
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-\section{Greater than}
+\section{a is not equal to b}
+\vspace{1mm}
 \begin{center}
 $
-a > b
-$
-\\  \vspace{4mm}
-$
-\outputdef
+|\neq[a] \rightarrow b| = |a \neq b| \hspace{1mm} \paritydef \hspace{1mm} 1
 $
 \\ \vspace{4mm}
 $
-1 > 0 \outputs \dot{T}
+=
 $
 \\ \vspace{4mm}
 $
-0 > 1 \outputs \dot{F}
+a \hspace{1mm} != b \hspace{1mm} \paritydef \hspace{1mm} 1
 $
 \end{center}
 
@@ -275,6 +195,49 @@ $
 
 
 
+
+\section{a is greater than b}
+\vspace{1mm}
+\begin{center}
+$
+0 > 0 \paritydef 0
+$
+\\ \vspace{4mm}
+$
+0 > 1 \paritydef 0
+$
+\\ \vspace{4mm}
+$
+1 > 0 \paritydef 1
+$
+\\ \vspace{4mm}
+$
+1 > 1 \paritydef 0
+$
+\end{center}
+
+
+
+
+\section{a is not greater than b}
+\vspace{1mm}
+\begin{center}
+$
+0  \not > 0 \paritydef 1
+$
+\\ \vspace{4mm}
+$
+0  \not > 1 \paritydef 1
+$
+\\ \vspace{4mm}
+$
+1  \not > 0 \paritydef 0
+$
+\\ \vspace{4mm}
+$
+1  \not > 1 \paritydef 1
+$
+\end{center}
 
 
 
@@ -287,24 +250,136 @@ $
 
 \newpage
 
-\section{Less than}
+\section{a is less than b}
 \begin{center}
 $
-a < b
-$
-\\  \vspace{4mm}
-$
-\outputdef
+0 < 0 \paritydef 0
 $
 \\ \vspace{4mm}
 $
-1 < 0 \outputs \dot{F}
+0 <1 \paritydef 1
+$
+\\ \vspace{4mM}
+$
+1 < 0 \paritydef 0
 $
 \\ \vspace{4mm}
 $
-0 > 1 \outputs \dot{T}
+1 < 1 \paritydef 0
 $
 \end{center}
+
+
+
+
+
+
+
+\section{a is not less than b}
+\begin{center}
+$
+0 \not < 0 \paritydef 1
+$
+\\ \vspace{4mm}
+$
+0 \not < 1 \paritydef 0
+$
+\\ \vspace{4mm}
+$
+1 \not < 0 \paritydef 1
+$
+\\ \vspace{4mm}
+$
+1 \not < 1 \paritydef 1
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{a and b}
+\begin{center}
+$
+0 \land 0 \paritydef 0
+$
+\\ \vspace{4mm}
+$
+0 \land 1 \paritydef 0
+$
+\\ \vspace{4mm}
+$
+1 \land 0 \paritydef 0
+$
+\\ \vspace{4mm}
+$
+1 \land 1 \paritydef 1
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+\section{a or b}
+\begin{center}
+$
+0 \lor 0 \paritydef 0
+$
+\\ \vspace{4mm}
+$
+0 \lor 1 \paritydef 1
+$
+\\ \vspace{4mm}
+$
+1 \lor 0 \paritydef 1
+$
+\\ \vspace{4mm}
+$
+1 \lor 1 \paritydef 1
+$
+\end{center}
+
+
+
+
+
+
+
+
+\section{a either or b}
+\begin{center}
+$
+0 \odot 0 \paritydef 0
+$
+\\ \vspace{4mm}
+$
+0 \odot 1 \paritydef 1
+$
+\\ \vspace{4mm}
+$
+1 \odot 0 \paritydef 1
+$
+\\ \vspace{4mm}
+$
+1 \odot 1 \paritydef 0
+$
+\end{center}
+
 
 
 
@@ -798,6 +873,38 @@ $
 
 
 
+\section{b is a pair of a}
+\begin{center}
+$
+f[a] \rightarrow b
+$
+\\ \vspace{4mm}
+$
+=
+$
+\\ \vspace{4mm}
+$
+a \hspace{2mm} {f } \hspace{2mm} b
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+\section{pair of a pair}
+\begin{center}
+$
+g[\hspace{1mm} f[a] \rightarrow b \hspace{1mm} ] \rightarrow c
+$
+\end{center}
+
 
 
 
@@ -1225,6 +1332,65 @@ $
 
 
 
+
+
+
+\section{pair ab}
+\begin{center}
+$
+pair \hspace{1mm} ab = a\rightarrow b
+$
+\\ \vspace{2mm}
+$
+\conditiondef
+$
+\\ \vspace{2mm}
+$
+\exists \pair : a \pair b
+$
+\end{center}
+
+\subsection{pair notation}
+\begin{center}
+$
+pair \hspace{1mm} ab = a\rightarrow b
+$
+\\ \vspace{2mm}
+$
+\conditiondef
+$
+\\ \vspace{2mm}
+$
+\exists f : f[a] \rightarrow b
+$
+\end{center}
+
+
+
+
+
+
+
+\section{Not True}
+\vspace{1mm}
+\begin{center}
+$
+\lnot[\hspace{1mm}\dot{T}\hspace{1mm}] = \lnot \dot{T} \paritydef \dot{F}
+$
+\end{center}
+
+
+
+
+
+
+\section{Not False}
+\vspace{1mm}
+\begin{center}
+$
+\lnot[\hspace{1mm}\dot{F}\hspace{1mm}] = \lnot \dot{F} \paritydef \dot{T}
+$
+\end{center}
 
 
 
@@ -1683,6 +1849,72 @@ $
 
 
 
+
+
+
+\section{judgement of fact t}
+\vspace{1mm}
+\begin{center}
+$
+||[\hspace{1mm} fact$ $t \hspace{1mm}] =| \hspace{1mm} fact$ $t \hspace{1mm} | \paritydef \dot{T}
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+\section{judgement of lie f}
+\vspace{1mm}
+\begin{center}
+$
+||[\hspace{1mm} lie$ $f \hspace{1mm}] =| \hspace{1mm} lie$ $f \hspace{1mm} | \paritydef \dot{F}
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{count of thing s}
+\vspace{1mm}
+\begin{center}
+$
+|\hspace{1mm} thing$ $s \hspace{1mm}| \paritydef 1
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\section{count of nothing n}
+\vspace{1mm}
+\begin{center}
+$
+| \hspace{1mm} nothing$ $n \hspace{1mm} | \paritydef 0
+$
+\end{center}
 
 
 
