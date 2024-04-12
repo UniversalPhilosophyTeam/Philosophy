@@ -2157,7 +2157,7 @@ Using the definition of increasing convergence for a discrete function$^*$
 
 
 
-\subsection{Defintion}
+\section{Divergent Decision Problem}
 Decision problem $\hat{D}$ with solution $s^+$ has divergent total complexity $O[n]$ if
 \begin{center}
 $
@@ -2480,7 +2480,6 @@ $
 
 % Subfunction Decomposition
 \subsection{Subfunction Decomposition of Solutions}
-FIX Double check conditions!!!
 Solutions $s^+$ can be written as the union of subfunctions $Sub_k[X_i]$
 \begin{center}
 $
@@ -2529,6 +2528,19 @@ $
 
 
 \section{Subfunction Complexity}
+\begin{center}
+$
+s^+ = Sub_1[X_i] \cup Sub_2[X_i] \cup ... \cup Sub_z[X_i]
+$
+\\ \vspace{3mm}
+$
+= \{ \mathcal{L}_1| \mathcal{M}_1,y_o\} \cup \{  \mathcal{L}_2| \mathcal{M}_2,y_o\} \cup ... \cup \{  \mathcal{L}_z| \mathcal{M}_z,y_o\} : 
+$
+\\ \vspace{3mm}
+$
+\mathcal{L}_j \cap \mathcal{L}_k = \emptyset \hspace{2mm} \forall j,k\neq j
+$
+\end{center}
 %\begin{center}
 %\vspace{2mm}
 %$
