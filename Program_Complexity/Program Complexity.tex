@@ -27,26 +27,305 @@
 
 
 \section{Instructions}
+\subsection{Definition of Instruction}
+\subsection{Definition of Instruction Set}
+Define $\mathcal{I}$; an ordered set of computational instructions $s_i$
+\begin{center}
+$
+\mathcal{I} := \{ s_1,s_2,...,s_{N}\}
+$
+\end{center}
 
 
 
 
 \section{Memory}
-
+\subsection{Definition of Memory}
+\subsection{Definition of Memory Set}
+Define Memory $\mathcal{M}$; an ordered set of memory elements $m_i$
+\begin{center}
+$\mathcal{M} := \{m_1,m_2,...,m_M\}$
+\end{center}
 
 
 
 \section{Programs}
+\subsection{Definition of a Program}
 \subsection{Void Programs}
+Define a void program; a program with inputs $x_i$ and no output
+\begin{center}
+$
+X_n = \{x_1,...,x_n\}
+$
+\\ \vspace{2mm}
+$P = P\lbrack X_n \rbrack := \{ s_1,s_2,...,s_{N}\hspace{1mm}|\hspace{1mm} b_1, b_2,...,b_M\}$
+\end{center}
+
 \subsection{Boolean Programs}
+Define a True or False Question; a bounded boolean expression given input(s) $X_n$\\
+\\
+Given
+\begin{center}
+$
+X_n = \{x_1,...,x_n\}
+$
+\\ \vspace{2mm}
+$P = P\lbrack X_n \rbrack := \{ s_1,s_2,...,s_{N}\hspace{1mm}|\hspace{1mm} b_1, b_2,...,b_M,y_o\}=$
+\\ \vspace{2mm}
+$
+P\lbrack X_n\rbrack \rightarrow y_o \in \{\mathbb{T},\mathbb{F}\}
+$
+\end{center}
+
 \subsection{Numerical Programs}
+Define a numerical program; a program with inputs $x_i$, input set C, and real, rational output $y_o$
+\begin{center}
+$
+X_n = \{x_1,...,x_n\}
+$
+\\ \vspace{2mm}
+$P = P\lbrack X_n \rbrack := \{ s_1,s_2,...,s_{N}\hspace{1mm}|\hspace{1mm} b_1, b_2,...,b_M,y_o\}=$
+\\ \vspace{2mm}
+$
+P\lbrack X_n \rbrack \rightarrow y_o \in \mathbb{Q} \hspace{2mm} y_o \geq 0
+$
+\end{center}
+
 \subsection{System Programs}
+Define a system program; a program with inputs $x_i$, input set C, and real, output set $Y_o$
+\begin{center}
+$
+X_n = \{x_1,...,x_n\}
+$
+\\ \vspace{2mm}
+$P = P\lbrack X_n \rbrack := \{ s_1,s_2,...,s_{N}\hspace{1mm}|\hspace{1mm} b_1, b_2,...,b_M,Y_o\}=$
+\\ \vspace{2mm}
+$
+P\lbrack X_n \rbrack \rightarrow Y_o = \{y_1,y_2,...,y_K\}
+$
+\end{center}
+
 
 
 
 
 
 \section{Program Complexity}
+
+
+\subsection{Definition}
+Define simple computational complexity of dimension 2
+\begin{center}
+$
+\bold{O}[n] := \hspace{3mm} < O_T [n], O_S [n] >
+$
+\end{center}
+
+
+
+
+\subsection{Total Complexity}
+Define Total Complexity of solution $s^+$
+\begin{center}
+$O[n] :=  |s^+[X_n]| = |\{\mathcal{L},\mathcal{M},y_o\}|$
+\\ \vspace{4mm}
+$
+= |\mathcal{L}| + |\mathcal{M}| + |y_o| = N + M + 1
+$
+\end{center}
+
+
+
+
+
+
+\subsection{Time Complexity}
+Restate definition of Time Complexity $O_T[n]$ of solution $s^+$
+\begin{center}
+$
+s^+ = \{ \mathcal{L},\mathcal{M},y_o\}
+$
+\\ \vspace{3mm}
+$
+O_T[n] := |\mathcal{L}| = N
+$
+\end{center}
+
+
+
+\subsection{Space Complexity}
+Restate definition of Time Complexity $O_S[n]$ of solution $s^+$
+\begin{center}
+$
+s^+ = \{ \mathcal{L},\mathcal{M},y_o\}
+$
+\\ \vspace{2mm}
+$
+O_S[n] := |\mathcal{M}| + |y_o| = M + 1
+$
+\end{center}
+
+
+
+\subsection{Total Complexity as a Function of Time and Space Complexity}
+\begin{center}
+\vspace{4mm}
+$
+O[n] :=  |s^+[X_n]| = |\{\mathcal{L},\mathcal{M},y_o\}|
+$
+\\ \vspace{2mm}
+$
+= |\mathcal{L}| + |\mathcal{M}| + |y_o|
+$
+\\ \vspace{2mm}
+$
+= O_T[n] + O_S[n]
+$
+\end{center}
+
+
+\subsection{$O_S[n] > 0^*$}
+Assuming Program is not void
+\subsubsection{Proof}
+Assume $O_S[n]$ = 0
+\begin{center}
+$
+O_S[n] := |\mathcal{M}| + |y_o| 
+$
+\\ \vspace{2mm}
+$
+O_S[n] = 0 \Rightarrow \mathcal{M} = y_o = \emptyset
+$
+\\ \vspace{2mm}
+$
+y_o = \emptyset; \hspace{2mm} y_o \in \{\mathbb{T},\mathbb{F}\}$ by definition of $s^+$
+\\ \vspace{4mm}
+$
+\therefore O_S[n] = 0$ contradicts the definition of solution $s^+$ of a decision problem
+\\ \vspace{2mm}
+$
+O_S[n] \geq 0$ by definition of magnitude
+\\ \vspace{2mm}
+$
+\therefore O_S[n] > 0
+$
+\end{center}
+
+
+\subsection{$O_T[n] > 0^*$}
+Assuming Program is not void
+\subsubsection{Proof}
+Assume $O_T[n] = 0$
+\begin{center}
+$
+O_T[n] := |\mathcal{L}| 
+$
+\\ \vspace{2mm}
+$
+O_T[n] = 0 \Rightarrow y_o \not \in \{\mathbb{T},\mathbb{F}\}
+$
+\\ \vspace{2mm}
+$
+y_o \not \in \{\mathbb{T},\mathbb{F}\}; \hspace{2mm} y_o \in \{\mathbb{T},\mathbb{F}\}$ by definition of $s^+$
+\\ \vspace{4mm}
+$
+\therefore O_T[n] = 0$ contradicts the definition of solution $s^+$ of a decision problem
+\\ \vspace{2mm}
+$
+O_T[n] \geq 0$ by definition of magnitude
+\\ \vspace{2mm}
+$
+\therefore O_T[n] > 0
+$
+\end{center}
+
+
+
+
+\subsection{$O[n] > 0^*$}
+Assuming Program is not void
+\subsubsection{Proof}
+\begin{center}
+$
+O[n] := O_T[n] + O_S[n]
+$
+\\ \vspace{3mm}
+$
+O_T[n] > 0; \hspace{2mm} O_S[n] > 0
+$
+\\ \vspace{3mm}
+$
+\therefore O[n] > 0
+$
+\end{center}
+
+\subsection{$O[n] > O_T[n]*$}
+Assuming Program is not void
+\subsubsection{Proof}
+\begin{center}
+$
+O[n] := O_T[n] + O_S[n]
+$
+\\ \vspace{3mm}
+$
+\hspace{2mm} O_S[n] > 0
+$
+\\ \vspace{3mm}
+$
+\therefore O[n] > O_T[n]
+$
+\end{center}
+
+\subsection{$O[n] > O_S[n]^*$}
+Assuming Program is not void
+\subsubsection{Proof}
+\begin{center}
+$
+O[n] := O_T[n] + O_S[n]
+$
+\\ \vspace{3mm}
+$
+O_T[n] > 0
+$
+\\ \vspace{3mm}
+$
+\therefore O[n] > O_S[n]
+$
+\end{center}
+
+
+\subsection{$O[n+1] \geq O[n]$}
+\subsubsection{Proof}
+\begin{center}
+$
+X_i = \{x_1,...,x_n,C\}; \hspace{2mm} \hat{X}_i = \{x_1,...,x_{n+1},C\}
+$
+\\ \vspace{4mm}
+$
+O[n] = |\hspace{1mm} s^+[X_i]|
+$
+\\ \vspace{2mm}
+$
+O[n+1] = \hat{O}[n] = |\hspace{1mm} s^+[\hat{X}_i]|
+$
+\end{center}
+\hspace{4mm}
+For general solutions $s^+$
+\begin{center}
+$
+s^+[\hat{X}_i] \supseteq s^+[X_i] 
+$
+\\ \vspace{2mm}
+$
+\Rightarrow |s^+[\hat{X}_i]| \geq |s^+[X_i]|
+$
+\\ \vspace{2mm}
+$
+\therefore \hat{O}[n] = O[n+1] \geq O[n]
+$
+\end{center}
+
+
 
 \subsection{Definition of Program Complexity}
 \subsection{Time Complexity of a Program}
