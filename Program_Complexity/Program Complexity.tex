@@ -15,6 +15,7 @@
 
 \begin{center}
 \section*{Program Complexity}
+"Ideal Complexity"
 \end{center}
 
 
@@ -28,6 +29,7 @@
 
 \section{Instructions}
 \subsection{Definition of Instruction}
+An instruction is a canonical operation of system S
 \subsection{Definition of Instruction Set}
 Define $\mathcal{I}$; an ordered set of computational instructions $s_i$
 \begin{center}
@@ -40,9 +42,8 @@ $
 
 
 \section{Memory}
-\subsection{Definition of Memory}
 \subsection{Definition of Memory Set}
-Define Memory $\mathcal{M}$; an ordered set of memory elements $m_i$
+Define Memory $\mathcal{M}$; an ordered set of objects $m_i$
 \begin{center}
 $\mathcal{M} := \{m_1,m_2,...,m_M\}$
 \end{center}
@@ -327,18 +328,385 @@ $
 
 
 
-\subsection{Definition of Program Complexity}
-\subsection{Time Complexity of a Program}
-\subsection{Space Complexity of a Program}
-\subsection{Total Complexity of a Program}
 
-\section{Properties of Program Complexity}
+\section{Worst Case Complexity $O_{wc}[n]$}
 
 
+
+
+% Total Polynomial Complexity; Set of all Polynomial Problems; Polynomial Order of Complexity
+\newpage
 \section{Polynomial Complexity}
 
-\section{Non-Polynomial Complexity}
+\subsection{Definition}
+Decision problem $D$ with solution $s^+$ has polynomial total complexity $O[n]$ if
+\begin{center}
+$\exists K,C,\lambda_1...\lambda_K \hspace{2mm} :$
+\\ \vspace{2mm}
+$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n$
+\end{center}
 
+
+
+
+
+\subsection{Polynomial Problems}
+Define $\mathbb{P}$, the set of Decision Problems that can be solved with Polynomial Complexity
+\begin{center}
+$
+\mathbb{P} := \{D_1,D_2,...\} : 
+$
+\\ \vspace{4mm}
+$
+\exists K,C,\lambda_1...\lambda_K : 
+$
+\\
+$
+O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{4mm} \forall n, D_i \in \mathbb{P}
+$
+\end{center}
+
+
+
+
+
+\subsection{Polynomial Order of Complexity}
+Solution $s^+$ with total complexity $O[n]$ is said to be of order $n^K$
+\begin{center}
+$
+ O[n] \sim n^K
+$
+\\ \vspace{2mm}
+$O[n] = (\lambda_{K} n)^{K} + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n +  C \hspace{4mm} \forall n$
+\end{center}
+
+
+
+
+
+
+
+
+\subsection{Property of Polynomial  Complexity 1}
+Solutions with polynomial complexity have convergent complexity
+\begin{center}
+$
+lim_{n \rightarrow \infty} \frac{O[n+1]}{O[n]} = 1
+$
+\end{center}
+\subsubsection{Proof}
+\begin{center}
+$
+O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C
+$
+\\ \vspace{2mm}
+$
+O[n+1] = (\lambda_K (n+1))^K + (\lambda_{K-1} (n+1))^{K-1}... + \lambda_1 (n+1) + C
+$
+\\ \vspace{2mm}
+$ 
+=  (\lambda_K n)^K + (\tilde{\lambda}_{K-1} n)^{K-1}... + \tilde{\lambda_1} n + \tilde{C}
+$
+\\ \vspace{5mm}
+$
+lim_{n \rightarrow \infty} \frac{O[n+1]}{O[n]}
+$
+\\ \vspace{3mm}
+$
+= lim_{n \rightarrow \infty} \frac{ (\lambda_K n)^K + (\tilde{\lambda}_{K-1} n)^{K-1}... + \tilde{\lambda_1} n + \tilde{C}}{(\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C}
+$
+\\ \vspace{3mm}
+$
+= lim_{n \rightarrow \infty} \frac{ (\lambda_K n)^K}{(\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C} + \frac{ (\tilde{\lambda}_{K-1} n)^{K-1}}{(\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C} + ... + \frac{ \tilde{\lambda}_1 n}{(\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C} +  \frac{ \tilde{C}}{(\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C}
+$
+\\ \vspace{3mm}
+$
+= 1 = lim_{n \rightarrow \infty} \frac{O[n+1]}{O[n]}
+$
+\end{center}
+
+
+
+
+
+
+
+\subsection{Property of Polynomial Complexity 2}
+\vspace{1mm}
+\begin{center}
+$
+\exists K,\hat{C},\hat{\lambda}_1,...,\hat{\lambda}_{K-1} :
+$
+\\ \vspace{2mm}
+$
+O[n+1] - O[n] = f_{n+1}[n] = (\hat{\lambda}_{K-1} n)^{K-1}... + \hat{\lambda}_1 n + \hat{C} \hspace{3mm} \forall n
+$
+\end{center}
+
+
+
+\subsubsection{Proof}
+\vspace{1mm}
+\begin{center}
+$
+O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C
+$
+\\ \vspace{2mm}
+$
+O[n+1] = (\lambda_K (n+1))^K + (\lambda_{K-1} (n+1))^{K-1}... + \lambda_1 (n+1) + C
+$
+\\ \vspace{2mm}
+$ 
+=  (\lambda_K n)^K + (\tilde{\lambda}_{K-1} n)^{K-1}... + \tilde{\lambda_1} n + \tilde{C}
+$
+\\ \vspace{2mm}
+$
+O[n+1] - O[n] = ((\tilde{\lambda}_{K-1}- \lambda_{K-1})n)^{K-1}... + (\tilde{\lambda_1} - \lambda_1) n + (\tilde{C} - C)
+$
+\\ \vspace{2mm}
+$
+O[n+1] - O[n] = (\hat{\lambda}_{K-1}n)^{K-1}... + \hat{\lambda}_1  n + \hat{C}
+$
+\end{center}
+
+
+
+
+\subsection{Property of Polynomial Complexity 3}
+\vspace{1mm}
+\begin{center}
+$
+limit_{n \rightarrow \infty } \frac{f_{n+1}[n]}{O[n]} = 0
+$
+\end{center}
+
+\subsubsection{Proof}
+\begin{center}
+$
+limit_{n \rightarrow \infty } \frac{O[n+1]}{O[n]} = 1
+$
+\\ \vspace{2mm}
+$
+limit_{n \rightarrow \infty } \frac{O[n] + f_{n+1}[n]}{O[n]} = 1
+$
+\\ \vspace{2mm}
+$
+limit_{n \rightarrow \infty } \frac{O[n]}{O[n]}+  \frac{f_{n+1}[n]]}{O[n]}  = 1
+$
+\\ \vspace{2mm}
+$
+limit_{n \rightarrow \infty } 1 +  \frac{f_{n+1}[n]]}{O[n]}  = 1
+$
+\\ \vspace{2mm}
+$
+limit_{n \rightarrow \infty }  \frac{f_{n+1}[n]]}{O[n]}  = 0
+$
+\end{center}
+
+
+
+
+
+
+
+\subsection{Total Polynomial Complexity Implies Time bounded Polynomial Complexity}
+\begin{center}
+\vspace{1mm}
+$
+D \in \mathbb{P} \Longrightarrow O_T[n] < (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C
+$
+\end{center}
+
+\subsubsection{Proof}
+\begin{center}
+$
+O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{2mm} \forall n
+$
+\\ \vspace{2mm}
+$
+O[n] := O_T[n] + O_S[n]; \hspace{2mm} O_S[n] > 0
+$
+\\ \vspace{2mm}
+$
+\therefore O_T[n] < (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{2mm} \forall n
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\subsection{Total Polynomial Complexity Implies Space bounded Polynomial Complexity}
+\begin{center}
+\vspace{1mm}
+$
+D \in \mathbb{P} \Longrightarrow O_S[n] <  (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C
+$
+\end{center}
+
+\subsubsection{Proof}
+\begin{center}
+$
+O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{2mm} \forall n
+$
+\\ \vspace{2mm}
+$
+O[n] := O_T[n] + O_S[n]; \hspace{2mm} O_T[n] > 0
+$
+\\ \vspace{2mm}
+$
+\therefore O_S[n] < (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{2mm} \forall n
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\subsection{Polynomial Complexity in Space and Time Implies Polynomial Total Complexity}
+\begin{center}
+\vspace{1mm}
+$
+(O_S[n] == (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + \lambda_0)
+$
+\\ \vspace{2mm}
+$
+\land
+$
+\\ \vspace{2mm}
+$
+(O_T[n] == (\hat{\lambda}_M n)^M + (\hat{\lambda}_{M-1} n)^{M-1}... + \hat{\lambda}_1 n + \hat{\lambda}_0)
+$
+\\ \vspace{4mm}
+$
+\Rightarrow D \in \mathbb{P}
+$
+\end{center}
+
+\subsubsection{Proof}
+\begin{center}
+\vspace{1mm}
+$
+O_S[n] = \lambda_K n^K + \lambda_{K-1} n^{K-1} + ... + \lambda_1 n + \lambda_0
+$
+\\ \vspace{3mm}
+$
+O_T[n] = \hat{\lambda}_M n^M + \hat{\lambda}_{M-1} n^{M-1} + ... + \hat{\lambda}_1 n + \hat{\lambda}_0
+$
+\\ \vspace{3mm}
+$
+O[n] = O_S[n] + O_T[n]
+$
+\\ \vspace{3mm}
+$
+^*O[n] = (\hat{\lambda}_0 + \lambda_0) + n(\lambda_1 + \hat{\lambda_1}) + ... + n^K(\lambda_K + \hat{\lambda_K}) + \hat{\lambda}_{K+1}n^{K+1} + ... +  \hat{\lambda}_M n^M
+$
+\\ \vspace{3mm}
+$
+\therefore O[n]$ has polynomial total complexity by definition
+\end{center}
+$^*$ Assume K < M, similar proof for K=M, K>M
+
+
+
+
+% Non Polynomial Problems
+\newpage
+\section{Non-Polynomial Complexity}
+\subsection{Definition}
+Decision problem $\tilde{D}$ with solution $s^+$ has non-polynomial total complexity $O[n]$ if
+\begin{center}
+$\not \exists K,\lambda_0,\lambda_1,...,\lambda_K \hspace{1mm} :$
+\\ \vspace{2mm}
+$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n$
+\end{center}
+
+
+\subsection{Non-Polynomial Problems}
+Define $\mathcal{N}$, the set of Decision Problems that cannot be solved with Polynomial Complexity
+\begin{center}
+$
+\mathcal{N} := \{\tilde{D}_1,\tilde{D}_2,...\} :
+$
+\\ \vspace{2mm}
+$\not \exists K,C,\lambda_1...\lambda_K \hspace{1mm} :$
+\\ \vspace{2mm}
+$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n, \hspace{1mm}  s^+ \in S^+_i, \hspace{1mm} \tilde{D}_i \in \mathcal{N}$
+\end{center}
+
+\subsection{$\mathbb{P}$ and $\mathcal{N}$ are disjoint}
+\begin{center}
+\vspace{2mm}
+$
+\mathbb{P} \cap \mathcal{N} = \emptyset
+$
+\end{center}
+
+\subsubsection{Proof}
+Let D $\in \mathcal{N}$
+\begin{center}
+$\not \exists K,C,\lambda_1...\lambda_K \hspace{1mm} :$
+\\ \vspace{2mm}
+$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n$
+\end{center}
+\vspace{4mm}
+Assume D $\in \mathbb{P}$
+\begin{center}
+$\exists K,C,\lambda_1...\lambda_K \hspace{1mm} :$
+\\ \vspace{2mm}
+$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n$
+\\ \vspace{4mm}
+Contradicts the definition of $\mathcal{N}$
+\\ \vspace{2mm}
+$
+\therefore D \in \mathcal{N} \Rightarrow D \not \in \mathbb{P}
+$
+\end{center}
+\vspace{6mm}
+Let D $\in \mathbb{P}$
+\begin{center}
+$\exists K,C,\lambda_1...\lambda_K \hspace{1mm} :$
+\\ \vspace{2mm}
+$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n$
+\end{center}
+\vspace{4mm}
+Assume D $\in \mathcal{N}$
+\begin{center}
+$\not \exists K,C,\lambda_1...\lambda_K \hspace{1mm} :$
+\\ \vspace{2mm}
+$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n$
+\\ \vspace{4mm}
+Contradicts the definition of $\mathbb{P}$
+\\ \vspace{2mm}
+$
+\therefore D \in \mathbb{P} \Rightarrow D \not \in \mathcal{N}
+$
+\\ \vspace{6mm}
+$
+D \in \mathcal{N} \Rightarrow D \not \in \mathbb{P}; D \in \mathbb{P} \Rightarrow D \not \in \mathcal{N}
+$
+\\ \vspace{2mm}
+$
+\therefore \mathbb{P} \cap \mathcal{N} = \emptyset
+$
+\end{center}
+
+
+
+\section{Divergent Complexity}
+See Appendix for additional proofs on Convergent and Divergent Functions
+\section{Divergent Programs}
+See Appendix for additional proofs on Convergent and Divergent Functions
 
 
 
@@ -358,28 +726,331 @@ Also referred to as a "Decision Problem"
 
 
 \section{Solution to a Question}
+\subsection{Worst Case Complexity of Solution $s^+$}
 
-\section{Solution Space of a Question}
+\subsection{Solution Space of a Question}
 
+\subsection{Candidate Solutions}
 
 
 \newpage
 \section{Subfunctions}
 \section{Subfunction Decomposition of  Program}
 \section{Subsolutions}
+\section{Inductive Complexity Expressions}
+\begin{center}
+\vspace{3mm}
+$
+O[n] = O_T[n] + O_S[n]
+$
+\\ \vspace{2mm}
+$
+O[n+1] = O_T[n+1] + O_S[n+1]
+$
+\\ \vspace{4mm}
+$
+f_{n+1}[n] := O[n+1] - O[n]
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\subsection{Inductive Space and Time Formulas}
+\begin{center}
+$
+f^T_{n+1}[n] := O_T[n+1] - O_T[n]
+$
+\\ \vspace{2mm}
+$
+O_T[n+1] = O_T[n] + f^T_{n+1}[n]
+$
+\\ \vspace{2mm}
+$
+f^S_{n+1}[n] := O_S[n+1] - O_S[n]
+$
+\\ \vspace{2mm}
+$
+O_S[n+1] = O_S[n] + f^S_{n+1}[n]
+$
+
+\end{center}
+
+
+
+
+
+% Theorem of Polynomia? Duality
+\subsection{Inductive Function Expressions}
+Relate $f_{n+1}[n]$ to equivalence functions
+\begin{center}
+\vspace{2mm}
+$
+O[n] = O_T[n] + O_S[n]
+$
+\\ \vspace{2mm}
+$
+O[n+1] = O_T[n+1] + O_S[n+1] = O[n] + f_{n+1}[n]
+$
+\\ \vspace{2mm}
+$
+O_T[n] = O[n] - O_S[n]
+$
+\\ \vspace{2mm}
+$
+O_S[n] = O[n] - O_T[n]
+$
+\\ \vspace{8mm}
+$
+f_{n+1}[n] = O[n+1] - O[n]
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] = O_T[n+1] + O_S[n+1] - O[n]
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] = O_T[n+1] - O_T[n] + O_S[n+1] - O_S[n]
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] = O[n+1] - O_T[n] - O_S[n]
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] =  f^T_{n+1}[n] +  f^S_{n+1}[n]
+$
+\end{center}
+
+
+
+
+
+
+\subsection{Zero Order Space Inductive Function}
+\begin{center}
+$
+Let \hspace{2mm} O_S[n] \sim n^0
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] = O_T[n+1] - O_T[n] + O_S[n+1] - O_S[n] = O_T[n+1] - O_T[n]
+$
+\end{center}
+
 
 
 
 
 \newpage
-\section*{Discrete Derivatives and Z-transforms}
+
+\section{Discrete Derivative; Z Transform}
+\subsection{Discrete Derivative}
+Define derivative for discrete function f[n]
+\begin{center}
+\vspace{1mm}
+$
+\Delta_n^1 f[n] := f[n+1] - f[n]
+$
+\end{center}
+\vspace{1mm}
+We will use the above definition for the remainder of this document \\
 
 
-\section*{Convergence, Divergence, Divergent Complexity}
-\section{Convergent Functions}
-\section{Divergent Functions}
-\section{Divergent Complexity}
-\section{Divergent Programs}
+\subsection{Zero Order Derivative}
+\begin{center}
+\vspace{1mm}
+$
+\Delta_n^0 f[n] = f[n]
+$
+\end{center}
+
+
+
+
+\subsection{K$^{th}$ Discrete Derivative}
+Define the $K^{th}$ derivative of discrete function $f[n]$
+\begin{center}
+\vspace{1mm}
+$
+\Delta_n^K f[n] := \Delta_n^{K-1} f[n+1] - \Delta_n^{K-1} f[n]
+$
+\end{center}
+
+
+
+
+\subsection{K$^{th}$ Discrete Derivative as an Alternating Sum}
+\begin{center}
+$
+\Delta_n^K f[n] := \Delta_n^{K-1} f[n+1] - \Delta_n^{K-1} f[n]
+$
+\\ \vspace{4mm}
+$
+= (\Delta_n^{K-2} f[n+2] - \Delta_n^{K-2} f[n+1]) - (\Delta_n^{K-2} f[n+1] - \Delta_n^{K-2} f[n])
+$
+\\ \vspace{4mm}
+$
+= (\Delta_n^{K-2} f[n+2] - 2\Delta_n^{K-2} f[n+1] - \Delta_n^{K-2} f[n])
+$
+\\ \vspace{4mm}
+$
+=  \sum_{i=0}^K (-1)^{j} \hspace{1mm} (_K C _j) \hspace{1mm} \Delta_n^{0} f[n + j]
+$
+\\ \vspace{4mm}
+$
+= \sum_{i=0}^K (-1)^{j} \hspace{1mm} (_K C _j) \hspace{1mm} f[n + j]
+$
+\end{center}
+
+
+
+
+
+\subsection{Z Transform}
+Define the Z Transform for discrete function f[n]
+\begin{center}
+$
+\mathcal{Z}(f[n]) := \sum_{n=0}^{\infty}f[n]z^{-n}
+$
+\end{center}
+
+
+\subsection{Z Transform of 0 Order Derivative}
+\begin{center}
+\vspace{1mm}
+$
+\Delta_n^0 f[n] := f[n]
+$
+\\ \vspace{3mm}
+$
+\mathcal{Z}(\Delta_n^0 f[n]) = \mathcal{Z}(f[n])
+$
+\end{center}
+
+
+
+
+
+\subsection{Z Transform of 1$^{st}$ Derivative}
+\begin{center}
+\vspace{1mm}
+$
+\Delta_n^1 f[n] := f[n+1] - f[n]
+$
+\\ \vspace{3mm}
+$
+\mathcal{Z}(\Delta_n^1 f[n]) = \mathcal{Z}(f[n+1] - f[n])
+$
+\\ \vspace{3mm}
+$
+= \sum_{n=0}^{\infty} (f[n+1] - f[n]) z^{-n}
+$
+\\ \vspace{3mm}
+$
+= \sum_{n=0}^{\infty} (f[n+1]z^{-n} - f[n] z^{-n})
+$
+\\ \vspace{3mm}
+$
+= \sum_{n=0}^{\infty} f[n+1]z^{-n} - \sum_{n=0}^{\infty} f[n] z^{-n}
+$
+\\ \vspace{3mm}
+$
+= \sum_{m=0}^{\infty} f[m+1]z^{-m} - \sum_{n=0}^{\infty} f[n] z^{-n}
+$
+\end{center}
+Let 
+\begin{center}
+$
+\hat{m} = m + 1; \hspace{2mm} m = \hat{m} - 1
+$
+\\ \vspace{3mm}
+$
+= \sum_{m=0}^{\infty} f[\hat{m}]z^{-(\hat{m}-1)} - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+= z^1 \sum_{\hat{m}=1}^{\infty} f[\hat{m}]z^{-\hat{m}} - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+= z^1 \sum_{\hat{m}=1}^{\infty} f[\hat{m}]z^{-\hat{m}} + f[0] - f[0] - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+= z^1 \sum_{\hat{m}=0}^{\infty} f[\hat{m}]z^{-\hat{m}} - f[0] - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+= z^1\mathcal{Z}(f[n]) - f[0] - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+\mathcal{Z}(\Delta_n^1 f[n]) = \mathcal{Z}(f[n])(z^1 - 1) - f[0]
+$
+\end{center}
+
+
+
+
+
+
+\subsection{Z Transform of K$^{th}$ Derivative}
+\vspace{1mm}
+\begin{center}
+$
+\mathcal{Z}(f[n]) := \sum_{n=0}^{\infty}f[n]z^{-n}
+$
+\\ \vspace{5mm}
+$
+\mathcal{Z}(\Delta_n^K f[n]) = \sum_{n=0}^{\infty} \Delta_n^K f[n]z^{-n}
+$
+\\ \vspace{5mm}
+$
+= \sum_{n=0}^{\infty} \sum_{i=0}^K (-1)^{j} \hspace{1mm} (_K C _j) \hspace{1mm} f[n + j] z^{-n}
+$
+\\ \vspace{5mm}
+$
+= \sum_{n=0}^{\infty} (f[n+K] - (_K C _1) f[n+K-1] +  (_K C _2) f[n+K-2] - ...\pm f[n])z^{-n}
+$
+\\ \vspace{5mm}
+$
+= \sum_{n=0}^{\infty} f[n+K]z^{-n} - (_K C _1) f[n+K-1]z^{-n} +  (_K C _2) f[n+K-2]z^{-n} - ...\pm f[n]z^{-n}
+$
+\\ \vspace{5mm}
+$
+= z^K \mathcal{Z}(f[n]) +\sum_{i=0}^{K-1} f[i] - (_K C _1)z^{K-1} \mathcal{Z}(f[n]) - \sum_{j=0}^{K-2}f[j] + (_K C _2)z^{K-2} \mathcal{Z}(f[n])+\sum_{k=0}^{K-3}f[k] - ... \pm \mathcal{Z}(f[n])
+$
+\end{center}
+When K is odd
+\begin{center}
+$
+\mathcal{Z}(\Delta_n^K f[n]) = (z-1)^K \mathcal{Z}(f[n]) + \sum_{i=0}^{\frac{n+1}{2}} f[2i] \hspace{3mm} K > 0
+$
+\end{center}
+When K is even
+\begin{center}
+$
+\mathcal{Z}(\Delta_n^K f[n]) = (z-1)^K \mathcal{Z}(f[n]) + \sum_{j=0}^{\frac{n}{2}} f[2j + 1] \hspace{3mm} K > 0
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -425,6 +1096,37 @@ Also referred to as a "Decision Problem"
 \section*{Optimal Programs}
 \section{Optimal Complexity}
 \section{Optimal Solutions}
+
+
+
+
+\newpage
+\section*{Appendix}
+
+\section{Domains}
+\section{Bounded Input Bounded Output}
+In abstraction theory, functions have a domain (bounded set of every possible input and output)
+
+
+
+\section*{Convergence, Divergence, Divergent Complexity}
+\section{Convergent Functions}
+\section{Divergent Functions}
+
+
+
+
+\newpage
+\section*{References}
+\lbrack1\rbrack \hspace{1mm} $https://kapeli.com/cheat\_sheets/LaTeX\_Math\_Symbols.docset/Contents\\\
+Resources/Documents/index$\\
+\lbrack2\rbrack \hspace{1mm} $chat.openai.com$\\
+\lbrack3\rbrack \hspace{1mm} $google.com$\\
+\lbrack4\rbrack \hspace{1mm} $wikipedia.org$\\
+\lbrack3\rbrack \hspace{1mm} $wolframalpha.com$\\
+\lbrack4\rbrack \hspace{1mm} $youtube.com$\\
+\lbrack5\rbrack \hspace{1mm} $https://stackoverflow.com/questions/3518973/floating-point-exponentiation-without-power-function$\\
+\lbrack6\rbrack \hspace{1mm} $https://stackoverflow.com/questions/27086195/linear-index-upper-triangular-matrix$\\
 
 
 
