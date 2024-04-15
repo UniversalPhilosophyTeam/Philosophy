@@ -22,26 +22,65 @@
 
 \section{Problems}
 
-\subsection{Alternate Terminology}
+\subsection{Definition of Problem $\mathcal{Q}$}
 A problem is also referred to as a "Question" - a bounded boolean expression
+\begin{center}
+\vspace{2mm}
+$
+X_n = \{x_1,...,x_n\}
+$
+\\ \vspace{4mm}
+$
+\mathcal{Q} := f\lbrack X_n \rbrack \rightarrow A_o \in \Omega \hspace{4mm} \forall X_n \in \mathbb{D}_{f}
+$
+\end{center}
 
 \subsection{True False Question}
 Also referred to as a "Decision Problem"
+\begin{center}
+\vspace{2mm}
+$
+X_n = \{x_1,...,x_n\}
+$
+\\ \vspace{4mm}
+$
+\mathcal{Q} := f\lbrack X_n \rbrack \rightarrow y_o \in \{\mathbb{T},\mathbb{F}\} \hspace{4mm} \forall X_n \in \mathbb{D}_{f}
+$
+\end{center}
 
-\subsection{Numerical Question}
+\subsection{Numerical Problem}
+\begin{center}
+\vspace{2mm}
+$
+X_n = \{x_1,...,x_n\}
+$
+\\ \vspace{4mm}
+$
+\mathcal{Q} := f\lbrack X_n \rbrack \rightarrow y_o \in \mathbb{C} \hspace{4mm} \forall X_n \in \mathbb{D}_{f}
+$
+\end{center}
 
 \subsection{System Question}
-
-
-
-
-
+\begin{center}
+\vspace{2mm}
+$
+X_n = \{x_1,...,x_n\}
+$
+\\ \vspace{4mm}
+$
+\mathcal{Q} := f\lbrack X_n \rbrack \rightarrow A_o \in \Omega \hspace{4mm} \forall X_n \in \mathbb{D}_{f}:
+$
+\\ \vspace{2mm}
+$
+|A_o| == M 
+$
+\end{center}
 
 
 
 \section{Instructions}
 \subsection{Definition of Instruction}
-An instruction is either a canonical comparison, canonical operation, or canonical measurment  of framework $\mathcal{F}$
+An instruction is either a canonical comparison, canonical operation, or canonical measurement  of Question $\mathcal{Q}$/ Framework $\mathcal{F}$/ System $\mathcal{S}$ followed by an assigment
 \subsection{Definition of Instruction Set}
 Define $\mathcal{I}$; an ordered set of instructions $s_i$
 \begin{center}
@@ -144,25 +183,36 @@ $
 
 \section{Program Complexity}
 
+\subsection{Definition of Computational Complexity of Serial Program $\mathcal{P}$}
+Define computational complexity of Program $\mathcal{P}$ with dimension C
+\begin{center}
+$
+\bold{O}[n] := \hspace{3mm} < O_T [n], O_S [n], O_3[n],..., O_C[n]>
+$
+\end{center}
 
-\subsection{Definition}
-Define simple computational complexity of dimension 2
+
+
+\subsection{Definition of Ideal Computational Complexity of Serial Program $\mathcal{P}$}
+Define ideal computational complexity of Program $\mathcal{P}$ with dimension 2
 \begin{center}
 $
 \bold{O}[n] := \hspace{3mm} < O_T [n], O_S [n] >
 $
 \end{center}
 
-
+\subsection{Assumption 1}
+The remainder of this document assumes complexity means ideal computational complexity with dimension 2.
 
 
 \subsection{Total Complexity}
-Define Total Complexity of solution $s^+$
+Define Total Complexity of Boolean Program $\mathcal{P}$
 \begin{center}
-$O[n] :=  |s^+[X_n]| = |\{\mathcal{L},\mathcal{M},y_o\}|$
+\vspace{.5mm}
+$O[n] :=  |P[X_n]| = |\{\mathcal{L},\mathcal{M},y_o\}|$
 \\ \vspace{4mm}
 $
-= |\mathcal{L}| + |\mathcal{M}| + |y_o| = N + M + 1
+= |\mathcal{L}| + |\mathcal{M}| + |y_o| = N + M
 $
 \end{center}
 
@@ -172,10 +222,11 @@ $
 
 
 \subsection{Time Complexity}
-Restate definition of Time Complexity $O_T[n]$ of solution $s^+$
+Define Time Complexity $O_T[n]$ of Boolean Program $\mathcal{P}$
 \begin{center}
+\vspace{.5mm}
 $
-s^+ = \{ \mathcal{L},\mathcal{M},y_o\}
+\mathcal{P} = \{ \mathcal{L},\mathcal{M},y_o\}
 $
 \\ \vspace{3mm}
 $
@@ -186,14 +237,15 @@ $
 
 
 \subsection{Space Complexity}
-Restate definition of Time Complexity $O_S[n]$ of solution $s^+$
+Define Space Complexity $O_S[n]$ of Boolean Program $\mathcal{P}$
 \begin{center}
+\vspace{.5mm}
 $
 s^+ = \{ \mathcal{L},\mathcal{M},y_o\}
 $
 \\ \vspace{2mm}
 $
-O_S[n] := |\mathcal{M}| + |y_o| = M + 1
+O_S[n] := |\mathcal{M}| + |y_o| = M
 $
 \end{center}
 
@@ -201,7 +253,7 @@ $
 
 \subsection{Total Complexity as a Function of Time and Space Complexity}
 \begin{center}
-\vspace{4mm}
+\vspace{.5mm}
 $
 O[n] :=  |s^+[X_n]| = |\{\mathcal{L},\mathcal{M},y_o\}|
 $
@@ -291,7 +343,7 @@ $
 $
 \end{center}
 
-\subsection{$O[n] > O_T[n]*$}
+\subsection{$O[n] > O_T[n]^*$}
 Assuming Program is not void
 \subsubsection{Proof}
 \begin{center}
@@ -738,7 +790,8 @@ $
 See Appendix for additional proofs on Convergent and Divergent Functions
 \subsection{Divergent Programs}
 See Appendix for additional proofs on Convergent and Divergent Functions
-\subsection{Divergent Program $\Leftrightarrow$ Not-Polynomial Program}
+\subsection{Divergent Program $\Rightarrow$ Not-Polynomial Program}
+\subsection{Not-Polynomial Program $\Rightarrow$ Divergent Programs}
 
 
 \section{Solution to a Problem}
@@ -1341,7 +1394,7 @@ limit_{n \rightarrow \infty}(\frac{3n^2 - 3n + 3}{3n^2 - 3n + 3} + \frac{6n}{3n^
 $
 \\ \vspace{2mm}
 $
-limit_{n \rightarrow \infty}(1 + \frac{6n }{3n^2 - 3n + 3}) = 1
+limit_{n \rightarrow \infty}(1 + \frac{6n}{3n^2 - 3n + 3}) = 1
 $
 \end{center}
 
