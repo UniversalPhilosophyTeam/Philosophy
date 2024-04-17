@@ -416,7 +416,7 @@ $
 Let Program $\mathcal{P}$ with input space $X_n = \{x_1,x_2,...,x_n\}$ and number of inputs n = $\tilde{n}$
 \begin{center}
 $
-O_{wc}[\tilde{n}] := O[\tilde{n}] : O[\tilde{n}] \geq O_i[\tilde{n}] \hspace{4mm} \forall X_{\tilde{n}} \in \mathbb{D}_\mathcal{P}
+O_{wc}[\tilde{n}] := O_T[\tilde{n}] : O_T[\tilde{n}] \geq O_{T_i}[\tilde{n}] \hspace{4mm} \forall X_{\tilde{n}} \in \mathbb{D}_\mathcal{P}
 $
 \end{center}
 
@@ -814,26 +814,6 @@ See Appendix for additional proofs on Convergent and Divergent Functions
 \subsection{Solution Space of a Question}
 
 \subsection{Candidate Solutions}
-
-\section{Optimal Complexity $O_{opt}[n]$}
-Let Problem $\mathcal{Q}$ with solution space $\mathbb{S}^+$ and number of inputs n = $\tilde{n}$
-\begin{center}
-$
-O_{opt}[\tilde{n}] := O[\tilde{n}] : O[\tilde{n}] \leq O_i[\tilde{n}] \hspace{4mm} \forall s_i^+[\tilde{n}] \in \mathbb{S}^+
-$
-\end{center}
-
-\subsection{Proof of Existence}
-Let Problem $\mathcal{Q}$ with solution space $\mathbb{S}^+$\\
-Prove the existence of $O_{opt}[n]$
-
-
-\section{Polynomial Problems}
-
-\section{Divergent Problems}
-AKA Not Polynomial Problems or Non-Polynomial Problems
-
-
 
 \newpage
 \section{Subfunctions}
@@ -1561,7 +1541,27 @@ $
 
 \section*{Optimal Programs}
 \section{Optimal Complexity}
+
+\section{Optimal Complexity $O_{opt}[n]$}
+Let Problem $\mathcal{Q}$ with solution space $\mathbb{S}^+$ and number of inputs n = $\tilde{n}$
+\begin{center}
+$
+O_{opt}[\tilde{n}] := O[\tilde{n}] : O[\tilde{n}] \leq O_i[\tilde{n}] \hspace{4mm} \forall s_i^+[\tilde{n}] \in \mathbb{S}^+
+$
+\end{center}
+
+\subsection{Proof of Existence}
+Let Problem $\mathcal{Q}$ with solution space $\mathbb{S}^+$\\
+Prove the existence of $O_{opt}[n]$
+
 \section{Optimal Solutions}
+
+\section{Polynomial Problems}
+
+\section{Divergent Problems}
+AKA Not Polynomial Problems or Non-Polynomial Problems
+
+
 
 
 
