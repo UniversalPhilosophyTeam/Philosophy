@@ -412,7 +412,7 @@ $
 
 
 
-\section{Worst Case Complexity $O_{wc}[n]$}
+\section{Worst Case Total Complexity $O_{wc}[n]$}
 Let Program $\mathcal{P}$ with input space $X_n = \{x_1,x_2,...,x_n\}$ and number of inputs n = $\tilde{n}$
 \begin{center}
 $
@@ -424,52 +424,55 @@ $
 Let Program $\mathcal{P}$ with input space $\mathbb{X}_n$ having magnitude > 0\\
 Prove the existence of $O_{wc}[n]$
 
+\newpage
+\section{The Set of all Programs}
+
+\begin{center}
+$
+\Omega_{\mathcal{P}} := \{\mathcal{P}_i,...\} \hspace{4mm} \forall i
+$
+\end{center}
 
 
 % Total Polynomial Complexity; Set of all Polynomial Problems; Polynomial Order of Complexity
-\newpage
 \section{Polynomial Complexity}
 
-\subsection{Definition}
-Decision problem $D$ with solution $s^+$ has polynomial total complexity $O[n]$ if
+\subsection{Definition of a Program with Polynomial Complexity}
+Boolean Program $\mathcal{P}$ with worst case total complexity $O_{wc}[n]$ is said to be $polynomial$ $bounded$ if and only if
 \begin{center}
-$\exists K,C,\lambda_1...\lambda_K \hspace{2mm} :$
+\vspace{1mm}
+$\exists K, \lambda_0, \lambda_1...\lambda_K \hspace{2mm} :$
 \\ \vspace{2mm}
-$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n$
+$O_{wc}[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1} + ... + \lambda_1 n + \lambda_0 \hspace{3mm} \forall n$
 \end{center}
-
-
-
-
-
-\subsection{Polynomial Problems}
-Define $\mathbb{P}$, the set of Decision Problems that can be solved with Polynomial Complexity
-\begin{center}
-$
-\mathbb{P} := \{D_1,D_2,...\} : 
-$
-\\ \vspace{4mm}
-$
-\exists K,C,\lambda_1...\lambda_K : 
-$
-\\
-$
-O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{4mm} \forall n, D_i \in \mathbb{P}
-$
-\end{center}
-
-
-
 
 
 \subsection{Polynomial Order of Complexity}
-Solution $s^+$ with total complexity $O[n]$ is said to be of order $n^K$
+Boolean Program $\mathcal{P}$ with worst case total complexity $O_{wc}[n]$ is said to be on the order of its maximum polynomial coefficient
 \begin{center}
+\vspace{1mm}
 $
- O[n] \sim n^K
+\exists K,\lambda_0,\lambda_1...\lambda_K : 
 $
 \\ \vspace{2mm}
-$O[n] = (\lambda_{K} n)^{K} + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n +  C \hspace{4mm} \forall n$
+$O_{wc}[n] = (\lambda_{K} n)^{K} + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n +  \lambda_0 \hspace{4mm} \forall n$
+\\ \vspace{2mm}
+$
+\Rightarrow O_{wc}[n] \sim n^K
+$
+\end{center}
+
+
+\subsection{The set of Polynomial Programs}
+Define $\mathbb{P}$, the set of Programs having polynomial worst case complexity
+\begin{center}
+$
+\mathbb{P} := \{\mathcal{P}_1,\mathcal{P}_2,...\} : 
+$
+\\ \vspace{4mm}
+$
+\mathcal{P}_i$ $is$ $polynomial$ $bounded \hspace{4mm} \forall P_i \in \mathbb{P}
+$
 \end{center}
 
 
@@ -480,28 +483,37 @@ $O[n] = (\lambda_{K} n)^{K} + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n +  C \hsp
 
 
 \subsection{Property of Polynomial  Complexity 1}
-Solutions with polynomial complexity have convergent complexity
 \begin{center}
+\vspace{1mm}
 $
-lim_{n \rightarrow \infty} \frac{O[n+1]}{O[n]} = 1
+\mathcal{P}$ $is$ $polynomial$ $bounded
+$
+\\ \vspace{3mm}
+$
+\Leftrightarrow
+$
+\\ \vspace{3mm}
+$
+lim_{n \rightarrow \infty} \frac{O_{wc}[n+1]}{O_{wc}[n]} = 1
 $
 \end{center}
+
 \subsubsection{Proof}
 \begin{center}
 $
-O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C
+O_{wc}[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + \lambda_0
 $
 \\ \vspace{2mm}
 $
-O[n+1] = (\lambda_K (n+1))^K + (\lambda_{K-1} (n+1))^{K-1}... + \lambda_1 (n+1) + C
+O_{wc}[n+1] = (\lambda_K (n+1))^K + (\lambda_{K-1} (n+1))^{K-1}... + \lambda_1 (n+1) + \lambda_0
 $
 \\ \vspace{2mm}
 $ 
-=  (\lambda_K n)^K + (\tilde{\lambda}_{K-1} n)^{K-1}... + \tilde{\lambda_1} n + \tilde{C}
+=  (\lambda_K n)^K + (\tilde{\lambda}_{K-1} n)^{K-1}... + \tilde{\lambda_1} n + \tilde{\lambda}_0
 $
 \\ \vspace{5mm}
 $
-lim_{n \rightarrow \infty} \frac{O[n+1]}{O[n]}
+lim_{n \rightarrow \infty} \frac{O_{wc}[n+1]}{O_{wc}[n]}
 $
 \\ \vspace{3mm}
 $
@@ -513,7 +525,7 @@ $
 $
 \\ \vspace{3mm}
 $
-= 1 = lim_{n \rightarrow \infty} \frac{O[n+1]}{O[n]}
+= 1 = lim_{n \rightarrow \infty} \frac{O_{wc}[n+1]}{O_{wc}[n]}
 $
 \end{center}
 
@@ -527,11 +539,11 @@ $
 \vspace{1mm}
 \begin{center}
 $
-\exists K,\hat{C},\hat{\lambda}_1,...,\hat{\lambda}_{K-1} :
+\exists K,\hat{\lambda}_0,\hat{\lambda}_1,...,\hat{\lambda}_{K} :
 $
 \\ \vspace{2mm}
 $
-O[n+1] - O[n] = f_{n+1}[n] = (\hat{\lambda}_{K-1} n)^{K-1}... + \hat{\lambda}_1 n + \hat{C} \hspace{3mm} \forall n
+O[n+1] - O[n] = f_{n+1}[n] = (\hat{\lambda}_{K-1} n)^{K-1}... + \hat{\lambda}_1 n + \hat{\lambda}_0 \hspace{3mm} \forall n
 $
 \end{center}
 
@@ -541,23 +553,27 @@ $
 \vspace{1mm}
 \begin{center}
 $
-O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C
+O_{wc}[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + \lambda_0
 $
-\\ \vspace{2mm}
+\\ \vspace{4mm}
 $
-O[n+1] = (\lambda_K (n+1))^K + (\lambda_{K-1} (n+1))^{K-1}... + \lambda_1 (n+1) + C
+O_{wc}[n+1] = (\lambda_K (n+1))^K + (\lambda_{K-1} (n+1))^{K-1}... + \lambda_1 (n+1) + \lambda_0
 $
 \\ \vspace{2mm}
 $ 
-=  (\lambda_K n)^K + (\tilde{\lambda}_{K-1} n)^{K-1}... + \tilde{\lambda_1} n + \tilde{C}
+=  (\lambda_K n)^K + (\tilde{\lambda}_{K-1} n)^{K-1}... + \tilde{\lambda_1} n + \tilde{\lambda}_0
+$
+\\ \vspace{6mm}
+$
+O_{wc}[n+1] - O_{wc}[n] = 
 $
 \\ \vspace{2mm}
 $
-O[n+1] - O[n] = ((\tilde{\lambda}_{K-1}- \lambda_{K-1})n)^{K-1}... + (\tilde{\lambda_1} - \lambda_1) n + (\tilde{C} - C)
+(\lambda_K n)^K - (\lambda_K n)^K + (\tilde{\lambda}_{K-1}^{K-1}- \lambda_{K-1}^{K-1})n^{K-1}... + (\tilde{\lambda_1} - \lambda_1) n + (\lambda_1 - \lambda_0)
 $
-\\ \vspace{2mm}
+\\ \vspace{4mm}
 $
-O[n+1] - O[n] = (\hat{\lambda}_{K-1}n)^{K-1}... + \hat{\lambda}_1  n + \hat{C}
+O_{wc}[n+1] - O_{wc}[n] = (\hat{\lambda}_{K-1}n)^{K-1}... + \hat{\lambda}_1  n + \hat{\lambda_0}
 $
 \end{center}
 
@@ -716,24 +732,46 @@ $^*$ Assume K < M, similar proof for K=M, K>M
 \newpage
 \section{Non-Polynomial Complexity}
 \subsection{Definition}
-Decision problem $\tilde{D}$ with solution $s^+$ has non-polynomial total complexity $O[n]$ if
+Boolean Program $\mathcal{P}$ is said to have $non$ $polynomial$ $complexity$ if and only if
 \begin{center}
 $\not \exists K,\lambda_0,\lambda_1,...,\lambda_K \hspace{1mm} :$
 \\ \vspace{2mm}
-$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n$
+$O_{wc}[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1} + ... + \lambda_1 n + \lambda_0 \hspace{3mm} \forall n$
 \end{center}
 
 
 \subsection{Non-Polynomial Problems}
-Define $\mathcal{N}$, the set of Decision Problems that cannot be solved with Polynomial Complexity
+Define $\mathbb{N}$, the set of Programs that do not have Polynomial Total Complexity
 \begin{center}
 $
-\mathcal{N} := \{\tilde{D}_1,\tilde{D}_2,...\} :
+\mathbb{N} := \{\mathcal{P}_1,\mathcal{P}_2,...\} :
 $
 \\ \vspace{2mm}
 $\not \exists K,C,\lambda_1...\lambda_K \hspace{1mm} :$
 \\ \vspace{2mm}
 $O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n, \hspace{1mm}  s^+ \in S^+_i, \hspace{1mm} \tilde{D}_i \in \mathcal{N}$
+\end{center}
+
+\subsection{Universe of Programs Theorem}
+Prove
+\begin{center}
+$
+\mathbb{P} \cup \mathbb{N} = \Omega_{\mathcal{P}}
+$
+\end{center}
+
+\subsubsection{corrolary 1}
+\begin{center}
+$
+\mathbb{N}  = \Omega_{\mathcal{P}} \setminus \mathbb{P}
+$
+\end{center}
+
+\subsubsection{corrolary 2}
+\begin{center}
+$
+\mathbb{P}  = \Omega_{\mathcal{P}} \setminus \mathbb{N}
+$
 \end{center}
 
 \subsection{$\mathbb{P}$ and $\mathcal{N}$ are disjoint}
@@ -1579,7 +1617,13 @@ In abstraction theory, functions have a domain (bounded set of every possible in
 \section{Convergent Functions}
 \section{Divergent Functions}
 
-
+\section{Polynomial Complexity - Note on $\lambda$}
+Property holds for $\lambda_i \geq$ 1. Since O is integer non-decreasing it is trivial to show $\lambda_i$ is an int > 0 
+\begin{center}
+$
+\lambda_i \geq 1
+$
+\end{center}
 
 
 \newpage
