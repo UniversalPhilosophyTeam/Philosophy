@@ -4,13 +4,18 @@
 \usepackage[T1]{fontenc}
 \usepackage{mathabx,graphicx}
 
-\def \attrdef{\atop}
-\def \hasattr{$\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize}
-\def \isattrof{$\rlap{$\supseteq$}$\tiny $a \attrdef $ \normalsize}
+%\def \attrdef{\atop}
+\def \fcontainssymbol{$\rlap{$\supseteq$}$\tiny $f \atop $ \normalsize}
+\def \hasattr{$\rlap{$\supseteq$}$\tiny $a \atop $ \normalsize}
+\def \isattrof{$\rlap{$\supseteq$}$\tiny $a \atop $ \normalsize}
+\def \fequiv{{f} \atop{==}}
+\def \fsupset{f \atop \supset}
+\def \fsupseteq{f \atop \supseteq}
+\def \fsubset{f \atop \subset}
+\def \fsubseteq{f \atop \subseteq}
+
 
 \begin{document}
-
-
 
 
 \begin{center}
@@ -23,7 +28,7 @@
 \section{Problems}
 
 \subsection{Definition of Problem $\mathcal{Q}$}
-A problem is also referred to as a "Question" - a bounded boolean expression
+A problem is also referred to as a "Question"
 \begin{center}
 \vspace{2mm}
 $
@@ -36,7 +41,7 @@ $
 \end{center}
 
 \subsection{True False Question}
-Also referred to as a "Decision Problem"
+Also referred to as a "Decision Question", "Decision Problem" xor "True False Problem"
 \begin{center}
 \vspace{2mm}
 $
@@ -79,16 +84,39 @@ $
 
 
 \section{Instructions}
+
+\subsection{Definition of a Canonical Instruction Set}
+Also denoted as an Instruction Set Architecture (ISA)
+
 \subsection{Definition of Instruction}
-An instruction is either a canonical comparison, canonical operation, or canonical measurement  of Question $\mathcal{Q}$/ Framework $\mathcal{F}$/ System $\mathcal{S}$ followed by an assigment
-\subsection{Definition of Instruction Set}
-Define $\mathcal{I}$; an ordered set of instructions $s_i$
+An instruction is either a canonical comparison, canonical operation, or canonical measurement  of Question $\mathcal{Q}$ given ISA $\mathcal{A}$ followed by an assignment
+
+
+\subsection{Definition of Instruction Tree}
+Define $\mathcal{T}$; a tree of of instructions $\tilde{s}_i$
+\vspace{1mm}
 \begin{center}
 $
-\mathcal{I} := \{ s_1,s_2,...,s_{N}\}
+\mathcal{T} := \{ \tilde{s}_1,\tilde{s}_i,...\}
 $
 \end{center}
 
+\subsection{Definiton of a Closed Path in an Instruction Tree}
+
+\subsection{Definition of the Tensor of Closed Paths in an Instruction Tree}
+
+\subsection{Definition of Valid Instruction Path of an Instruction Tree}
+Define Instruction Path $\mathcal{I}$ of Instruction Tree $\mathcal{T}$; a closed path of ordered instructions $s_i$\\ \\
+Let  Instruction Path $\mathcal{I}$ of Instruction Tree $\mathcal{T}$
+\begin{center}
+$
+\mathcal{I}_{\mathcal{T}}:= \{ s_1,s_2,...,s_{N}\} :
+$
+\\ \vspace{2mm}
+$
+(s_1 == \tilde{s}_1)  \land ((s_i \hspace{2mm} -> s_{i+1}) \in \mathcal{T} \hspace{3mm} \forall i < N) \land (s_N == return$ $y)
+$
+\end{center}
 
 
 
@@ -177,6 +205,8 @@ $
 \end{center}
 
 
+\subsection{Domain of a Program}
+The space of inputs/outputs
 
 
 
@@ -423,6 +453,128 @@ $
 \subsection{Proof of Existence}
 Let Program $\mathcal{P}$ with input space $\mathbb{X}_n$ having magnitude > 0\\
 Prove the existence of $O_{wc}[n]$
+
+
+\section{Total Runtime Complexity}
+
+
+\section{Control Flow Statements}
+If, then, while, enum
+\subsection{Early return statements}
+
+
+
+
+\section{Proving Wost Case Complexity as a function of n}
+Given ISA $\mathcal{A}$, when is it provable that $O_{wc}$ is a function of n?
+
+\section{Inductive Complexity Expressions}
+\begin{center}
+\vspace{3mm}
+$
+O[n] = O_T[n] + O_S[n]
+$
+\\ \vspace{2mm}
+$
+O[n+1] = O_T[n+1] + O_S[n+1]
+$
+\\ \vspace{4mm}
+$
+f_{n+1}[n] := O[n+1] - O[n]
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\subsection{Inductive Space and Time Formulas}
+\begin{center}
+$
+f^T_{n+1}[n] := O_T[n+1] - O_T[n]
+$
+\\ \vspace{2mm}
+$
+O_T[n+1] = O_T[n] + f^T_{n+1}[n]
+$
+\\ \vspace{2mm}
+$
+f^S_{n+1}[n] := O_S[n+1] - O_S[n]
+$
+\\ \vspace{2mm}
+$
+O_S[n+1] = O_S[n] + f^S_{n+1}[n]
+$
+
+\end{center}
+
+
+
+
+
+% Theorem of Polynomia? Duality
+\subsection{Inductive Function Expressions}
+Relate $f_{n+1}[n]$ to equivalence functions
+\begin{center}
+\vspace{2mm}
+$
+O[n] = O_T[n] + O_S[n]
+$
+\\ \vspace{2mm}
+$
+O[n+1] = O_T[n+1] + O_S[n+1] = O[n] + f_{n+1}[n]
+$
+\\ \vspace{2mm}
+$
+O_T[n] = O[n] - O_S[n]
+$
+\\ \vspace{2mm}
+$
+O_S[n] = O[n] - O_T[n]
+$
+\\ \vspace{8mm}
+$
+f_{n+1}[n] = O[n+1] - O[n]
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] = O_T[n+1] + O_S[n+1] - O[n]
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] = O_T[n+1] - O_T[n] + O_S[n+1] - O_S[n]
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] = O[n+1] - O_T[n] - O_S[n]
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] =  f^T_{n+1}[n] +  f^S_{n+1}[n]
+$
+\end{center}
+
+
+
+
+
+
+\subsection{Zero Order Space Inductive Function}
+\begin{center}
+$
+Let \hspace{2mm} O_S[n] \sim n^0
+$
+\\ \vspace{2mm}
+$
+f_{n+1}[n] = O_T[n+1] - O_T[n] + O_S[n+1] - O_S[n] = O_T[n+1] - O_T[n]
+$
+\end{center}
+
 
 \newpage
 \section{The Set of all Programs}
@@ -747,9 +899,9 @@ $
 \mathbb{N} := \{\mathcal{P}_1,\mathcal{P}_2,...\} :
 $
 \\ \vspace{2mm}
-$\not \exists K,C,\lambda_1...\lambda_K \hspace{1mm} :$
+$\not \exists K,\lambda_0,\lambda_1...\lambda_K \hspace{1mm} :$
 \\ \vspace{2mm}
-$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + C \hspace{3mm} \forall n, \hspace{1mm}  s^+ \in S^+_i, \hspace{1mm} \tilde{D}_i \in \mathcal{N}$
+$O[n] = (\lambda_K n)^K + (\lambda_{K-1} n)^{K-1}... + \lambda_1 n + \lambda_0 \hspace{3mm} \forall n, \hspace{2mm}  \forall \mathcal{P}_i \in \mathbb{N}$
 \end{center}
 
 \subsection{Universe of Programs Theorem}
@@ -838,18 +990,140 @@ See Appendix for additional proofs on Convergent and Divergent Functions
 \subsection{Divergent Programs}
 See Appendix for additional proofs on Convergent and Divergent Functions
 \subsection{Divergent Program $\Rightarrow$ Not-Polynomial Program}
+Enter proof
 \subsection{Not-Polynomial Program $\Rightarrow$ Divergent Programs}
+Disprove xor prove
 
 
 \section{Solution to a Problem}
 
-\subsection{Definition of a Solution}
+\subsection{Definition of Functionally Contains}
+Let
+\begin{center}
+$
+f_{1}[X] \rightarrow a_1 \in \Omega \hspace{4mm} \forall X \in \mathbb{D}_{f_1} 
+$
+\\ \vspace{2mm}
+$
+f_{2}[\hat{X}] \rightarrow a_2 \in \Omega \hspace{4mm} \forall \hat{X} \in \mathbb{D}_{f_2} 
+$
+\\ \vspace{6mm}
+$
+(f_1[] \rightarrow a_1$ $\fsubseteq$ $f_2[] \rightarrow a_2) \rightarrow y \in \{\mathbb{T},\mathbb{F}\} :=
+$
+\\ \vspace{2mm}
+$
+(\mathbb{D}_2 \subseteq \mathbb{D}_1) \land (a_1 == a_2 \hspace{4mm} \forall \hat{X} \in \mathbb{D}_2) 
+$
+\end{center}
+
+\subsection{Definition of Functionally Equivalent}
+Let
+\begin{center}
+$
+f_{1}[X] \rightarrow a_1 \in \Omega \hspace{4mm} \forall X \in \mathbb{D}_{f_1} 
+$
+\\ \vspace{2mm}
+$
+f_{2}[X] \rightarrow a_2 \in \Omega \hspace{4mm} \forall X \in \mathbb{D}_{f_2} 
+$
+\\ \vspace{6mm}
+$
+(f_1$ $\fequiv$ $f_2) \rightarrow y \in \{\mathbb{T},\mathbb{F}\} :=
+$
+\\ \vspace{2mm}
+$
+(a_1 == a_2 \hspace{4mm} \forall X \in \mathbb{D}_1) \land (\mathbb{D}_1 == \mathbb{D}_2)
+$
+\end{center}
+
+
+
+
+\subsection{Definition of a Solution of Boolean Problem}
+Let Boolean Problem Q
+\begin{center}
+\vspace{1mm}
+$
+\mathcal{Q} := f\lbrack X_n \rbrack \rightarrow a_o \in \{\mathbb{T},\mathbb{F}\} \hspace{4mm} \forall X_n \in \mathbb{D}_{Q}
+$
+\\ \vspace{6mm}
+$
+S_Q^+[X_n] := P[X_n] \rightarrow y =\{ s_1,s_2,...,s_{N}\hspace{1mm}|\hspace{1mm} y, b_2,...,b_M\} \rightarrow y :
+$
+\\ \vspace{2mm}
+$
+(P[X_n] \rightarrow y) \land (y == a_o) \hspace{3mm} \forall  X_n \in \mathbb{D}_Q
+$
+\end{center}
+
 
 \subsection{Complexity of a Solution}
+Let Boolean Problem $\mathcal{Q}$ having solution $S^+$ $\in$ $\mathbb{S}^+$
+\begin{center}
+\vspace{1mm}
+$
+\mathcal{Q} := f\lbrack X_n \rbrack \rightarrow a_o \in \{\mathbb{T},\mathbb{F}\} \hspace{4mm} \forall X_n \in \mathbb{D}_{Q}
+$
+\\ \vspace{6mm}
+$
+S_Q^+[X_n] := P[X_n] \rightarrow y =\{ s_1,s_2,...,s_{N}\hspace{1mm}|\hspace{1mm} y, m_2,...,m_M\} \rightarrow y :
+$
+\\ \vspace{2mm}
+$
+(P[X_n] \rightarrow y) \land (y == a_o) \hspace{3mm} \forall  X_n \in \mathbb{D}_Q
+$
+\\ \vspace{6mm}
+$
+S_Q^+[X_n] \rightarrow y  \hspace{4mm} \forall  X_n \in \mathbb{D}_Q
+$
+\\ \vspace{3mm}
+$
+= P[X_n] \rightarrow y =\{ s_1,s_2,...,s_{N}\hspace{1mm}|\hspace{1mm} y, m_2,...,m_M\} \rightarrow y \hspace{4mm} \forall  X_n \in \mathbb{D}_Q
+$
+\\ \vspace{3mm}
+$
+=\{\mathcal{I}, \mathcal{M} \} \rightarrow y \hspace{4mm} \forall  X_n \in \mathbb{D}_Q
+$
+\\ \vspace{8mm}
+$
+Complexity$$[S_Q^+] := |\mathcal{I}| + |\mathcal{M}| = N + M
+$
+\end{center}
+\subsubsection{Proof of existence of Complexity of Solution}
+By definition $S^+$ is a Program, $\mathcal{I}$ and $\mathcal{M}$ are sets, therefore $|\mathcal{I}|$ $and$ $|\mathcal{M}|$ are defined
+\begin{center}
 
-\subsection{Worst Case Complexity of Solution $s^+$}
+\end{center}
 
-\subsection{Solution Space of a Question}
+\subsection{Worst Case Complexity of Solution $s_{wc}^+$}
+
+\subsection{Proving the existence of $s_{wc}^+$}
+
+\subsection{Solution Space of a Boolean Problem}
+Let Boolean Problem Q
+\begin{center}
+\vspace{1mm}
+$
+\mathcal{Q} := f\lbrack X_n \rbrack \rightarrow y_o \in \{\mathbb{T},\mathbb{F}\} \hspace{4mm} \forall X_n \in \mathbb{D}_{Q}
+$
+\\ \vspace{6mm}
+$
+\mathbb{S}_{Q}^+ := \{S_{i}^+,...\} :
+$
+\\ \vspace{2mm}
+$
+S^+_{i}[X_n] := P[X_n] =\{ s_1,s_2,...,s_{N}\hspace{1mm}|\hspace{1mm} y, b_2,...,b_M\} :
+$
+\\ \vspace{2mm}
+$
+(P_{Q}[X_n] \rightarrow y) \land (y == a) \hspace{3mm} \forall  X_n \in \mathbb{D}_Q
+$
+\\ \vspace{2mm}
+$
+\forall S_{i}^+ \in \mathbb{S}^+
+$
+\end{center}
 
 \subsection{Candidate Solutions}
 
