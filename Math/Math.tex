@@ -1,0 +1,713 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{mathabx,graphicx}
+
+\newcommand{\test}{\circlearrowright}
+\def \loop {\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}}
+\def \nestedloop {\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}^n}
+
+\begin{document}
+
+\section*{Math}
+
+
+
+
+
+\section{Definition of a line  $\mathbb{L}$}
+\subsection{Definition}
+\begin{center}
+$\mathbb{L} := \{l_i,...$
+\\ \vspace{2mm}
+$\exists l_i \in \mathbb{L} \hspace{3mm} \forall i$
+\end{center}
+
+
+
+
+\section{Whole Numbers $\mathbb{W}$}
+\subsection{Definition}
+Define the positive number line $\mathbb{W}$, the set of whole numbers
+\begin{center}
+$\mathbb{W} :=$
+\\ \vspace{2mm}
+$|S_i| \in \mathbb{W} \hspace{3mm} \forall i$
+\end{center}
+
+
+
+
+
+\section{Injection (one-to-one)}
+\subsection{Definition$\lbrack 1 \rbrack$}
+\begin{center}
+$\hspace{2mm} S_1 = \{a_1,a_2,...,a_n\}; \hspace{2mm} S_2 = \{b_1,b_2,...,b_m\} \hspace{2mm} m \geq n$
+\\ \vspace{2mm}
+$injective \lbrack S_1, S_2 \rbrack \rightarrow (\forall a_i \in S_1 \hspace{2mm} \exists b_j \in S_2 : f \lbrack a_i \rbrack \rightarrow b_j)$
+\\ \vspace{2mm}
+$\forall a_i,a_j \in S_1; f \lbrack a_i \rbrack = f \lbrack a_j \rbrack \Longleftrightarrow a_i = a_j \hspace{2mm} \lbrack 2 \rbrack$
+\end{center}
+
+
+
+
+
+\section{Surjection (onto)}
+\subsection{Definition $\lbrack 2 \rbrack$}
+\begin{center}
+$\hspace{2mm} S_1 = \{a_1,a_2,...,a_n\}; \hspace{2mm} S_2 = \{b_1,b_2,...,b_m\} \hspace{2mm} m \geq n$
+\\ \vspace{2mm}
+$surjective \lbrack S_1, S_2 \rbrack \rightarrow (\forall a_i \in S_1 \hspace{2mm} \exists b_j \in S_2 : f \lbrack a_i \rbrack \rightarrow b_j)$
+\end{center}
+
+
+
+
+
+
+
+\section{Bijection (One-to-one and onto)}
+Also known as invertible
+
+\subsection{Definition $\lbrack 3 \rbrack$}
+\begin{center}
+$\hspace{2mm} S_1 = \{a_1,a_2,...,a_n\}; \hspace{2mm} S_2 = \{b_1,b_2,...,b_n\}$
+\\ \vspace{2mm}
+$Invertible \lbrack S_1,S_2 \rbrack \rightarrow$
+\\ \vspace{2mm}
+$ (\forall a_i \in S_1 \hspace{2mm} \exists b_j \in S_2 : f \lbrack a_i \rbrack \rightarrow b_j) \land (\forall b_j \in S_2 \hspace{2mm} \exists a_i \in S_1 : g \lbrack b_j \rbrack \rightarrow a_i)$
+\end{center}
+
+
+
+
+\section{Hierarchy of Bijections Surjections and Injections}
+
+
+
+
+
+\section{Vector}
+Define vector as a set of more than one cardinalities
+
+\subsection{Definition}
+\begin{center}
+$\vec{v} :=$
+\\ \vspace{2mm}
+$|S_1| = x_1; |S_2| = x_2;...;|S_N| = x_N$
+\\ \vspace{2mm}
+$\vec{v} = \{|S_1|,|S_2|,...,|S_N|\} = <x_1,x_2,...,x_N>$
+\end{center}
+
+\subsection{Dimensionality}
+\begin{center}
+$
+dim \lbrack \vec{v} \rbrack = |\vec{v}| :=
+$
+\\ \vspace{2mm}
+$
+\vec{v} = \{|S_1|,|S_2|,...,|S_N|\} = <x_1,x_2,...,x_N>
+$
+\\ \vspace{2mm}
+$
+| \vec{v} | = N
+$
+\end{center}
+
+
+
+\section{Vector Space}
+Define Vector Space $\bold{V}$ as a set of more than one lines
+\subsection{Definition}
+\begin{center}
+$\bold{V} := \{ \mathbb{L}_1,\mathbb{L}_2,...,\mathbb{L}_N\}$
+\end{center}
+
+
+
+\section{Spans}
+A function/system mapping to a vector space
+
+\subsection{Bijective Span}
+\subsection{Injective Span}
+\subsection{Surjective Span}
+
+
+
+
+\section{Summation Notation}
+Define summation $\sum$; the notation for successive additions
+\begin{center}
+$\sum_{i=1}^{N} a :=$
+\\ \vspace{2mm}
+$\sum_{i=1}^{N} a = a + \sum_{i=2}^{N} a =$
+\\ \vspace{2mm}
+$a + a + \sum_{i=3}^{N} a = ... = a + a + ... + a = a * N$
+\end{center}
+
+
+
+
+\section{Definition of Series}
+Define series
+\begin{center}
+$series :=$
+\\ \vspace{2mm}
+$\sum_{i=1}^{N} x_i = x_1 + x_2 + ... + x_N$
+\end{center}
+
+
+
+
+
+
+\subsection{Discrete Derivative}
+Define Derivative for discrete function f[n]; commonly denoted as a difference function
+\begin{center}
+$
+\Delta_n^1 f[n] := f[n+1] - f[n]
+$
+\end{center}
+\vspace{1mm}
+We will use the above definition for the remainder of this document \\
+
+
+\subsubsection{Left Hand Derivative Definition}
+\begin{center}
+\vspace{1mm}
+$
+\Delta_{n_l}^1 f[n] = f[n] - f[n-1]
+$
+\end{center}
+
+
+\subsection{Zero Order Derivative}
+\begin{center}
+\vspace{1mm}
+$
+\Delta_n^0 f[n] := f[n]
+$
+\end{center}
+
+
+
+\subsection{K$^{th}$ Discrete Derivative}
+Define the $K^{th}$ derivative of discrete function $f[n]$
+\begin{center}
+\vspace{1mm}
+$
+\Delta_n^K f[n] := \Delta_n^{K-1} f[n+1] - \Delta_n^{K-1} f[n]
+$
+\end{center}
+
+
+
+
+\subsection{K$^{th}$ Discrete Derivative as an Alternating Sum}
+\begin{center}
+$
+\Delta_n^K f[n] := \Delta_n^{K-1} f[n+1] - \Delta_n^{K-1} f[n]
+$
+\\ \vspace{4mm}
+$
+= (\Delta_n^{K-2} f[n+2] - \Delta_n^{K-2} f[n+1]) - (\Delta_n^{K-2} f[n+1] - \Delta_n^{K-2} f[n])
+$
+\\ \vspace{4mm}
+$
+= (\Delta_n^{K-2} f[n+2] - 2\Delta_n^{K-2} f[n+1] - \Delta_n^{K-2} f[n])
+$
+\\ \vspace{4mm}
+$
+=  \sum_{i=0}^K (-1)^{j} \hspace{1mm} (_K C _j) \hspace{1mm} \Delta_n^{0} f[n + j]
+$
+\\ \vspace{4mm}
+$
+= \sum_{i=0}^K (-1)^{j} \hspace{1mm} (_K C _j) \hspace{1mm} f[n + j]
+$
+\end{center}
+
+
+
+
+
+
+
+
+\subsection{Z Transform}
+Define the Z Transform for discrete function f[n]
+\begin{center}
+$
+\mathcal{Z}(f[n]) := \sum_{n=0}^{\infty}f[n]z^{-n}
+$
+\end{center}
+
+
+
+
+
+\subsection{Z Transform of 0 Order Derivative}
+\begin{center}
+\vspace{1mm}
+$
+\Delta_n^0 f[n] := f[n]
+$
+\\ \vspace{3mm}
+$
+\mathcal{Z}(\Delta_n^0 f[n]) = \mathcal{Z}(f[n])
+$
+\end{center}
+
+
+
+
+
+\subsection{Z Transform of 1$^{st}$ Derivative}
+\begin{center}
+\vspace{1mm}
+$
+\Delta_n^1 f[n] := f[n+1] - f[n]
+$
+\\ \vspace{3mm}
+$
+\mathcal{Z}(\Delta_n^1 f[n]) = \mathcal{Z}(f[n+1] - f[n])
+$
+\\ \vspace{3mm}
+$
+= \sum_{n=0}^{\infty} (f[n+1] - f[n]) z^{-n}
+$
+\\ \vspace{3mm}
+$
+= \sum_{n=0}^{\infty} (f[n+1]z^{-n} - f[n] z^{-n})
+$
+\\ \vspace{3mm}
+$
+= \sum_{n=0}^{\infty} f[n+1]z^{-n} - \sum_{n=0}^{\infty} f[n] z^{-n}
+$
+\\ \vspace{3mm}
+$
+= \sum_{m=0}^{\infty} f[m+1]z^{-m} - \sum_{n=0}^{\infty} f[n] z^{-n}
+$
+\end{center}
+Let 
+\begin{center}
+$
+\hat{m} = m + 1; \hspace{2mm} m = \hat{m} - 1
+$
+\\ \vspace{3mm}
+$
+= \sum_{m=0}^{\infty} f[\hat{m}]z^{-(\hat{m}-1)} - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+= z^1 \sum_{\hat{m}=1}^{\infty} f[\hat{m}]z^{-\hat{m}} - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+= z^1 \sum_{\hat{m}=1}^{\infty} f[\hat{m}]z^{-\hat{m}} + f[0] - f[0] - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+= z^1 \sum_{\hat{m}=0}^{\infty} f[\hat{m}]z^{-\hat{m}} - f[0] - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+= z^1\mathcal{Z}(f[n]) - f[0] - \mathcal{Z}(f[n])
+$
+\\ \vspace{3mm}
+$
+\mathcal{Z}(\Delta_n^1 f[n]) = \mathcal{Z}(f[n])(z^1 - 1) - f[0]
+$
+\end{center}
+
+
+
+
+
+
+\subsection{Z Transform of K$^{th}$ Derivative}
+\vspace{1mm}
+\begin{center}
+$
+\mathcal{Z}(f[n]) := \sum_{n=0}^{\infty}f[n]z^{-n}
+$
+\\ \vspace{5mm}
+$
+\mathcal{Z}(\Delta_n^K f[n]) = \sum_{n=0}^{\infty} \Delta_n^K f[n]z^{-n}
+$
+\\ \vspace{5mm}
+$
+= \sum_{n=0}^{\infty} \sum_{i=0}^K (-1)^{j} \hspace{1mm} (_K C _j) \hspace{1mm} f[n + j] z^{-n}
+$
+\\ \vspace{5mm}
+$
+= \sum_{n=0}^{\infty} (f[n+K] - (_K C _1) f[n+K-1] +  (_K C _2) f[n+K-2] - ...\pm f[n])z^{-n}
+$
+\\ \vspace{5mm}
+$
+= \sum_{n=0}^{\infty} f[n+K]z^{-n} - (_K C _1) f[n+K-1]z^{-n} +  (_K C _2) f[n+K-2]z^{-n} - ...\pm f[n]z^{-n}
+$
+\\ \vspace{5mm}
+$
+= z^K \mathcal{Z}(f[n]) +\sum_{i=0}^{K-1} f[i] - (_K C _1)z^{K-1} \mathcal{Z}(f[n]) - \sum_{j=0}^{K-2}f[j] + (_K C _2)z^{K-2} \mathcal{Z}(f[n])+\sum_{k=0}^{K-3}f[k] - ... \pm \mathcal{Z}(f[n])
+$
+\end{center}
+When K is odd
+\begin{center}
+$
+\mathcal{Z}(\Delta_n^K f[n]) = (z-1)^K \mathcal{Z}(f[n]) + \sum_{i=0}^{\frac{n+1}{2}} f[2i] \hspace{3mm} K > 0
+$
+\end{center}
+When K is even
+\begin{center}
+$
+\mathcal{Z}(\Delta_n^K f[n]) = (z-1)^K \mathcal{Z}(f[n]) + \sum_{j=0}^{\frac{n}{2}} f[2j + 1] \hspace{3mm} K > 0
+$
+\end{center}
+
+
+
+
+
+
+% Convergent Functions; Convergence
+\section{Convergent Functions}
+
+
+
+
+\subsection{Definition of Converges to}
+\begin{center}
+\vspace{1mm}
+$f[n]$ $converges$ $to$ $C$ = $convergent [f [n],C] = a_o; \hspace{1mm} a_o \in \{\mathbb{T},\mathbb{F}\} =$
+\\ \vspace{6mm}
+$
+|C - f[n+1]| < |C - f[n]| \hspace{2mm} \forall n
+$
+\\ \vspace{2mm}
+$
+\land
+$
+\\ \vspace{2mm}
+$
+\not \exists K : | C - f[\hat{n}] | > K \hspace{4mm} \forall n; K > 0
+$
+\end{center}
+
+\subsubsection{Notation}
+C is commonly denoted by a limit
+\begin{center}
+$
+C = lim_{n \rightarrow \infty} f[n]
+$
+\end{center}
+
+
+
+\subsection{Definition of General Convergence}
+\begin{center}
+\vspace{1mm}
+$f[n]$ is $convergent$ = $convergent \lbrack f \lbrack n \rbrack \rbrack = a_o; \hspace{1mm} a_o \in \{\mathbb{T},\mathbb{F}\} =$
+\\ \vspace{6mm}
+$
+\exists C :
+$
+\\ \vspace{2mm}
+$convergent[f[n],C] == \mathbb{T}$
+\end{center}
+Alternatively
+\begin{center}
+\vspace{1mm}
+$f[n]$ is $convergent$ = $convergent \lbrack f \lbrack n \rbrack \rbrack = a_o \in \{\mathbb{T},\mathbb{F}\} =$
+\\ \vspace{2mm}
+$
+\exists C :
+$
+\\ \vspace{2mm}
+$f[n]$ $converges$ $to$ $C$
+\end{center}
+
+\subsubsection{Notation}
+\begin{center}
+\vspace{1mm}
+$f[n]$ is $convergent$ = $convergent \lbrack f \lbrack n \rbrack \rbrack = a_o; \hspace{1mm} a_o \in \{\mathbb{T},\mathbb{F}\} =$
+\\ \vspace{6mm}
+$
+\exists lim_{n \rightarrow \infty} f[n]:
+$
+\\ \vspace{2mm}
+$
+f[n]$ $converges$ $to$ $lim_{n \rightarrow \infty} f[n]
+$
+\end{center}
+
+
+
+
+
+
+\subsection{Increasing Convergence}
+For strictly increasing functions
+\begin{center}
+$ f \lbrack n \rbrack = \sum_{i=1}^{n} x_i$
+\\ \vspace{2mm}
+$\forall f \lbrack n \rbrack : convergent \lbrack f \lbrack n \rbrack \rbrack \rightarrow \mathbb{T}$
+\\ \vspace{2mm}
+$ \lim_{n \rightarrow \infty} f \lbrack n \rbrack = C:=$
+\\ \vspace{2mm}
+$C >  f[n] \hspace{3mm} \forall n$
+\\ \vspace{2mm}
+$
+f[n+1] > f[n] \hspace{2mm} \forall n
+$
+\\ \vspace{2mm}
+$\not \exists K : C - \sum_{i=1}^{n} x_i > K \hspace{3mm} \forall n; K > 0$
+\end{center}
+\subsubsection{Prove Increasing Convergence has General Convergence}
+
+
+
+
+\subsection{Decreasing Convergence}
+For strictly decreasing functions
+\begin{center}
+$ f \lbrack n \rbrack = \sum_{i=1}^{n} x_i$
+\\ \vspace{2mm}
+$\forall f \lbrack n \rbrack : convergent \lbrack f \lbrack n \rbrack \rbrack \rightarrow \mathbb{T}$
+\\ \vspace{2mm}
+$ \lim_{n \rightarrow \infty} f \lbrack n \rbrack = C:=$
+\\ \vspace{2mm}
+$f[n] > C \hspace{3mm} \forall n$
+\\ \vspace{2mm}
+$
+f[n+1] < f[n] \hspace{2mm} \forall n
+$
+\\ \vspace{2mm}
+$\not \exists K :\sum_{i=1}^{n} x_i - C > K \hspace{3mm} \forall n; K > 0$
+\end{center}
+\subsubsection{Prove Decreasing Convergence has General Convergence}
+
+
+
+
+\subsection{Transient Convergence}
+For alternating functions
+\begin{center}
+
+\end{center}
+\subsubsection{Prove Transient Convergence has General Convergence}
+
+\section{Chaotic Convergence}
+\begin{center}
+\vspace{1mm}
+$f[n]$ $is$ $chaotic$ $convergent$ = $chaotic$ $convergent \lbrack f \lbrack n \rbrack \rbrack =$
+\\ \vspace{4mm}
+$
+\exists C,\hat{n} :
+$
+\\ \vspace{2mm}
+$
+ |C - f[n]| > |C - f[n+\hat{n}]| \hspace{2mm} \forall n
+$
+\end{center}
+\subsection{Prove General Convergence implies Chaotic Convergence}
+\subsection{Prove Choatic Convergence does not necessarily imply General Convergence}
+
+
+
+
+% Definition of Divergent Function
+\subsection{Definition of Divergent Function}
+
+
+
+\section{Divergence}
+\subsection{Definition of Divergence}
+\begin{center}
+\vspace{1mm}
+$
+diverges \lbrack f \lbrack n \rbrack \rbrack = \lnot converges[f[n]] = d_o; \hspace{1mm} d_o \in \{\mathbb{T},\mathbb{F}\}
+$
+\\ \vspace{4mm}
+$
+:= \not \exists C : convergent[f[n],C] == \mathbb{T}
+$
+\end{center}
+
+
+
+
+
+\subsection{Alternate Definition of Divergence}
+\begin{center}
+\vspace{1mm}
+$diverges \lbrack f \lbrack n \rbrack \rbrack = \lnot converges[f[n]] = d_o; \hspace{1mm} d_o \in \{\mathbb{T},\mathbb{F}\}$
+\\ \vspace{4mm}
+$
+= convergent[f[n],C] == \mathbb{F} \hspace{4mm} \forall C
+$
+\end{center}
+\subsubsection{Proof of Equivalence; Alternate Definition of Divergence}
+
+
+
+
+
+\subsection{Necessary and Sufficient Criteria 1 For Divergence}
+Function f[n] diverges if and only if the $K^{th}$ derivative of f[n] is strictly increasing
+\vspace{1mm}
+\begin{center}
+$
+diverges \lbrack f \lbrack n \rbrack \rbrack := \not \exists C : convergent[f[n],C] == \mathbb{T}
+$
+\\ \vspace{4mm}
+$
+\Longleftrightarrow
+$
+\\ \vspace{4mm}
+$
+\Delta_n^{K+1} f[n] > \Delta_n^{K}f[n] \hspace{3mm} \forall K
+$
+\end{center}
+Alternatively
+\begin{center}
+$
+\Delta_n^{K+1} f[n] - \Delta_n^{K}f[n] > 0 \hspace{3mm} \forall K
+$
+\\ \vspace{4mm}
+$
+\Delta_{n}^{K+2} > 0 \hspace{2mm} \forall K
+$
+\end{center}
+
+
+
+
+
+
+\subsubsection{Criteria 1; Proof of Necessity and Sufficiency}
+\begin{center}
+$
+diverges \lbrack f \lbrack n \rbrack \rbrack = d_o; \hspace{1mm} d_o \in \{\mathbb{T},\mathbb{F}\}
+$
+\\ \vspace{4mm}
+$
+= \not \exists C : convergent[f[n],C] == \mathbb{T}
+$
+\end{center}
+Let
+\begin{center}
+$
+f[n] :
+$
+\\ \vspace{2mm}
+$
+\Delta_{n}^{K+2} > 0 \hspace{3mm} \forall K
+$
+\end{center}
+
+
+
+
+\subsection{Necessary and Sufficient Criteria 2 For Divergence}
+\begin{center}
+\vspace{2mm}
+$
+f[n]\hspace{1mm} is \hspace{1mm} Divergent = Divergent[f[n]] = a_o \in \{\mathbb{T},\mathbb{F}\} :=
+$
+\\ \vspace{4mm}
+$
+\not \exists c: lim_{n\rightarrow \infty} \Delta_n^K f[n] = c
+$
+\end{center}
+
+
+
+
+
+
+
+
+\subsubsection{Criteria 2; Proof of Necessity and Sufficiency}
+\begin{center}
+$
+diverges \lbrack f \lbrack n \rbrack \rbrack = d_o; \hspace{1mm} d_o \in \{\mathbb{T},\mathbb{F}\}
+$
+\\ \vspace{4mm}
+$
+= \not \exists C : convergent[f[n],C] == \mathbb{T}
+$
+\end{center}
+
+
+
+
+
+
+\subsection{Verbal Expressions}
+\begin{center}
+\vspace{1mm}
+$
+f[n]$ $diverges$ = $f[n]$ $is$ $divergent =
+$
+\\ \vspace{2mm}
+$
+f[n]$ $is$ $not$ $convergent= f[n]$ $does$ $not$ $converge
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+%\newpage
+%\section*{Appendix}
+
+
+
+
+%\section{Properties of Sums $\sum$}
+
+
+
+
+
+%\section{For all convergent series, there exists only one bound}
+%\begin{center}
+%$\forall f \lbrack n \rbrack : convergent \lbrack f \lbrack n \rbrack \rbrack \rightarrow \mathbb{T}$
+%\\ \vspace{2mm} 
+%$\lim_{n \rightarrow \infty} f \lbrack n \rbrack = C_1; \lim_{n \rightarrow \infty} f \lbrack n \rbrack = C_2$
+%\\ \vspace{2mm}
+%$\Longleftrightarrow C_1 = C_2$
+%\end{center}
+%\subsection{Proof}
+%Proof by contradiction
+
+
+
+
+\newpage
+\section*{Citations}
+$
+\lbrack 1 \rbrack \hspace{2mm}  https://en.wikipedia.org/wiki/Bijection,\_injection\_and\_surjection\#Injection
+$
+\\
+$
+\lbrack 2 \rbrack \hspace{2mm}  https://en.wikipedia.org/wiki/Bijection,\_injection\_and\_surjection\#Surjection
+$
+\\
+$
+\lbrack 3 \rbrack \hspace{2mm}  https://en.wikipedia.org/wiki/Bijection,\_injection\_and\_surjection\#Bijection
+$
+\\
+$
+\lbrack 4 \rbrack \hspace{2mm} https://www.wolframalpha.com
+$
+
+\end{document}

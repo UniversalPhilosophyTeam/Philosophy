@@ -1,0 +1,1147 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{mathabx,graphicx}
+
+\def \attrdef{\atop}
+\def \hasattrdef{$\rlap{$\supseteq$}$\tiny $a \attr $ \normalsize}
+\def \isattrof{$\rlap{$\supseteq$}$\tiny $a \attr $ \normalsize}
+
+\begin{document}
+
+\section{Buffer}
+\subsection{Definition}
+\vspace{2mm}
+\begin{center}
+$
+buffer[b] \rightarrow b
+$
+\end{center}
+\subsection{Explicit Definition}
+\vspace{2mm}
+b $\in \mathbb{T}$
+\begin{center}
+$
+buffer[b] \rightarrow b \in \mathbb{T}
+$
+\end{center}
+b $\in \mathbb{F}$
+\begin{center}
+$
+buffer[b] \rightarrow b \in \mathbb{F}
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ b \hspace{1mm}| \hspace{1mm} b \in \{\mathbb{T}, \mathbb{F}\}\}
+$
+\end{center}
+
+% Not
+\section{$\lnot$}
+\subsection{Definition}
+\begin{center}
+$
+\lnot = \lnot[b] :=
+$
+\\ \vspace{2mm}
+$
+ \lnot[\mathbb{T}] \rightarrow \mathbb{F}
+ $
+ \\ \vspace{2mm}
+ $
+ \lnot[\mathbb{F}] \rightarrow \mathbb{T}
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ b \hspace{1mm}| \hspace{1mm} b \in \{\mathbb{T}, \mathbb{F}\}\}
+$
+\end{center}
+
+
+
+\section{Binary Comparisons}
+
+
+\subsection{Definition of a Boolean Comparison}
+\vspace{3mm}
+\begin{center}
+$
+f[x_1,x_2] :
+$
+\\ \vspace{2mm}
+$
+f[x_1,x_2] \rightarrow b \in \{\mathbb{T},\mathbb{F}\} \hspace{2mm} \forall x_1,x_2 \in \mathbb{D}_f
+$
+\end{center}
+
+\subsection{Abstraction Notation}
+\begin{center}
+$
+f[input_1,input_2] :
+$
+\\ \vspace{2mm}
+$
+(f \equiv function) \land (f.input_1, f.input_2 \in \mathbb{D}_f) \land (f.out \equiv bool)
+$
+\end{center}
+
+
+% Is Equal To
+\section{==}
+\subsection{Definition}
+\begin{center}
+$
+(a == b) = (==[a,b]) :=
+$
+\end{center}
+a = b
+\begin{center}
+$
+a == b \rightarrow \mathbb{T}
+$
+\end{center}
+\vspace{2mm}
+a $\neq$ b
+\begin{center}
+$
+a == b \rightarrow \mathbb{F}
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{a \hspace{1mm} | \hspace{1mm} a \in \{\mathbb{T},\mathbb{F}\} \}
+$
+\\ \vspace{2mm}
+$
+\{b \hspace{1mm} | \hspace{1mm} b \in \{\mathbb{T},\mathbb{F}\} \}
+$
+\end{center}
+
+
+
+
+% Logical Or
+\section{$\lor$}
+\subsection{Definition}
+\begin{center}
+$
+a \lor b = \lor[a,b] :=
+$
+\end{center}
+\vspace{2mm}
+a = b = $\mathbb{T}$
+\begin{center}
+$
+a \lor b = \mathbb{T}
+$
+\end{center}
+\vspace{2mm}
+a = b = $\mathbb{F}$
+\begin{center}
+$
+a \lor b  = \mathbb{F}
+$
+\end{center}
+\vspace{2mm}
+$\mathbb{T}$ = $a \neq b$ = $\mathbb{F}$
+\begin{center}
+$
+a \lor b = \mathbb{T}
+$
+\end{center}
+\vspace{2mm}
+$\mathbb{F}$ = $a \neq b$ = $\mathbb{T}$
+\begin{center}
+$
+a \lor b = \mathbb{T}
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{a \hspace{1mm} | \hspace{1mm} a \in \{\mathbb{T},\mathbb{F}\}\}
+$
+\\ \vspace{2mm}
+$
+\{b \hspace{1mm} | \hspace{1mm} b \in \{\mathbb{T},\mathbb{F}\}\}
+$
+\end{center}
+
+
+
+
+
+
+
+
+% Logical And
+\section{$\land$}
+\subsection{Definition}
+\begin{center}
+$
+a \land b = \land[a,b] :=
+$
+\end{center}
+\vspace{2mm}
+a = b = $\mathbb{T}$
+\begin{center}
+$
+a \land b = \mathbb{T}
+$
+\end{center}
+\vspace{2mm}
+a = b = $\mathbb{F}$
+\begin{center}
+$
+a \land b  = \mathbb{F}
+$
+\end{center}
+\vspace{2mm}
+$\mathbb{T}$ = $a \neq b$ = $\mathbb{F}$
+\begin{center}
+$
+a \land b = \mathbb{F}
+$
+\end{center}
+\vspace{2mm}
+$\mathbb{F}$ = $a \neq b$ = $\mathbb{T}$
+\begin{center}
+$
+a \land b = \mathbb{F}
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{a \hspace{1mm} | \hspace{1mm} a \in \{\mathbb{T},\mathbb{F}\}\}
+$
+\\ \vspace{2mm}
+$
+\{b \hspace{1mm} | \hspace{1mm} b \in \{\mathbb{T},\mathbb{F}\}\}
+$
+\end{center}
+
+
+
+% Greater than
+\section{>}
+\subsection{Definition}
+\begin{center}
+$
+a > b \hspace{1.5mm} =\hspace{1.5mm} >[a,b] :=
+$
+\\ \vspace{2mm}
+$
+0 > 1\hspace{1.5mm} =\hspace{1.5mm} >[0,1] \rightarrow \mathbb{F} 
+$
+\\ \vspace{2mm}
+$
+1 > 0 \hspace{1.5mm}=\hspace{1.5mm} >[1,0] \rightarrow \mathbb{T} 
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ a \hspace{1mm}| \hspace{1mm} a \in \{0,1\} \}
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}| \hspace{1mm} b \in \{0,1\} \}
+$
+\end{center}
+
+
+
+
+% Less than
+\newpage
+\section{<}
+\subsection{Definition}
+\begin{center}
+$
+a < b \hspace{1.5mm} =\hspace{1.5mm} <[a,b] :=
+$
+\\ \vspace{2mm}
+$
+0 < 1\hspace{1.5mm} =\hspace{1.5mm} <[0,1] \rightarrow \mathbb{T} 
+$
+\\ \vspace{2mm}
+$
+1 < 0 \hspace{1.5mm}=\hspace{1.5mm} <[1,0] \rightarrow \mathbb{F} 
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ a \hspace{1mm}| \hspace{1mm} a \in \{0,1\} \}
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}| \hspace{1mm} b \in \{0,1\} \}
+$
+\end{center}
+
+
+
+\section{Prove all comparators can be expressed with ==,<,>}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% Union
+\newpage
+\section{$\cup$}
+\subsection{Definition}
+\vspace{1mm}
+\begin{center}
+$
+a  \cup  b = \cup[a,b] := 
+$
+\end{center}
+$a = b \neq \emptyset$
+\begin{center}
+$
+a  \cup  a = b \cup b \rightarrow \{a\} = \{b\}
+$
+\end{center}
+\vspace{2mm}
+$\emptyset \neq a \neq b \neq \emptyset$
+\begin{center}
+$
+a \cup  b \rightarrow \{a,b\}
+$
+\end{center}
+\vspace{2mm}
+$\emptyset = a \neq b$
+\begin{center}
+$
+\emptyset \cup  b \rightarrow \{b\}
+$
+\end{center}
+\vspace{2mm}
+$a \neq b = \emptyset$
+\begin{center}
+$
+a \cup \emptyset \rightarrow \{a\}
+$
+\end{center}
+\vspace{2mm}
+$a = b = \emptyset$
+\begin{center}
+$
+\emptyset \cup \emptyset \rightarrow \emptyset
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ a \hspace{1mm} | \hspace{1mm} a \in \Omega\}
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}|\hspace{1mm} b \in \Omega\}
+$
+\end{center}
+
+
+
+
+
+
+% Element-wise subtraction
+\newpage
+\section{$\setminus$}
+\subsection{Definition}
+\vspace{1mm}
+\begin{center}
+$
+a \hspace{1mm} \setminus \hspace{1mm}  b = \setminus[a,b] := 
+$
+\end{center}
+$a \neq b = \emptyset$
+\begin{center}
+$
+a \hspace{1mm} \setminus \hspace{1mm} b \rightarrow a
+$
+\end{center}
+\vspace{2mm}
+$a = b$
+\begin{center}
+$
+a \hspace{1mm} \setminus \hspace{1mm} b \rightarrow \emptyset
+$
+\end{center}
+\vspace{2mm}
+$\emptyset = a \neq b$
+\begin{center}
+Undefined
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ a \hspace{1mm} | \hspace{1mm} a \in \Omega\}
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}|\hspace{1mm} b \subseteq a\}
+$
+\end{center}
+
+
+
+
+
+
+% Intersection
+\newpage
+\section{$\cap$}
+\subsection{Definition}
+\begin{center}
+$
+a \cap b = \cap[a,b] :=
+$
+\end{center}
+\vspace{2mm}
+a = b
+\begin{center}
+$
+a \cap a = b \cap b \rightarrow \{a\} = \{b\}
+$
+\end{center}
+\vspace{2mm}
+$a \neq b$
+\begin{center}
+$
+a \cap b \rightarrow \emptyset
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ a \hspace{1mm}|\hspace{1mm} a \in \Omega\}
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}|\hspace{1mm} b \in \Omega\}
+$
+\end{center}
+
+
+
+
+
+
+
+
+% Cardinality
+\newpage
+\section{Cardinality | |}
+\subsection{Definition}
+\begin{center}
+$
+|S| = $ | |[S\hspace{.2mm}]$:=
+$
+\end{center}
+$S = \emptyset$
+\begin{center}
+$
+|S| \rightarrow 0
+$
+\end{center}
+$S = \{s_1\}$
+\begin{center}
+$
+|S| = |\{s_1\}| \rightarrow 1
+$
+\end{center}
+$S = \{s_1,s_2,...,s_N\}$
+\begin{center}
+$
+|S| = |\{s_1,s_2,...,s_N\}| \rightarrow N
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{S \hspace{1mm} | \hspace{1mm} S \subset \Omega\}
+$
+\end{center}
+
+
+
+
+% Identity
+\section{Definition of Get}
+\begin{center}
+$
+"get" = get[a] :=
+$
+\end{center}
+\vspace{1mm}
+$\exists \doteq a$
+\begin{center}
+$
+get[a] \rightarrow a
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ a \hspace{1mm} | \hspace{1mm} a \in \Omega\}
+$
+\end{center}
+
+
+
+\section{Definition of Assign}
+\begin{center}
+$
+"set" = set[a] :=
+$
+\end{center}
+\vspace{1mm}
+$\exists \doteq a$
+\begin{center}
+$
+set[a]
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ a \hspace{1mm} | \hspace{1mm} a \in \Omega\}
+$
+\end{center}
+
+
+
+\section{Definition of Return}
+
+
+
+\section{Definition of New}
+
+
+
+
+%Computational Operations
+\section{Computational Operations}
+
+
+
+
+
+
+% Set of Canonical Functions
+\subsection{Set of Canonical Functions}
+Define $\mathbb{C}$; the set of canonical functions
+\begin{center}
+$
+\mathbb{C} = \{get,\lnot,\lor,\land,==,>,<,\cup,\cap,||,...\}
+$
+\end{center}
+
+
+
+
+% Assignment
+\subsection{Definition of Assignment}
+Define assignment $\leftarrow$
+\begin{center}
+$
+a \leftarrow b \hspace{1mm} = \hspace{1mm} \leftarrow[a,b] :=
+$
+\\ \vspace{2mm}
+$
+a = \emptyset \cup b
+$
+\end{center}
+
+
+
+
+
+% Definition of Canonical Instruction
+\subsection{Definition of Canonical Instruction}
+Define canonical instruction $c$ as the assignment of a canonical program $l[X_n]$ to element $a$
+\begin{center}
+$
+c := a \leftarrow l[X_n]
+$
+\end{center}
+
+
+
+
+
+
+
+
+% Definition of Computational Instruction
+\subsection{Definition of Computational Instruction}
+Define computational instruction $s$ as a set of canonical instructions with output $a_{2M-1}$
+\begin{center}
+\vspace{1mm}
+$
+X_n = \{x_1,x_2,...,x_n\};
+$
+\\ \vspace{6mm}
+$
+s[X_n] := \{c_1,c_3,c_5,...,c_{2M-1}\} \rightarrow a_{1} \hspace{1mm} |
+$
+\\ \vspace{3mm}
+$
+c_{2i -1}= a_i \leftarrow l_i[\hat{X_i}]  \hspace{4mm} l_i \in \mathbb{C} \hspace{4mm} \forall i \leq M
+$
+\\ \vspace{6mm}
+$
+= \{\{a_1 \leftarrow l[\hat{X_1}]\},\{a_2 \leftarrow l[\hat{X_2}]\},...,\{a_M \leftarrow l[\hat{X}_M]\}\}  \rightarrow a_M \hspace{1mm} |
+$
+\\ \vspace{2mm}
+$
+ l_i \in \mathbb{C} \hspace{4mm} \forall i
+$
+\end{center}
+
+
+
+
+
+\section*{Operators}
+
+% Get Not
+\section{Get}
+\subsection{Definition}
+\begin{center}
+$
+get[b] :=
+$
+\\ \vspace{2mm}
+$
+get[b] \rightarrow b
+$
+\end{center}
+
+
+
+
+
+
+% Definition of Set Union
+\subsection{Set Union $\cup$}
+
+
+
+
+\subsubsection{Canonical Union $\cup$}
+Restate the definion of Union $\cup$ for elements $a;b$
+\vspace{2mm}
+\begin{center}
+$
+a  \cup  b = \cup[a,b] \hspace{3mm} a \in \Omega \hspace{2mm} b \in \Omega := 
+$
+\end{center}
+$a = b \neq \emptyset$
+\begin{center}
+$
+a  \cup  a = b \cup b \rightarrow \{a\} = \{b\}
+$
+\end{center}
+\vspace{2mm}
+$\emptyset \neq a \neq b \neq \emptyset$
+\begin{center}
+$
+a \cup  b \rightarrow \{a,b\}
+$
+\end{center}
+\vspace{2mm}
+$\emptyset = a \neq b$
+\begin{center}
+$
+\emptyset \cup  b \rightarrow \{b\}
+$
+\end{center}
+\vspace{2mm}
+$a \neq b = \emptyset$
+\begin{center}
+$
+a \cup \emptyset \rightarrow \{a\}
+$
+\end{center}
+\vspace{2mm}
+$a = b = \emptyset$
+\begin{center}
+$
+\emptyset \cup \emptyset \rightarrow \emptyset
+$
+\end{center}
+\subsubsection{Domain of Canonical Union $\cup$}
+\begin{center}
+$
+\{ a \hspace{1mm} | \hspace{1mm} a \in \Omega\}
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}|\hspace{1mm} b \in \Omega\}
+$
+\end{center}
+
+
+
+
+
+\subsubsection{Set Theory Definition of Set Union $\cup$}
+Define the overloaded symbol $\cup$; Set Union
+\begin{center}
+\vspace{2mm}
+$
+A = \{a_1,a_2,...,a_N\} : a_i \in \Omega \hspace{3mm} \forall a_i \in A
+$
+\\ \vspace{2mm}
+$
+B = \{b_1,b_2,...,b_M\} : b_j \in \Omega \hspace{3mm} \forall b_j \in A
+$
+\\ \vspace{4mm}
+$
+A \cup B := \tilde{A} = \{\tilde{a}_1,\tilde{a}_2,...,\tilde{a}_K\}:
+$
+\\ \vspace{2mm}
+$
+\tilde{a}_i \in A \lor \tilde{a}_i \in B \hspace{4mm} \forall \tilde{a}_i \in \tilde{A}
+$
+\end{center}
+
+
+
+
+
+\subsubsection{Domain Set Union}
+\begin{center}
+$
+\{ A \hspace{1mm} | \hspace{1mm} A \subseteq \Omega\}
+$
+\\ \vspace{2mm}
+$
+\{ B \hspace{1mm}|\hspace{1mm} B \subseteq \Omega\}
+$
+\end{center}
+
+
+
+\subsubsection{Overloaded $\cup$}
+Union is defined distinctly according to the domain of inputs
+
+
+\subsubsection{Computational Defintion of Set Union $\cup$}
+
+
+
+
+
+
+
+
+
+
+
+% Definition of Set Union
+\subsection{Set Minus $\setminus$}
+\subsubsection{Formal Definition}
+\subsubsection{Computational Defintion of Set Minus $\setminus$}
+\subsubsection{Domain}
+
+
+
+
+
+
+% Definition of Set Union
+\subsection{Set is equal to $==$}
+\subsubsection{Formal Definition}
+\subsubsection{Computational Defintion of Set is equal to $==$}
+\subsubsection{Domain}
+
+
+
+
+% Definition of +
+\subsection{Plus +}
+\subsubsection{Formal Definition}
+\begin{center}
+\vspace{1mm}
+$
+N + M :=
+$
+\\ \vspace{2mm}
+$
+| \{a_1,a_2,...,a_N\} \cup \{b_1,b_2,...,b_M\} |
+$
+\\ \vspace{2mm}
+$
+= | a_1 \cup a_2 \cup ... \cup a_N \cup b_1 \cup b_2 ... \cup b_M |
+$
+\end{center}
+Let $\hat{a}_{i}$ = $a_i$ \hspace{2mm} $\forall i \leq N$; \hspace{2mm} $\hat{a}_{N+j}$ = $b_j$ \hspace{2mm} $\forall j \leq M$; 
+\begin{center}
+$
+= |\{\hat{a}_1\} \cup \{\hat{a}_2\} \cup ... \cup \{\hat{a}_N\} \cup \{\hat{a}_{N+1}\} \cup \{\hat{a}_{N+2}\} \cup ... \cup \{\hat{a}_{N+M}\}|
+$
+\end{center}
+\subsubsection{Computational Instruction Definition of Plus +}
+\begin{center}
+\vspace{4mm}
+$
+s[X_n] := \{c_1,c_3,c_5,...,c_{2M-1}\} \rightarrow a_{1} \hspace{1mm} |
+$
+\\ \vspace{3mm}
+$
+c_{2i -1}= a_i \leftarrow l_i[\hat{X_i}]  \hspace{4mm} l_i \in \mathbb{C} \hspace{4mm} \forall i \leq M
+$
+\\ \vspace{8mm}
+$
++[N,M] :=
+$
+\\ \vspace{2mm}
+$
+c_1 = a_1 \leftarrow I_1[1]
+$
+\\ \vspace{2mm}
+$
+c_3 = a_2 \leftarrow I_2[1]
+$
+\\ \vspace{2mm}
+$
+c_5 = a_1 \leftarrow a_1 \cup a_2
+$
+\\ \vspace{2mm}
+$
+c_7 = a_3 \leftarrow I_3[1]
+$
+\\ \vspace{2mm}
+$
+c_9 = a_1 \leftarrow a_1 \cup a_3
+$
+\\ \vspace{2mm}
+$
+...
+$
+\\ \vspace{2mm}
+$
+c_{4(M+N-2)+3} = a_{M+N} \leftarrow I_{M+N}[1]
+$
+\\ \vspace{2mm}
+$
+c_{4(M+N-2)+5} = a_1 \leftarrow a_1 \cup a_{M+N}
+$
+\\ \vspace{2mm}
+$
+c_{4(M+N-1)+3} = a_1 \leftarrow |a_1|
+$
+\end{center}
+\subsubsection{Domain}
+\begin{center}
+$
+\{N \hspace{1mm} | \hspace{1mm} N \in \mathbb{R}\}
+$
+\\ \vspace{2mm}
+$
+\{M \hspace{1mm} | \hspace{1mm} M \in \mathbb{R}\}
+$
+\end{center}
+
+
+
+% Subtraction
+\subsection{Minus -}
+\subsubsection{Formal Definition}
+\begin{center}
+\vspace{1mm}
+$
+N - M := |\{a_1 \cup a_2 \cup ... \cup a_N\} \setminus \{a_1 \cup a_2 \cup ... \cup a_M\}|
+$
+\\ \vspace{2mm}
+$
+= | a_1 \cup a_2 \cup ... \cup a_N \hspace{1mm} \setminus \hspace{1mm} a_1 \hspace{1mm} \setminus \hspace{1mm} a_2 \hspace{1mm} ...\hspace{1mm} \setminus \hspace{1mm} a_M |
+$
+\\ \vspace{2mm}
+$
+= | a_{M+1} \cup a_{M+2} \cup ... \cup a_N |
+$
+\end{center}
+Let $\hat{a}_i = a_{M+i} \hspace{3mm} M < i \leq N$
+\begin{center}
+$
+= | \hat{a}_{1} \cup \hat{a}_{2} \cup ... \cup \hat{a}_{N-M}|
+$
+\end{center}
+
+
+
+
+\subsubsection{Computational Instruction Definition of Minus -}
+\begin{center}
+\vspace{4mm}
+$
+s[X_n] := \{c_1,c_3,c_5,...,c_{2M-1}\} \rightarrow a_{1} \hspace{1mm} |
+$
+\\ \vspace{3mm}
+$
+c_{2i -1}= a_i \leftarrow l_i[\hat{X_i}]  \hspace{4mm} l_i \in \mathbb{C} \hspace{4mm} \forall i \leq M
+$
+\\ \vspace{8mm}
+$
+-[N,M] :=
+$
+\\ \vspace{2mm}
+$
+c_1 = a_1 \leftarrow I_1[1]
+$
+\\ \vspace{2mm}
+$
+c_3 = a_2 \leftarrow I_2[1]
+$
+\\ \vspace{2mm}
+$
+c_5 = a_1 \leftarrow a_1 \cup a_2
+$
+\\ \vspace{2mm}
+$
+c_7 = a_3 \leftarrow I_3[1]
+$
+\\ \vspace{2mm}
+$
+c_9 = a_1 \leftarrow a_1 \cup a_3
+$
+\\ \vspace{2mm}
+$
+...
+$
+\\ \vspace{2mm}
+$
+c_{4(N-2)+3} = a_{N} \leftarrow I_{N}[1]
+$
+\\ \vspace{2mm}
+$
+c_{4(N-2)+5} = a_1 \leftarrow a_1 \cup a_{N}
+$
+\\ \vspace{2mm}
+$
+c_{4(N-1)+3} = a_{N+1} \leftarrow  I_{1}[1]
+$
+\\ \vspace{2mm}
+$
+c_{4(N-1)+5} = a_1 \leftarrow a_1 \hspace{1mm} \setminus \hspace{1mm} a_{N+1}
+$
+\\ \vspace{2mm}
+$
+c_{4N+3} = a_{N+2} \leftarrow  I_{2}[1]
+$
+\\ \vspace{2mm}
+$
+c_{4N+5} = a_1 \leftarrow a_1 \hspace{1mm} \setminus \hspace{1mm} a_{N+2}
+$
+\\ \vspace{2mm}
+$
+...
+$
+\\ \vspace{2mm}
+$
+c_{4(M+N-2)+3} = a_{M} \leftarrow I_{M}[1]
+$
+\\ \vspace{2mm}
+$
+c_{4(M+N-2)+5} = a_1 \leftarrow a_1 \hspace{1mm} \setminus \hspace{1mm} a_{M}
+$
+\\ \vspace{2mm}
+$
+c_{4(M+N-1)+3} = a_1 \leftarrow |a_1|
+$
+\end{center}
+
+
+
+
+
+\subsubsection{Domain}
+\begin{center}
+$
+\{ a \hspace{1mm} | \hspace{1mm} a \in \mathbb{R}\}
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm} | \hspace{1mm} b \in \mathbb{R} \hspace{1mm} \land b \leq a\}
+$
+\end{center}
+
+
+
+
+
+
+
+
+
+%\subsection{insert}
+%\subsection{append}
+%\subsection{delete}
+%\subsection{pop}
+
+
+
+\section{Compound Instruction Theorem}
+Any Instruction that can be defined as a set of computational instructions "Compound Instruction" is also a computational instruction
+\subsection{Definition of Compound Instruction}
+\subsection{$!=$}
+\subsection{$\geq$}
+\subsection{$\leq$}
+\subsection{$\sum$}
+
+
+
+
+% Definition of Set Union
+\subsection{Set Intersection $\cap$}
+\subsubsection{Formal Definition}
+\subsubsection{Computational Defintion of $\cap$}
+\subsubsection{Domain}
+\begin{center}
+$
+\{ A \hspace{1mm} | \hspace{1mm} A \in \Omega \}
+$
+\\ \vspace{2mm}
+$
+\{ B \hspace{1mm} | \hspace{1mm} B \in \Omega \}
+$
+\end{center}
+
+
+
+
+
+\subsection{*}
+\subsection{Exponentiation $a^b$}
+
+
+
+
+
+
+
+\subsection{/}
+\subsubsection{Definition}
+\subsubsection{Prove / is a Computational Instruction}
+
+
+
+
+
+
+
+\subsection{$N^{th}$ root $^n \sqrt{a}$}
+\subsubsection{Definition}
+\subsubsection{Prove $^n \sqrt{a}$  is a Computational Instruction}
+
+
+
+
+
+
+\section*{Appendix}
+
+\section{Definition of is Boolean}
+\begin{center}
+$
+is \hspace{1mm} boolean(f) \rightarrow b \in \{\mathbb{T},\mathbb{F}\} :=
+$
+\\ \vspace{2mm}
+$
+(f.out \subseteq \{\mathbb{T},\mathbb{F}\}) \rightarrow b \in \{\mathbb{T},\mathbb{F}\}
+$
+\end{center}
+
+
+\subsection{Domain}
+\begin{center}
+$
+\{f | f \equiv function\}
+$
+\end{center}
+
+%\section{No-op ;}
+%\subsection{Definition}
+%\subsection{Domain}
+%Define void program No-op ;
+%\begin{center}
+%\vspace{1mm}
+%$
+%;[\emptyset] := \{s_;=\emptyset\} = \{\mathcal{L}\}
+%$
+%\end{center}
+
+%\subsection{Prove No-op ; is an Instruction}
+
+%\subsection{Time Complexity of No-op}
+%\begin{center}
+%\vspace{1mm}
+%$
+%O_T[n] := |\mathcal{L}| = 1
+%$
+%\end{center}
+
+%\subsection{Space Complexity of No-op}
+%\begin{center}
+%\vspace{1mm}
+%$
+%O_S[n] := |\mathcal{M}| = 0
+%$
+%\end{center}
+
+
+%\subsection{Total Complexity of No-op}
+%\begin{center}
+%\vspace{1mm}
+%$
+%O[n] = O_T[n] + O_S[n] = 0
+%$
+%\end{center}
+
+
+%\subsection{Property of No-op ;}
+%Prove No-op can be added to any Program $P$ without modifying the output $y_o$ or memory $b_i$
+%\begin{center}
+%\vspace{1mm}
+%$
+%P = \{ s_1,s_2,...,s_{O_T \lbrack n \rbrack }, b_1, b_2,...,b_{O_S \lbrack n \rbrack},y_o\} = \{ \mathcal{L},\mathcal{M},y_o\}
+%$
+%\end{center}
+%Let
+%\begin{center}
+%$
+%P_; = \{ s_1,s_2,...,s_{j}, \hspace{.25mm} s_; \hspace{.25mm}, s_{j+1}, ...,s_{O_T \lbrack n \rbrack}, \hat{b}_1, \hat{b}_2,...,\hat{b}_{O_S \lbrack n \rbrack},\hat{y}_o\}
+%$
+%\end{center}
+%Suppose
+%\begin{center}
+%$
+%\hat{y}_o \neq y_o
+%$
+%\end{center}
+
+
+
+\end{document}
