@@ -6,15 +6,19 @@
 \def \attrdef{\atop}
 \def \hasattrdef{$\rlap{$\supseteq$}$\tiny $a \attr $ \normalsize}
 \def \isattrof{$\rlap{$\supseteq$}$\tiny $a \attr $ \normalsize}
+\def \fdef{\hspace{1mm} {def \atop \rightarrow} \hspace{1mm}}
+\def \feq{\hspace{1mm} {def \atop =} \hspace{1mm}}
 
 \begin{document}
 
-\section{Buffer}
+\section*{Boolean Functions}
+
+\section{Identity}
 \subsection{Definition}
 \vspace{2mm}
 \begin{center}
 $
-buffer[b] \rightarrow b
+I[b] \fdef b
 $
 \end{center}
 \subsection{Explicit Definition}
@@ -22,48 +26,146 @@ $
 b $\in \mathbb{T}$
 \begin{center}
 $
-buffer[b] \rightarrow b \in \mathbb{T}
+I[b] \rightarrow b \in \mathbb{T}
 $
 \end{center}
 b $\in \mathbb{F}$
 \begin{center}
 $
-buffer[b] \rightarrow b \in \mathbb{F}
+I[b] \rightarrow b \in \mathbb{F}
 $
 \end{center}
 \subsection{Domain}
 \begin{center}
 $
-\{ b \hspace{1mm}| \hspace{1mm} b \in \{\mathbb{T}, \mathbb{F}\}\}
-$
-\end{center}
-
-% Not
-\section{$\lnot$}
-\subsection{Definition}
-\begin{center}
-$
-\lnot = \lnot[b] :=
+\{ b \hspace{1mm}| \hspace{1mm} b \equiv bool\}
 $
 \\ \vspace{2mm}
 $
- \lnot[\mathbb{T}] \rightarrow \mathbb{F}
- $
- \\ \vspace{2mm}
- $
- \lnot[\mathbb{F}] \rightarrow \mathbb{T}
+\feq
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}| \hspace{1mm} |b| \in \{\mathbb{T}, \mathbb{F}\}\}
+$
+\end{center}
+% Not
+\section{Not $\lnot$}
+\subsection{Definition}
+\begin{center}
+$
+\lnot[b] \fdef b_{\perp}
+$
+\end{center}
+\subsection{Explicit Definition}
+\vspace{2mm}
+b $\in \mathbb{T}$
+\begin{center}
+$
+\lnot[b] \rightarrow b_{\perp} \in \mathbb{F}
+$
+\end{center}
+b $\in \mathbb{F}$
+\begin{center}
+$
+\lnot[b] \rightarrow b_{\perp} \in \mathbb{T}
 $
 \end{center}
 \subsection{Domain}
 \begin{center}
 $
-\{ b \hspace{1mm}| \hspace{1mm} b \in \{\mathbb{T}, \mathbb{F}\}\}
+\{ b \hspace{1mm}| \hspace{1mm} b \equiv bool\}
+$
+\\ \vspace{2mm}
+$
+\feq
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}| \hspace{1mm} |b| \in \{\mathbb{T}, \mathbb{F}\}\}
 $
 \end{center}
 
 
 
-\section{Binary Comparisons}
+\section*{Logical Functions}
+
+\section{Buffer}
+\subsection{Definition}
+\vspace{2mm}
+\begin{center}
+$
+\triangleright[|b|] \fdef |b|
+$
+\end{center}
+\subsection{Explicit Definition}
+\vspace{2mm}
+b $\in \mathbb{T}$
+\begin{center}
+$
+\triangleright[|b|] \rightarrow t
+$
+\end{center}
+b $\in \mathbb{F}$
+\begin{center}
+$
+\triangleright[|b|] \rightarrow f
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ b \hspace{1mm}| \hspace{1mm} b \equiv bool\}
+$
+\\ \vspace{2mm}
+$
+\feq
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}| \hspace{1mm} |b| \in \{\mathbb{T}, \mathbb{F}\}\}
+$
+\end{center}
+% Not
+\section{Inverter !}
+\subsection{Definition}
+\begin{center}
+$
+! \hspace{1mm}[|b|] \fdef |b_{\perp}|
+$
+\end{center}
+\subsection{Explicit Definition}
+\vspace{2mm}
+b $\in \mathbb{T}$
+\begin{center}
+$
+! \hspace{1mm}[|b|] \rightarrow f
+$
+\end{center}
+b $\in \mathbb{F}$
+\begin{center}
+$
+! \hspace{1mm}[|b|] \rightarrow t
+$
+\end{center}
+\subsection{Domain}
+\begin{center}
+$
+\{ b \hspace{1mm}| \hspace{1mm} b \equiv bool\}
+$
+\\ \vspace{2mm}
+$
+\feq
+$
+\\ \vspace{2mm}
+$
+\{ b \hspace{1mm}| \hspace{1mm} |b| \in \{\mathbb{T}, \mathbb{F}\}\}
+$
+\end{center}
+
+
+
+\section{Comparisons}
 
 
 \subsection{Definition of a Boolean Comparison}
@@ -74,7 +176,7 @@ f[x_1,x_2] :
 $
 \\ \vspace{2mm}
 $
-f[x_1,x_2] \rightarrow b \in \{\mathbb{T},\mathbb{F}\} \hspace{2mm} \forall x_1,x_2 \in \mathbb{D}_f
+f[x_1,x_2] \rightarrow b \in \{ t,f \} \hspace{4mm} \forall x_1,x_2 \in \mathbb{D}_f
 $
 \end{center}
 
