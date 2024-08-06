@@ -64,7 +64,11 @@ $
 \subsection{Definiton of Memory}
 \begin{center}
 $
-memory m :=
+memory \hspace{1.5mm} m :=
+$
+\\ \vspace{2mm}
+$
+m \in \Omega
 $
 \end{center}
 
@@ -89,7 +93,7 @@ Define Memory $\mathcal{M}$; an ordered set of either bools numbers or objects $
 "Memory Set" := $\mathcal{M}:$
 \\ \vspace{2mm}
 $
-(\mathcal{M} \equiv Set) \land((m_i \equiv bool) \oplus (m_i \in \mathbb{R}) \oplus (m_i \equiv$ $object) \hspace{2mm} \forall m_i \in \mathcal{M})
+(\mathcal{M} \equiv Set) \land (m_i \equiv object \hspace{2mm} \forall m_i \in \mathcal{M}) 
 $
 \end{center}
 
@@ -105,9 +109,9 @@ $
 \newpage
 
 % Definition of Program
-\section{Methods}
-\subsection{Definition of a Method}
-Define a method $\mathcal{P}$; a tensor of instructions and memory
+\section{Program}
+\subsection{Definition of a Program}
+Define program $\mathcal{P}$; a tensor of instructions and memory
 \begin{center}
 $
 \mathcal{P} := \{ \{s_1, s_2,...,s_{N}\}, \{m_1, m_2,...,m_M\} \}
