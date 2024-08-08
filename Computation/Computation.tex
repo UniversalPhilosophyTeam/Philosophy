@@ -13,10 +13,10 @@
 % Definition of Instruction Set
 \section{Instruction}
 \subsection{Definiton of Instruction}
-Define instruction s
+Define Instruction s
 \begin{center}
 $
-instruction \hspace{1.5mm} s :=
+Instruction \hspace{1.5mm} s :=
 $
 \\ \vspace{2mm}
 $
@@ -27,7 +27,7 @@ $
 % Definition of Instruction Set
 \section{Instruction Set}
 \subsection{Definiton of Instruction Set}
-Define $\mathcal{I}$; an ordered set of computational instructions $s_i$
+Define $\mathcal{I}$; an ordered Set of Instructions $s_i$
 \begin{center}
 $
 \mathcal{I} := \{ s_1,s_2,...,s_{N}\}
@@ -37,13 +37,13 @@ $
 
 
 \subsection{Abstraction Notation}
-Define $\mathcal{I}$; an ordered set of computational instructions $s_i$
+Define $\mathcal{I}$; an ordered Set of Instructions $s_i$
 \begin{center}
-"Instruction Set"$ := \mathcal{I}:
+Instruction Set$ \hspace{2mm} \mathcal{I}:
 $
 \\ \vspace{2mm}
 $
-(\mathcal{I} \equiv \hspace{1mm} $Set$) \land (s_i \equiv$ instruction$ \hspace{3mm} \forall s_i \in \mathcal{I})
+(\mathcal{I} \equiv \hspace{1mm} $Set$) \land (s_i \equiv$ Instruction$ \hspace{3mm} \forall s_i \in \mathcal{I})
 $
 \end{center}
 
@@ -64,7 +64,7 @@ $
 \subsection{Definiton of Memory}
 \begin{center}
 $
-memory \hspace{1.5mm} m :=
+Memory \hspace{1.5mm} m :=
 $
 \\ \vspace{2mm}
 $
@@ -79,7 +79,7 @@ $
 
 
 \subsection{Definition of Memory Set}
-Define Memory $\mathcal{M}$; an ordered set of objects $m_i$
+Define Memory Set $\mathcal{M}$; an ordered set of objects $m_i$
 \begin{center}
 $\mathcal{M} := \{m_1,m_2,...,m_M\}$
 \end{center}
@@ -93,7 +93,7 @@ Define Memory $\mathcal{M}$; an ordered set of either bools numbers or objects $
 "Memory Set" := $\mathcal{M}:$
 \\ \vspace{2mm}
 $
-(\mathcal{M} \equiv Set) \land (m_i \equiv object \hspace{2mm} \forall m_i \in \mathcal{M}) 
+(\mathcal{M} \equiv Set) \land (m_i \equiv Object \hspace{2mm} \forall m_i \in \mathcal{M}) 
 $
 \end{center}
 
@@ -111,14 +111,20 @@ $
 % Definition of Program
 \section{Program}
 \subsection{Definition of a Program}
-Define program $\mathcal{P}$; a tensor of instructions and memory
+Given Instruction Set $\mathcal{I}$, Memory Set $\mathcal{M}$, and Set $X$; Define Program $\mathcal{P}$[X]\\\\\\
+Given
 \begin{center}
+\vspace{1mm}
 $
-\mathcal{P} := \{ \{s_1, s_2,...,s_{N}\}, \{m_1, m_2,...,m_M\} \}
+\mathcal{I} = \{ s_1,s_2,...,s_N\}, \hspace{2mm} \mathcal{M} = \{ m_1,m_2,...,m_M\}, \hspace{2mm} X = \{x_1,x_2,...,x_n\}
+$
+\\ \vspace{4mm}
+$
+\mathcal{P}[X] := \{s_1[\hat{X}_1,\hat{\mathcal{M}}_1],s_2[\hat{X}_2,\hat{\mathcal{M}}_2],...,s_{N}[\hat{X}_N,\hat{\mathcal{M}}_N]\}  \rightarrow Y:
 $
 \\ \vspace{2mm}
 $
-= \hspace{1mm} < \mathcal{I}, \mathcal{M} >
+(\hat{X}_i \subseteq X \hspace{4mm} \forall i \leq N) \land (\hat{\mathcal{M}}_i \subseteq \mathcal{M} \hspace{4mm} \forall i \leq N) \land (Y \in \Omega \hspace{3mm} \forall X \in \mathbb{D}_{\mathcal{P}})
 $
 \end{center}
 
@@ -128,36 +134,29 @@ $
 \subsection{Abstraction Notation}
 Define a method $\mathcal{P}$; a tensor of instructions and memory
 \begin{center}
-"Method" := $
-\mathcal{P} :
+$
+Program \hspace{2mm} P = P \rightarrow Y :
 $
 \\ \vspace{2mm}
 $
-(\mathcal{P} \equiv$ Tensor$)\land(\mathcal{P} \supseteq \mathcal{I})\land(\mathcal{P} \supseteq \mathcal{M})
+(\mathcal{P} \equiv$ Set$)\land(p_i \equiv Instruction \hspace{3mm} \forall p_i \in \mathcal{P})
+$
+\\ \vspace{2mm}
+$
+\land
+$
+\\ \vspace{2mm}
+$
+(p_i.input \subseteq \mathcal{M} \hspace{2mm}  \forall p_i \in \mathcal{P})\land(Y \in \Omega)
 $
 \end{center}
 
 
 
 
-\subsection{State Variable Notation}
-It is convention to use $|$ to separate instructions and memory 
-\begin{center}
-$
-\mathcal{P} := \{ \{s_1, s_2,...,s_{N}\},\{ m_1, m_2,...,m_M \} \}
-$
-\\ \vspace{2mm}
-$
-= \{ s_1, s_2,...,s_{N} | m_1, m_2,...,m_M\}
-$
-\\ \vspace{2mm}
-$
-= \{\hspace{1mm} \mathcal{I} \hspace{1mm}|\hspace{1mm} \mathcal{M} \hspace{1mm} \}
-$
-\end{center}
 
-
-
+\section{Workers}
+\subsection{Definition of a Worker}
 
 
 
@@ -3272,9 +3271,9 @@ $
 
 
 
-% Theorem of Optimal Complexity
+% Parallel Programming
 \newpage
-\section{Theorem of Optimal Complexity}
+\section{Parallel Programs}
 
 
 
